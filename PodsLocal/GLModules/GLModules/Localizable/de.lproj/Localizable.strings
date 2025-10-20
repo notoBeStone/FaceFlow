@@ -1,0 +1,6 @@
+"text_continue" = "Weiter";
+"text_failed" = "Fehlgeschlagen";
+"text_retore_empty" = "Kein Kaufbeleg gefunden";
+"text_no_connection" = "Keine Internetverbindung";
+"text_restore_membership" = "Mitgliedschaft wiederherstellen";
+"text_restore_membership_desc" = "Um deine Mitgliedschaft wiederherzustellen, musst du dich in dein VIP-Konto einloggen. Dadurch werden die Daten auf dem aktuellen Gerät überschrieben. Möchtest du fortfahren?";

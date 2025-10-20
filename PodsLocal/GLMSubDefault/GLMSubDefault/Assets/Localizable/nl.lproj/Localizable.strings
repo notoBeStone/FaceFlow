@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Beheer Abonnement";
+
+"text_member_since" = "Lid sinds: %@";
+
+"text_membership_s" = "Lidmaatschap: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7-dagen gratis proefperiode)";
+
+"text_premium_free_day" = "Premium (%@-dagen gratis proefperiode)";
+
+"text_next_billing" = "Volgende factuurdatum: %@";
+
+"text_1_year" = "1 jaar";
+
+"text_billing_period" = "Factuurperiode: %@";
+
+"TEXT_SDAY" = "%@/dag";
+
+"text_1_month" = "1 maand";
+
+"text_3_month" = "3 maanden";
+
+"text_1_week" = "1 week";
+
+"text_free_trial_end" = "Gratis proefperiode eindigt over: %@";
+
+"text_s_days" = "%@ dagen";
+
+"text_s_day" = "%@ dag";
+
+"text_manage_desc" = "De knop \"Ga naar App Store\" hieronder brengt je direct naar het abonnementsmenu. %@ heeft geen toegang tot het factureringssysteem van Apple, dus we kunnen niet namens jou opzeggen.";
+
+"text_manage_notice" = "Mededelingen";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Je abonnement wordt automatisch verlengd en de betaling wordt in rekening gebracht op je iTunes account.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple begint 24 uur voor het einde van de proefperiode met het in rekening brengen van kosten. Om je abonnement succesvol te beëindigen, dien je dit ten minste 24 uur vóór het einde van de proefperiode te doen. Anders loop je het risico dat er toch kosten in rekening worden gebracht.";
+
+"text_manage_notice_item2_2" = "Apple begint 24 uur voor het einde van de huidige abonnementsperiode met het in rekening brengen van kosten. Om je abonnement succesvol te beëindigen, dien je dit ten minste 24 uur vóór het verstrijken van de huidige periode te doen. Anders loop je het risico dat er toch kosten in rekening worden gebracht.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Je abonnement wordt niet opgezegd als je de app verwijdert.";
+
+"text_go_cancel" = "Ga naar App Store om te Annuleren";
+
+"text_keep_plan" = "Houd mijn plan";
+
+"text_manage_desc" = "Je kunt dit doen via de instellingen in jouw telefoon. De onderstaande knop brengt je direct naar het abonnement menu. %@ heeft geen toegang tot het Factureersysteem van Apple, dus wij kunnen niet annuleren namens jou.";
+
+"TEXT_PLEASE_NOTE" = "Let op dat de app de-instaleren niet automatisch jouw abonnement annuleert.";
+

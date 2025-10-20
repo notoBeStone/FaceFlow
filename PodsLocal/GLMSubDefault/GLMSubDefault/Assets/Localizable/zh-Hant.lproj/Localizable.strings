@@ -1,0 +1,58 @@
+"text_manage_subscription" = "管理訂閱項目";
+
+"text_member_since" = "會員自：%@";
+
+"text_membership_s" = "會員資格：%@";
+
+"text_premium" = "高階版";
+
+"TEXT_PREMIUM_7DAY" = "高階版（免費試用7天）";
+
+"text_premium_free_day" = "高階版（免費試用%@天）";
+
+"text_next_billing" = "下次收款日期：%@";
+
+"text_1_year" = "1年";
+
+"text_billing_period" = "帳單週期：%@";
+
+"TEXT_SDAY" = "%@/天";
+
+"text_1_month" = "1個月";
+
+"text_3_month" = "3個月";
+
+"text_1_week" = "1週";
+
+"text_free_trial_end" = "免費試用還剩：%@";
+
+"text_s_days" = "%@ 天";
+
+"text_s_day" = "%@ 天";
+
+"text_manage_desc" = "下方的「前往 App Store」按鈕，會直接將你帶到訂閱選單。%@ 無法存取 Apple 的計費系統，所以我們無法為你取消訂單。";
+
+"text_manage_notice" = "注意";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "訂閱將自動續訂，將自你的 iTunes 帳號中扣款。";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple 的計費系統會在試用期結束前 24 小時開始計費。要成功取消訂閱，請在試用期滿前 24 小時取消，以免遭到計費。";
+
+"text_manage_notice_item2_2" = "Apple 的計費系統會在目前訂閱期結束前 24 小時開始計費。要成功取消訂閱，請在目前訂閱期滿前 24 小時取消，以免遭到計費。";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "刪除本 app 並不會取消你的訂閱。";
+
+"text_go_cancel" = "請到App Store商店取消訂閱";
+
+"text_keep_plan" = "保留我的方案";
+
+"text_manage_desc" = "您可以從手機裡的設定執行此操作。下方的按鈕將直接帶您進入訂閱頁面。%@並沒有取得Apple帳單系統的權限，因此無法代表您取消訂閱。";
+
+"TEXT_PLEASE_NOTE" = "請注意，移除應用程式並不會自動為您取消訂閱。";
+

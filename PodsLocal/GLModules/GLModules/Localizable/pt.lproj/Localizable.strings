@@ -1,0 +1,6 @@
+"text_continue" = "Continuar";
+"text_failed" = "Falha";
+"text_retore_empty" = "Você não possui um histórico de compras.";
+"text_no_connection" = "Sem conexão com a internet.";
+"text_restore_membership" = "Restaurar assinatura";
+"text_restore_membership_desc" = "Para restaurar a sua assinatura, precisamos fazer login em sua conta VIP. Isso substituirá as informações que constam no dispositivo pelos dados da conta VIP. Gostaria de continuar?";

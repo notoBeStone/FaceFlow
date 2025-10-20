@@ -1,0 +1,21 @@
+{
+    "product": "aquaai",
+    "project_id": "2485",
+    "job_id": "0",
+    "changelog": {
+        "base": "00000000",
+        "head": "00000000",
+        "content_file": "changelog.txt"
+    },
+    "ding_notify": [],
+    "deploy_method": "rc",
+    "output_name": "AquaAI.ipa",
+    "export_method": "app-store",
+    "export_options": "ExportOptions.plist",
+    "export_project": "AquaAI.xcodeproj",
+    "export_team_id": "8DHYPVL45R",
+    "privacy_info_path": "PrivacyInfo.lock",
+    "podfile_lock_path": "Podfile.lock",
+    "archive_path": "AquaAI.xcarchive",
+    "installer_size_limit":"400M"
+}

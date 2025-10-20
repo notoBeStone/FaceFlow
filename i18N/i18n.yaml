@@ -1,0 +1,176 @@
+common:
+  appname: BeVocal
+  next: Next
+  get_started: Get Started
+  continue: Continue
+  skip: Skip
+  vocal_bass: Bass
+  vocal_bari: Baritone
+  vocal_tenor: Tenor
+  vocal_alto: Alto
+  vocal_mezzo: Mezzo
+  vocal_sporano: Soprano
+  done: Done
+
+onboarding:
+  start_title: Every song is yours to master
+  start_subtitle: Personalized tunes that highlight your distinct voice
+
+onboarding_q1:
+  title_music_kind: What kind of music do you sing to
+  option_pop: Pop
+  option_rock: Rock  
+  option_hiphop: Hip-Hop
+  option_rnb: R&B
+  option_country: Country
+  option_jazz: Jazz
+  option_classical: Classical
+  option_indie: Indie
+  option_blues: Blues
+  option_latin: Latin
+  option_gospel: Gospel
+  option_other: Other
+
+onboarding_q2:
+  title_singers: Who are your favorite singers or bands?
+  enter_name: Enter Name
+
+onboarding_q3:
+  title_experience: How would you describe your singing experience?
+  option_beginner: I’ve never really sung before
+  option_intermediate: I sing casually sometimes
+  option_advanced: I’ve practiced or performed
+  option_professional: I’m trained or professional
+
+onboarding_q4:
+  title_hope: What goals do you hope to achieve with this app?
+  option_improve: Improve my singing skills
+  option_enhance: Enhance pitch and rhythm
+  option_reaching: Reaching high or low notes
+  option_learn: Learn new songs
+  option_happy: Entertainment and relaxation
+  option_other: Other
+
+onboarding_q5:
+  title_old: How old are you?
+  option_18: 18-24
+  option_24: 24-34
+  option_34: 34-44
+  option_45: 45-54
+  option_55: 55+
+  option_notsay: Prefer not to say
+
+onboarding_summary:
+  title: Find Your Unique Voice
+  subtitle: Adapt any song to your range and sing with confidence
+
+onboarding_welcome:
+  title: Welcome to Your Sing Journey!
+  subtitle: Discover your voice with top hits and pro tips, all enhanced by instant AI feedback to perfect your performance.
+
+vocal_range:
+  title: Get ready to sing
+  subtitle: Complete these 3 steps to unlock your personalized singing experience
+  title_ready: You're Ready to Sing!
+  subtitle_ready: Enjoy your personalized singing experience now
+  option_add_preference: Add Your Preferences
+  option_find_range: Find Your Vocal Range
+  option_try_sing: Try Singing in Your Range
+
+find_range:
+  gender_hint: To better estimate your vocal range, please choose your voice type
+  female_voice: Female Voice
+  male_voice: Male Voice
+  hint: Tap the button below and read the text in your natural voice.
+  provided_text_1: You say you're a mess,\nI say you're real,
+  provided_text_2: Every scar is something I feel.
+  mm_lowest_title: Hum the lowest note you can for 3 seconds
+  mm: Mmmmmmm
+  ya_highest_title: Yay the highest note you can for 3 times
+  ya: Yay-Yay-Yay
+  tap_start: Tap to start
+  retry: Retry
+  next: Next
+  result_title: Your Vocal Range
+
+range_result:
+  title: Your Vocal Range
+  test_again: Test Again
+
+onboarding_review:
+  help_grow: Help us grow!
+  subtitle: 💖 Leaving a review will encourage us a lot!
+
+song:
+  change_song: Chnage A Song
+  start_sing: Start Singing
+
+headphone_popup:
+  title: Headphones Recommended
+  subtile: Using headphones reduces feedback and noise, enhancing recording quality for clearer, accurate score.
+  got_it: Got It
+
+settlement:
+  title: You have finished singing this song!
+  notes: Notes
+  timing: Timing
+  x_song_finished: Songs Finished
+  sing_again: Sing Again
+
+home:
+  feedback: Feedback
+  tool_vocal_range_finder: Vocal Range Finder
+  tool_warmup: Warm-up Exercise
+  tool_pitch_training: Pitch Ear Training
+  category_pop: Pop Music
+  category_Rock: Rock
+  category_country: Country & Folk
+  category_soul: Soul & Disco
+  sing: Sing
+
+warmup_intro:
+  title: Vocal warm-up
+  feature_1: Listen to a given vocal exercise melody
+  feature_2: Sing along to match the pitch
+  feature_3: See your pitch and if you hit the right notes
+  get_started: Get Started
+
+warmup_sing:
+  info: Sing along and focus on maintaining pitch accuracy
+  result_title: Greate Job!
+  result_subtile: You have completed your vocal warm-up!
+  pitch_accuracy: Pitch Accuracy
+  test_again: Warm-up Again
+
+pitch_train_intro:
+  title: Pitch Ear Training
+  subtitle: Identify single notes by name as you listen to them. For best results, practice daily
+  select_level: Select Difficulty Level
+  level_easy: Easy
+  level_medium: Medium
+  level_hard: Hard
+
+pitch_train:
+  select_notes: Select the notes you heard
+  is_correct: "Nice!\"%@\" is correct!"
+  not_correct: "\"%@\" is not correct"
+  accuracy: Pitch Accuracy
+  finished: Finished !
+  summary_prefix: "You identified "
+  summary_suffix: " of 10 correctly, Keep practicing !"
+  hear_again: Hear Again
+  train_again: Training Again
+
+exit_popup:
+  title: Are you sure to leave now?
+  resume: Resume
+  exit: Exit
+  restart: Restart
+
+change_range:
+  song_range: Song Range
+  your_voice: Your Voice
+  original: Original
+  your_range: Your Vocal Range
+  best_fit: Best Fit
+  save: Save Range

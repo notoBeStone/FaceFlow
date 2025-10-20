@@ -1,0 +1,8 @@
+variables:
+  ON_CONFLICT: abort # abort or replace
+  PRODUCT_NAME: PictureThisV5
+
+include:
+  - project: 'lokalise/ci-template'
+    ref: main
+    file: '/ios/ci.yml'

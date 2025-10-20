@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Abonnement verwalten";
+
+"text_member_since" = "Mitglied seit: %@";
+
+"text_membership_s" = "Mitgliedschaft: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7-Tage-Gratistest)";
+
+"text_premium_free_day" = "Premium (%@-Tage-Gratistest)";
+
+"text_next_billing" = "Nächstes Zahlungsdatum: %@";
+
+"text_1_year" = "1 Jahr";
+
+"text_billing_period" = "Rechnungszeitraum: %@";
+
+"TEXT_SDAY" = "%@/Tag";
+
+"text_1_month" = "1 Monat";
+
+"text_3_month" = "3 Monate";
+
+"text_1_week" = "1 Woche";
+
+"text_free_trial_end" = "Gratistest endet in: %@";
+
+"text_s_days" = "%@ Tage";
+
+"text_s_day" = "%@ Tag";
+
+"text_manage_desc" = "Die Schaltfläche „Zum App Store“ unten führt dich direkt zum Abonnementmenü. %@ hat keinen Zugriff auf das Abrechnungssystem von Apple, daher können wir nicht in deinem Namen kündigen.";
+
+"text_manage_notice" = "Hinweise";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Dein Abonnement wird automatisch verlängert und die Zahlung wird von deinem iTunes-Konto abgebucht.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apples Abrechnungssystem beginnt 24 Stunden vor Ende der Testphase mit der Berechnung. Um dein Abonnement erfolgreich zu kündigen, bitte tue dies mindestens 24 Stunden vor Ende der Testphase, da dir sonst möglicherweise noch Kosten entstehen.";
+
+"text_manage_notice_item2_2" = "Apples Abrechnungssystem beginnt 24 Stunden vor Ende des aktuellen Abonnementzeitraums mit der Berechnung. Um dein Abonnement erfolgreich zu kündigen, bitte tue dies mindestens 24 Stunden vor Ende des aktuellen Zeitraums, da dir sonst möglicherweise noch Kosten entstehen.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Durch die Deinstallation der App wird dein Abonnement nicht gekündigt.";
+
+"text_go_cancel" = "Gehe zum Abbrechen zu App Store";
+
+"text_keep_plan" = "Abo behalten";
+
+"text_manage_desc" = "Dies können Sieüber die Einstellungen Ihres Handys tun. Über die Schaltfläche gelangen Sie direkt zum Abo-Menü. %@ hat keinen Zugriff auf das Abrechnungssystem von Apple, daher können wir nicht für Sie kündigen.";
+
+"TEXT_PLEASE_NOTE" = "Bitte beachten Sie, dass eine Deinstallation der App nicht der Kündigung Ihres Abonnements entspricht.";
+

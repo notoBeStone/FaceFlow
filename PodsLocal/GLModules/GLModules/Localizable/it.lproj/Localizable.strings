@@ -1,0 +1,6 @@
+"text_continue" = "Continua";
+"text_failed" = "Non riuscito";
+"text_retore_empty" = "Nessun acquisto registrato";
+"text_no_connection" = "Nessuna connessione internet";
+"text_restore_membership" = "Ripristina l'Abbonamento";
+"text_restore_membership_desc" = "Per ripristinare l'abbonamento, è necessario effettuare il login al tuo account VIP. Questa azione sostituirà i dati nel dispositivo attualmente in uso. Vuoi continuare?";

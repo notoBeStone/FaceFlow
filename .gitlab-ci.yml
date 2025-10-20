@@ -1,0 +1,28 @@
+variables:
+  GDP_APPLICATION: aquaai-ios-app #GDP上配的应用名称（GDP->应用管理->应用列表）
+  PRODUCT: aquaai #产品名
+  NEED_TEST: 0
+  NEED_STYLE: 0 #是否开启代码规范检测
+  OC_SONAR: 0 #是否开启OC代码检测 （需添加sonar配置）
+  SWIFT_SONAR: 0 #是否开启swift代码检测（需添加sonar配置）
+  USE_OLD_WHITELIST: 0 #是否使用老白名单（已废弃，CI根据GDP上对应产品区域和安全等级自行选择白名单）
+  BUILD_WORKSPACE: AquaAI.xcworkspace
+  BUILD_SCHEME: AquaAI
+  SRC_PATH: ./ #ci项目脚本相对路径（保持默认勿动）
+  BUNDLE_ID: com.aquariumai.fishkeeping #bundleId
+  NEED_BUILD_DATAV: 0 #是否需要build DATAV包
+  DATAV_VERSION: 0.0.0 #DATAV版本
+  INSTALLER_SIZE_LIMIT: 250 #上传大小限制
+  DEPLOY_JSON_FILE: ./deploytpl-rc.json #deploytpl-rc.json文件路径
+  SIGNATURE_FILE: PodsLocal/GLConfig/GLConfig/NetworkSignture/NetworkSignture.m #server签名文件路径
+  
+  # HOST_FILE: xxx/xxxx/xxxHost.m #host配置代码文件
+  # HOST_REPLACEMENT_TARGET: '        \[xxxx setHostEnvironment:'  #项目中host设置代码
+  # HOST_REPLACEMENT_test: '        \[xxxx setHostEnvironment:Test\]\;' #test环境设置
+  # HOST_REPLACEMENT_stage: '        \[xxxx setHostEnvironment:Stage\]\;' #stage环境设置
+  # HOST_REPLACEMENT_prod: '        \[xxxx setHostEnvironment:Prod\]\;' #prod环境设置 
+
+include: #ci项目的一些配置（保持默认勿动）
+  - project: 'component/devops/ci-template'
+    ref: '$CI_TEMPLATE_VERSION'
+    file: '/ios/templates/ci.yml'

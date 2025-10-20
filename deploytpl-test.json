@@ -1,0 +1,29 @@
+{
+    "product": "aquaai",
+    "project_id": "2485",
+    "job_id": "0",
+    "ossconf": {
+        "module": "ios",
+        "env": "poddemo"
+    },
+    "changelog": {
+        "base": "00000000",
+        "head": "00000000",
+        "content_file": "changelog.txt"
+    },
+    "ding_notify": [],
+    "deploy_method": "adhoc",
+    "output_name": "AquaAI.ipa",
+    "export_method": "ad-hoc",
+    "export_options": "ExportOptions.plist",
+    "export_project": "AquaAI.xcodeproj",
+    "privacy_info_path": "PrivacyInfo.lock",
+    "podfile_lock_path": "Podfile.lock",
+    "archive_path": "AquaAI.xcarchive",
+    "export_team_id": "8DHYPVL45R",
+    "issue_project_id": "182",
+    "resign": [{
+        "name": "adhoc",
+        "skip": true
+    }]
+}

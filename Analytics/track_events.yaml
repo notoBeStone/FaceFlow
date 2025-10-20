@@ -1,0 +1,21 @@
+# 页面定义
+pages:
+  home: "首页"
+  detail: "详情页"
+  settings: "设置页"
+  profile: "个人中心"
+  search: "搜索页"
+
+# 事件定义 (只定义点击事件)
+events:
+  # 首页事件
+  home:
+    close: "关闭按钮"
+    refresh: "刷新按钮"
+    search: "搜索按钮"
+    
+  # 详情页事件
+  detail:
+    share: "分享按钮"
+    like: "点赞按钮"
+    comment: "评论按钮" 

@@ -1,0 +1,6 @@
+"text_continue" = "استمرار";
+"text_failed" = "فشل";
+"text_retore_empty" = "ليس لديك سجل معاملات شراء";
+"text_no_connection" = "لا يوجد اتصال بالإنترنت.";
+"text_restore_membership" = "استعادة العضوية";
+"text_restore_membership_desc" = "لاستعادة عضويتك، نحتاج إلى تسجيل الدخول إلى حساب VIP الخاص بك. سيؤدي ذلك إلى استبدال البيانات في هذا الجهاز. هل ترغب في الاستمرار؟";

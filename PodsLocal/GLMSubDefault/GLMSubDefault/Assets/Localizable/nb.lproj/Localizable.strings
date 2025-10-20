@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Administrer abonnement";
+
+"text_member_since" = "Medlem siden %@";
+
+"text_membership_s" = "Medlemskap: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 dager gratis prøveperiode)";
+
+"text_premium_free_day" = "Premium (%@ dager gratis prøveperiode)";
+
+"text_next_billing" = "Neste betalingsdato: %@";
+
+"text_1_year" = "1 år";
+
+"text_billing_period" = "Betalingsperiode: %@";
+
+"TEXT_SDAY" = "%@/dag";
+
+"text_1_month" = "1 måned";
+
+"text_3_month" = "3 måneder";
+
+"text_1_week" = "1 uke";
+
+"text_free_trial_end" = "Gratis prøveendringer i: %@";
+
+"text_s_days" = "%@ dager";
+
+"text_s_day" = "%@ dag";
+
+"text_manage_desc" = "Knappen \Gå til App Store\ nedenfor tar deg direkte til abonnementsmenyen. %@ har ikke tilgang til Apples faktureringssystem, så vi kan ikke avbryte på dine vegne.";
+
+"text_manage_notice" = "Merk";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Abonnementet fornyes automatiskt, og betalingen belastes direkte til din iTunes-konto.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apples betalingssystem begynner å belaste 24 timer før prøveperioden avsluttes. Hvis du ønsker å avslutte abonnementet ditt, må du gjøre det minst 24 timer før prøveperioden avsluttes, ellers kan du fortsatt bli belastet.";
+
+"text_manage_notice_item2_2" = "Apples betalingssystem begynner å belaste 24 timer før den aktuelle abonnementsperioden utløper. Hvis du ønsker å avslutte abonnementet ditt, må du gjøre det minst 24 timer før den aktuelle perioden utløper, ellers kan du fortsatt bli belastet.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Hvis du avinstallerer appen, vil ikke abonnementet ditt bli avsluttet.";
+
+"text_go_cancel" = "Gå til App Store for å avbryte";
+
+"text_keep_plan" = "Behold abonnement";
+
+"text_manage_desc" = "Du kan avslutte abonnementet i telefonens innstillinger. Knappen nedenfor tar deg direkte til abonnementsmenyen. %@ har ikke tilgang til Apples betalingssystem, så vi kan ikke avslutte abonnementet for deg.";
+
+"TEXT_PLEASE_NOTE" = "Vennligst merk at abonnentet ditt ikke avsluttes dersom du avinnstallerer appen.";
+

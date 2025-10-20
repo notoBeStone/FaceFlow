@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Hantera abonnemang";
+
+"text_member_since" = "Medlem sedan: %@";
+
+"text_membership_s" = "Medlemskap: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 dagar gratis)";
+
+"text_premium_free_day" = "Premium (%@ dagar gratis)";
+
+"text_next_billing" = "Nästa debitering: %@";
+
+"text_1_year" = "1 år";
+
+"text_billing_period" = "Debiteringsperiod: %@";
+
+"TEXT_SDAY" = "%@/dag";
+
+"text_1_month" = "1 månad";
+
+"text_3_month" = "3 månader";
+
+"text_1_week" = "1 vecka";
+
+"text_free_trial_end" = "Gratis försök slutar i: %@";
+
+"text_s_days" = "%@ dagar";
+
+"text_s_day" = "%@ dag";
+
+"text_manage_desc" = "Knappen \"Gå till App Store\" nedan tar dig direkt till prenumerationsmenyn. %@ har inte tillgång till Apples faktureringssystem, så vi kan inte avbryta för din räkning.";
+
+"text_manage_notice" = "Observera";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Prenumerationen förnyas automatiskt och betalningen debiteras ditt iTunes-konto.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apples debiteringssystem börjar debitera 24 timmar innan provperioden avslutas. Om du vill avbryta din prenumeration måste du göra det minst 24 timmar innan testperioden avslutas, annars kan du fortfarande debiteras.";
+
+"text_manage_notice_item2_2" = "Apples debiteringssystem börjar debitera 24 timmar innan den aktuella prenumerationsperioden löper ut. Om du vill säga upp din prenumeration måste du göra det minst 24 timmar innan den aktuella perioden löper ut, annars kan du fortfarande debiteras.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Om du avinstallerar appen avslutas inte din prenumeration.";
+
+"text_go_cancel" = "Besök App Store för att avbryta";
+
+"text_keep_plan" = "Behåll min plan";
+
+"text_manage_desc" = "Du kan göra det via inställningarna i din telefon. Med knappen nedan kommer du direkt till abonnemangsmenyn. %@ har inte tillgång till Apples debiteringssystem, så vi kan inte säga upp abonnemanget åt dig.";
+
+"TEXT_PLEASE_NOTE" = "Observera att avinstallation av appen inte automatiskt avbryter abonnemanget åt dig.";
+

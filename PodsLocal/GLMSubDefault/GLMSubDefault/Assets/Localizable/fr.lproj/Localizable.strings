@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Gérer l'abonnement";
+
+"text_member_since" = "Membre depuis : %@";
+
+"text_membership_s" = "Abonnement : %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (essai gratuit de 7 jours)";
+
+"text_premium_free_day" = "Premium (essai gratuit de %@ jours)";
+
+"text_next_billing" = "Prochaine date de facturation : %@";
+
+"text_1_year" = "1 an";
+
+"text_billing_period" = "Période de facturation : %@";
+
+"TEXT_SDAY" = "%@/jour";
+
+"text_1_month" = "1 mois";
+
+"text_3_month" = "3 mois";
+
+"text_1_week" = "1 semaine";
+
+"text_free_trial_end" = "L'essai gratuit se termine dans %@";
+
+"text_s_days" = "%@ jours";
+
+"text_s_day" = "%@ jour";
+
+"text_manage_desc" = "Le bouton \"Aller à l'App Store\" ci-dessous vous permet d'accéder directement au menu d'abonnement. %@ n'a pas accès au système de facturation d'Apple, nous ne pouvons donc pas annuler l'abonnement en votre nom.";
+
+"text_manage_notice" = "Notices";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Votre abonnement se renouvellera automatiquement, le paiement est débité de votre compte iTunes.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Le système de facturation d'Apple commence à facturer 24 heures avant la fin de la période d'essai. Pour annuler votre abonnement avec succès, veuillez le faire au moins 24 heures avant la fin de la période d'essai, sinon vous risquez d'être facturé.";
+
+"text_manage_notice_item2_2" = "Le système de facturation d'Apple commence à facturer 24 heures avant la fin de la période d'abonnement en cours. Pour annuler votre abonnement avec succès, veuillez le faire au moins 24 heures avant la fin de la période en cours, sinon vous risquez d'être facturé.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "La désinstallation de l'application n'annulera pas votre abonnement.";
+
+"text_go_cancel" = "Aller sur App Store pour annuler";
+
+"text_keep_plan" = "Conserver mon forfait";
+
+"text_manage_desc" = "Vous pouvez le faire via les paramètres de votre téléphone. Le bouton ci-dessous vous amènera directement au menu Abonnement. %@ n'a pas accès au système de facturation d'Apple, nous ne sommes donc pas en mesure d'annuler en votre nom.";
+
+"TEXT_PLEASE_NOTE" = "Veuillez noter que la désinstallation de l'application n'annule pas automatiquement votre abonnement pour vous.";
+

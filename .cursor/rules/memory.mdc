@@ -1,0 +1,66 @@
+---
+alwaysApply: true
+---
+
+# 项目工程记忆加载规则
+
+## 📚 工程记忆文件位置
+
+本项目使用 CLAUDE.md 文件作为工程记忆载体。当你接手新任务时，应当主动加载相关的工程记忆文件以了解项目上下文。
+
+### 🎯 核心工程记忆
+
+1. **项目根目录记忆** (必读)
+   - 文件路径：`/Users/wangzhilong/Documents/capwords/CLAUDE.md`
+   - 内容：项目整体架构、技术栈、四大核心能力、项目结构、使用指南等
+   - 适用场景：任何新对话开始时、理解项目整体架构、查找模块位置
+
+### 📦 模块级工程记忆
+
+根据用户提到的功能模块，主动加载对应的 CLAUDE.md 文件：
+
+2. **付费转化模块**
+   - 文件路径：`/Users/wangzhilong/Documents/capwords/HackWeek/Features/VipConversion/CLAUDE.md`
+   - 适用场景：涉及付费、转化、订阅、试用等功能
+
+3. **单词本模块**
+   - 文件路径：`/Users/wangzhilong/Documents/capwords/HackWeek/Features/WordBook/CLAUDE.md`
+   - 适用场景：涉及单词学习、词库管理、学习计划等功能
+
+4. **用户引导模块**
+   - 文件路径：`/Users/wangzhilong/Documents/capwords/HackWeek/Features/Onboarding/CLAUDE.md`
+   - 适用场景：涉及新用户引导、欢迎页、语言选择等功能
+
+5. **导航系统模块**
+   - 文件路径：`/Users/wangzhilong/Documents/capwords/HackWeek/Incubator/ViewStack/CLAUDE.md`
+   - 适用场景：涉及页面导航、路由、页面跳转等功能
+
+## 🔄 加载策略
+
+### 自动加载时机
+1. **会话开始时**：自动加载根目录的 CLAUDE.md
+2. **模块相关任务**：根据用户提到的功能关键词，主动加载对应模块的 CLAUDE.md
+3. **架构疑问时**：主动查阅根目录 CLAUDE.md 中的架构说明
+4. **新功能开发时**：参考相似模块的 CLAUDE.md 了解代码模式
+
+### 关键词映射
+- "付费" / "转化" / "订阅" / "试用" / "VIP" → VipConversion/CLAUDE.md
+- "单词" / "词库" / "学习" / "WordBook" → WordBook/CLAUDE.md  
+- "引导" / "欢迎" / "Onboarding" → Onboarding/CLAUDE.md
+- "导航" / "路由" / "跳转" / "Navigator" → ViewStack/CLAUDE.md
+
+## 💡 使用原则
+
+1. **主动性**：不要等用户明确要求才加载工程记忆，而是根据任务需要主动加载
+2. **精准性**：只加载与当前任务相关的 CLAUDE.md 文件，避免信息过载
+3. **完整性**：在开始重要任务前，先加载相关记忆再给出建议
+4. **引用性**：在回答时，明确说明信息来源于哪个工程记忆文件
+
+## 📖 补充文档资源
+
+除了 CLAUDE.md 工程记忆外，项目还有完整的文档中心：
+- 文档中心入口：`Documentation/README.md`
+- 使用指南目录：`Documentation/Guides/`
+- 模块详细文档：`Documentation/Modules/`
+
+当 CLAUDE.md 中的信息不够详细时，可以进一步查阅这些文档。

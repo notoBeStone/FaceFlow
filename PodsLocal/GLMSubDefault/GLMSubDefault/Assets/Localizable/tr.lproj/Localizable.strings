@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Aboneliği Yönet";
+
+"text_member_since" = "Üyelik başl: %@";
+
+"text_membership_s" = "Üyelik: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 gün ücretsiz deneme)";
+
+"text_premium_free_day" = "Premium (%@ gün ücretsiz deneme)";
+
+"text_next_billing" = "Sonraki fatura tar: %@";
+
+"text_1_year" = "1 yıl";
+
+"text_billing_period" = "Fatura dönemi: %@";
+
+"TEXT_SDAY" = "%@/gün";
+
+"text_1_month" = "1 ay";
+
+"text_3_month" = "3 ay";
+
+"text_1_week" = "1 hafta";
+
+"text_free_trial_end" = "Ücretsiz deneme biter: %@";
+
+"text_s_days" = "%@ günler";
+
+"text_s_day" = "%@ gün";
+
+"text_manage_desc" = "Aşağıdaki \"App Store'a Git\" butonu sizi doğrudan abonelik menüsüne götürecektir. %@ Apple'ın faturalandırma sistemine erişimi yok, dolayısıyla sizin adınıza iptal edemiyoruz.";
+
+"text_manage_notice" = "Bildirimler";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Aboneliğiniz otomatik olarak yenilenecek ve ödeme iTunes hesabınıza yansıtılacaktır.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple'ın faturalandırma sistemi, deneme süresi sona ermeden 24 saat önce ücretlendirmeye başlar. Aboneliğinizi başarılı bir şekilde iptal etmek için lütfen bunu deneme süresi sona ermeden en az 24 saat önce yapın, aksi takdirde yine de ücretlendirilebilirsiniz.";
+
+"text_manage_notice_item2_2" = "Apple'ın faturalandırma sistemi, mevcut abonelik döneminin bitiminden 24 saat önce ücretlendirmeye başlar. Aboneliğinizi başarılı bir şekilde iptal etmek için lütfen bunu mevcut dönem sona ermeden en az 24 saat önce yapın, aksi takdirde sizden yine de ücret tahsil edilebilir.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Uygulamanın kaldırılması aboneliğinizi iptal etmez.";
+
+"text_go_cancel" = "İptal için App Store'e Git";
+
+"text_keep_plan" = "Planımla devam";
+
+"text_manage_desc" = "Abonelik iptalini telefonunuzun Ayarlar'ından yapabilirsiniz. Aşağıdaki tuş sizi doğrudan abonelik menüsüne götürür. %@'ın Apple faturalama sistemine erişimi yoktur, bu nedenle sizin adınıza iptal edemeyiz.";
+
+"TEXT_PLEASE_NOTE" = "Uygulamayı silmenin aboneliğinizi otomatik olarak iptal etmeyeceğini lütfen unutmayın.";
+

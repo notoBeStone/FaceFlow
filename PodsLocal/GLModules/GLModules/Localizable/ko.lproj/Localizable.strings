@@ -1,0 +1,6 @@
+"text_continue" = "계속";
+"text_failed" = "실패했습니다";
+"text_retore_empty" = "구매 기록이 없습니다";
+"text_no_connection" = "인터넷에 연결되지 않았습니다";
+"text_restore_membership" = "멤버십 복원";
+"text_restore_membership_desc" = "멤버십을 복원하려면 VIP 계정에 로그인해야 합니다. 그러면 현재 장치의 데이터로 대체될 것입니다. 계속하시겠습니까?";

@@ -1,0 +1,6 @@
+"text_continue" = "继续";
+"text_failed" = "失败";
+"text_retore_empty" = "您没有购买记录。";
+"text_no_connection" = "没有网络连接。";
+"text_restore_membership" = "恢复会员";
+"text_restore_membership_desc" = "需要登录您的VIP账户来恢复会员权益。这会替代此设备上的数据。是否继续？";

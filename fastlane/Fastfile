@@ -1,0 +1,250 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+require 'fileutils'
+fastlane_require 'xcodeproj'
+import_from_git(
+  url: "https://gitlab.glority.cn/tool/iostools/releasebot.git",
+  branch: "master",
+  path: "fastlane/Fastfile"
+)
+
+$PROJECT_NAME = "AquaAI"
+
+default_platform(:ios)
+$HOST_PREFIX = "    @objc dynamic public class var env: AppEnv {"
+$CUSTOM_HOST_PREFIX = "    @objc var host: String { "
+$HOST_FILE = "PodsLocal/GLConfig/GLConfig/GLConfig.swift"
+$scheme_map = {
+  :scheme => "AquaAI",
+  :google_service_file_path => 'AquaAI/SupportingFiles/GoogleService-Info.plist',
+  :ding_talk_hook => {
+    "test" => ["3be2303e92f2df5077182d6aa2c95195b817f2a551e48e3718ef35a424be292f"],
+    "stage" => ["3be2303e92f2df5077182d6aa2c95195b817f2a551e48e3718ef35a424be292f"],
+    "prod" => ["3be2303e92f2df5077182d6aa2c95195b817f2a551e48e3718ef35a424be292f"]
+  },
+  :host_file => $HOST_FILE,
+  :target => "#{$HOST_PREFIX}",
+  :replacement => {
+    "test" => "#{$HOST_PREFIX} .test }",
+    "stage" => "#{$HOST_PREFIX} .stage }",
+    "prod" => "#{$HOST_PREFIX} .prod }"
+  }
+}
+
+$head_commit_sha = $head_commit[:abbreviated_commit_hash]
+$base_commit_sha = base_commit_sha({
+  :ref_map => {
+  }
+})
+
+def changeHost (path, target, replacement)
+    t_file = File.new('temp.txt', 'w')
+    path = "#{ENV["PWD"]}/#{path}"
+    found_target = false
+    File.open(path, 'r') do |file|
+        file.each_line do |line|
+            if line.start_with?(target)
+                found_target = true
+                line = replacement
+            end
+            t_file.puts line
+        end
+    end
+    # 如果 target 是 $HOST_PREFIX 且未找到替换目标，抛出错误
+    unless found_target
+        if target == $HOST_PREFIX
+            raise "Error: Target string '#{$HOST_PREFIX}' not found in the '#{path}'."
+        end
+    end
+    t_file.close
+    FileUtils.mv(t_file.path, path)
+end
+
+platform :ios do
+  lane :git_status_check do | options |
+    ensure_git_status_clean
+  end
+
+  lane :build_test_ipa do | options |
+    increment_build_number(build_number: $buildNo)
+    add_badge(shield: options[:shield_string], no_badge: true, grayscale: options[:testing_ico])
+    test_build_path = "build"
+    scheme_config = options[:scheme_config]
+
+    if options[:host] != nil && options[:host].length > 0 && options[:host].start_with?("http")
+      host = "#{$CUSTOM_HOST_PREFIX} \"#{options[:host]}\" }"
+      changeHost(scheme_config[:host_file], $CUSTOM_HOST_PREFIX, host)
+    else
+      host = scheme_config[:replacement][options[:env]]
+      changeHost(scheme_config[:host_file], scheme_config[:target], host)
+    end
+    
+    system "echo #{host}"
+
+    build_ios_app(
+      skip_package_ipa: true,
+      workspace: "#{$PROJECT_NAME}.xcworkspace",
+      scheme: "AquaAI",
+      xcargs: "-allowProvisioningUpdates",
+      configuration: options[:build_configuration],
+      build_path: test_build_path,
+      buildlog_path: test_build_path,
+      archive_path: "#{test_build_path}/#{scheme_config[:scheme]}",
+      output_directory: test_build_path,
+      # suppress_xcode_output: true,
+      # silent: true
+    )
+    syncFiles({
+      "#{$project_root}/PrivacyInfo.lock" => "#{$project_root}/build/PrivacyInfo.lock",
+      "#{$project_root}/Podfile.lock" => "#{$project_root}/build/Podfile.lock",
+      "#{$project_root}/AdHocExportOptions.plist" => "#{$project_root}/build/ExportOptions.plist",
+      "#{$project_root}/#{$PROJECT_NAME}.xcodeproj" => "#{$project_root}/build/#{$PROJECT_NAME}.xcodeproj",
+      "#{$project_root}/#{scheme_config[:google_service_file_path]}" => "#{$project_root}/build/GoogleService-Info.plist"
+    })
+    change_log_path = "#{$project_root}/build/changelog.txt"
+    gen_changelog(
+      path: change_log_path,
+      base: $base_commit_sha,
+      head: $head_commit_sha,
+      filter: true
+    )
+    deploy_conf = create_deploy_info("#{$project_root}/deploytpl-test.json")
+    deploy_conf["changelog"]["base"] = $base_commit_sha
+    deploy_conf["changelog"]["head"] = $head_commit_sha
+    deploy_conf["ossconf"]["env"] = options[:deploy_method]
+    deploy_conf["deploy_method"] = options[:deploy_method]
+    deploy_conf["project_scheme"] = scheme_config[:scheme]
+    deploy_conf["ding_notify"] = scheme_config[:ding_talk_hook][options[:env]]
+    deploy_conf["current_host"] = host
+
+    archive_path = "#{$project_root}/#{test_build_path}/#{scheme_config[:scheme]}.xcarchive"
+    archive_plist = CFPropertyList::List.new(:file => File.join(archive_path, "Info.plist"))
+    archive_info = CFPropertyList.native_types(archive_plist.value)
+    File.open("#{$project_root}/build/deploy.json", 'w') { |f| f.write(deploy_conf.to_json) }
+  end
+
+  lane :canary_build do | options |
+    build_test_ipa(
+      build_configuration:"Release",
+      deploy_method:"Adhoc",
+      shield_string:"#{$head_commit[:abbreviated_commit_hash]}-#{$buildNo}-blue",
+      testing_ico:true,
+      scheme_config:$scheme_map,
+      env: options[:env] || "stage",
+      host: options[:host]
+    )
+  end
+
+  lane :beta_build do
+    build_test_ipa(
+      build_configuration:"Release",
+      deploy_method:"Adhoc",
+      shield_string:"#{$head_commit[:abbreviated_commit_hash]}-#{$buildNo}-blue",
+      testing_ico:true,
+      scheme_config:$scheme_map,
+      env:"stage"
+    )
+  end
+
+  lane :datav_beta_build do
+    build_test_ipa(
+      build_configuration:"Release",
+      deploy_method:"Adhoc",
+      testing_ico:true,
+      shield_string:"datav-stage-blue",
+      scheme_config:$scheme_map,
+      env:"stage"
+    )
+  end
+
+  lane :build_rc_pack do | options |
+    increment_build_number(build_number: $buildNo)
+    scheme_config = options[:scheme_config]
+    changeHost(scheme_config[:host_file], scheme_config[:target], scheme_config[:replacement]["prod"])
+
+    shield_string = options[:shield_string]
+    if shield_string != nil && shield_string.length != 0
+     add_badge(shield: shield_string, no_badge: true, grayscale: true)
+    end
+
+    build_ios_app(
+      skip_package_ipa: true,
+      workspace: "#{$PROJECT_NAME}.xcworkspace",
+      scheme: "AquaAI",
+      configuration: "Release",
+      xcargs: "-allowProvisioningUpdates",
+      scheme: scheme_config[:scheme],
+      build_path: "build", #dir for archive
+      archive_path: "build/#{scheme_config[:scheme]}", #name for archive
+      buildlog_path: "build", 
+      output_directory: "build",
+      suppress_xcode_output: true,
+      silent: true
+    )
+    syncFiles({
+      "#{$project_root}/#{$PROJECT_NAME}.xcodeproj" => "#{$project_root}/build/#{$PROJECT_NAME}.xcodeproj",
+      options[:export_options] => "#{$project_root}/build/ExportOptions.plist",
+      "#{$project_root}/Podfile.lock" => "#{$project_root}/build/Podfile.lock",
+      "#{$project_root}/PrivacyInfo.lock" => "#{$project_root}/build/PrivacyInfo.lock",
+      "#{$project_root}/#{scheme_config[:google_service_file_path]}" => "#{$project_root}/build/GoogleService-Info.plist"
+    })
+    change_log_path = "#{$project_root}/build/changelog.txt"
+    gen_changelog(
+      path: change_log_path,
+      base: $base_commit_sha,
+      head: $head_commit_sha,
+      filter: true
+    )
+    deploy_conf = options[:deploy_tpl]
+    deploy_conf["changelog"]["base"] = $base_commit_sha
+    deploy_conf["changelog"]["head"] = $head_commit_sha
+    deploy_conf["deploy_method"] = "rc"
+    deploy_conf["ding_notify"] = scheme_config[:ding_talk_hook]["prod"]
+    deploy_conf["project_scheme"] = scheme_config[:scheme]
+    File.open("#{$project_root}/build/deploy.json", 'w') { |f| f.write(deploy_conf.to_json) }
+  end
+
+
+  lane :rc_build do | options |
+    scheme_config = $scheme_map
+    deploy_info = create_deploy_info("#{$project_root}/deploytpl-rc.json")
+    build_rc_pack(
+      deploy_tpl: deploy_info,
+      export_options: "#{$project_root}/AppStoreExportOptions.plist",
+      scheme_config: scheme_config
+    )
+  end
+
+  lane :datav_rc_build do | options |
+    scheme_config = $scheme_map
+    deploy_info = create_deploy_info("#{$project_root}/deploytpl-rc.json")
+    build_rc_pack(
+      deploy_tpl: deploy_info,
+      export_options: "#{$project_root}/AppStoreExportOptions.plist",
+      scheme_config: scheme_config,
+      shield_string: "datav-prod-blue"
+    )
+  end
+
+  lane :deploy_build do | option |
+    trigger_token = ENV["DEPLOY_BOT_TOKEN"]
+    deploy_env = option[:env] || "stage"
+    trigger_deploy(
+      config: "#{$project_root}/build/deploy.json",
+      env: "#{deploy_env}"
+    )
+  end
+
+end

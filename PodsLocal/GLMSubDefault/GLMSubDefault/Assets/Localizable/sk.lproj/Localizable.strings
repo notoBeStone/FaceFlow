@@ -1,0 +1,59 @@
+"text_manage_subscription" = "Spravovať predplatné";
+
+"text_member_since" = "Členom od:  %@";
+
+"text_membership_s" = "Členstvo: %@";
+
+"text_premium" = "Prémia";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7-dňová skúšobná verzia)";
+
+"text_premium_free_day" = "Premium (%@-dňová skúšobná verzia)";
+
+"text_next_billing" = "Ďalší dátum fakturácie: %@";
+
+"text_1_year" = "1 Rok";
+
+"text_billing_period" = "Fakturačná doba: %@";
+
+"TEXT_SDAY" = "%@/deň";
+
+"text_1_month" = "1 mesiac";
+
+"text_3_month" = "3 mesiace";
+
+"text_1_week" = "1 týždeň";
+
+"text_free_trial_end" = "Bezplatná skúšobná verzia končí v: %@";
+
+"text_s_days" = "%@ dní";
+
+"text_s_day" = "%@ deň";
+
+"text_manage_desc" = "The \"Go to App Store\" button below will take you directly to the subscription menu. %@ does not have access to Apple's billing system, so we are not able to cancel on your behalf.";
+
+"text_manage_notice" = "Notices";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Your subscription will auto-renew, with payment charged to your iTunes account.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple's billing system starts charging 24 hours before the trial ends. To successfully cancel your subscription, please do so at least 24 hours before the trial ends, or you may still be charged.";
+
+"text_manage_notice_item2_2" = "Apple's billing system starts charging 24 hours before the current subscription period ends. To successfully cancel your subscription, please do so at least 24 hours before the current period ends, or you may still be charged.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Uninstalling the app won't cancel your subscription.";
+
+
+"text_go_cancel" = "Prejdite na App Store a zrušte";
+
+"text_keep_plan" = "Ohrani moj načrt";
+
+"text_manage_desc" = "To lahko storite v Nastavitve vašega telefona. Spodnji gumb vas bo premestil neposredno na meni naročnine. %@ nima dostopa do plačilnega sistema Apple-a, zatorej ne moremo ničesar preklicati v vašem imenu.";
+
+"TEXT_PLEASE_NOTE" = "Prosimo pomnite, da odstranitev aplikacije samodejno ne prekliče vaše naročnine.";
+

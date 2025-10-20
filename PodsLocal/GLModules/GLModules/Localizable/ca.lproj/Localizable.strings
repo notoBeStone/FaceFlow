@@ -1,0 +1,6 @@
+"text_continue" = "Continua";
+"text_failed" = "Fallit";
+"text_retore_empty" = "No teniu cap registre de compra";
+"text_no_connection" = "Sense connexió a internet";
+"text_restore_membership" = "Restaura la Membresia";
+"text_restore_membership_desc" = "Per restaurar la vostra membresia, necessitem iniciar sessió en el vostre compte VIP. Això substituirà les dades de l'aparell actual. Voleu continuar?";

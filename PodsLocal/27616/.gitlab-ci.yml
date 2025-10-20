@@ -1,0 +1,5 @@
+
+include:
+  - project: 'component/devops/ci-template'
+    ref: '$CI_TEMPLATE_VERSION'
+    file: '/ios/templates/ci-channelization.yml'

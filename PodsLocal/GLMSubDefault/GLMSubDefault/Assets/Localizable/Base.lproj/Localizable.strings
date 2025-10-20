@@ -1,0 +1,54 @@
+"text_manage_subscription" = "Manage Subscription";
+
+"text_member_since" = "Member since: %@";
+
+"text_membership_s" = "Membership: %@";
+
+"text_free_trial_end" = "Free trial ends in: %@";
+
+"text_billing_period" = "Billing period: %@";
+
+"text_next_billing" = "Next billing date: %@";
+
+"text_premium_free_day" = "Premium (%@-day free trial)";
+
+"text_s_days" = "%@ days";
+
+"text_s_day" = "%@ day";
+
+"text_premium" = "Premium";
+
+"text_1_year" = "1 year";
+
+"text_1_month" = "1 month";
+
+"text_3_month" = "3 months";
+
+"text_1_week" = "1 week";
+
+"text_manage_desc" = "The \"Go to App Store\" button below will take you directly to the subscription menu. %@ does not have access to Apple's billing system, so we are not able to cancel on your behalf.";
+
+"text_manage_notice" = "Notices";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Your subscription will auto-renew, with payment charged to your iTunes account.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple's billing system starts charging 24 hours before the trial ends. To successfully cancel your subscription, please do so at least 24 hours before the trial ends, or you may still be charged.";
+
+"text_manage_notice_item2_2" = "Apple's billing system starts charging 24 hours before the current subscription period ends. To successfully cancel your subscription, please do so at least 24 hours before the current period ends, or you may still be charged.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Uninstalling the app won't cancel your subscription.";
+
+"text_keep_plan" = "Keep my plan";
+
+"text_go_cancel" = "Go to App Store to Cancel";
+
+
+
+
+

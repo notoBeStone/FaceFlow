@@ -1,0 +1,1115 @@
+PODS:
+  - Adjust (4.38.0):
+    - Adjust/Core (= 4.38.0)
+  - Adjust/Core (4.38.0)
+  - Alamofire (5.9.1)
+  - AppConfig (0.1.0):
+    - GLABTestingExtension
+    - GLAccountExtension
+    - GLCore
+    - GLDatabase
+    - GLPurchaseExtension
+    - GLPurchaseUIExtension
+    - GLResource
+    - GLUserTag_Extension
+    - GLUtils
+    - GLWidget
+  - AppDebugger (0.1.0):
+    - AppDebugger/CacheDebugger (= 0.1.0)
+    - AppDebugger/HostDebugger (= 0.1.0)
+    - DGMessageAPI
+    - GLCore
+    - GLDebugger (>= 0.1.5)
+    - GLUtils
+    - GLWidget
+  - AppDebugger/CacheDebugger (0.1.0):
+    - AppRepository
+    - DGMessageAPI
+    - GLAccountExtension
+    - GLCore
+    - GLDatabase
+    - GLDebugger (>= 0.1.5)
+    - GLUtils
+    - GLWidget
+  - AppDebugger/HostDebugger (0.1.0):
+    - DGMessageAPI
+    - GLConfig
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLDebugger (>= 0.1.5)
+    - GLUtils
+    - GLWidget
+  - AppDebuggerExtension (0.1.0):
+    - GLCore
+  - AppModels (0.1.0):
+    - DGMessageAPI
+    - GLComponentAPI
+    - GLCore
+    - GLImageProcess
+    - GLWebImageExtension
+    - GLWidget
+  - AppRepository (0.1.0):
+    - AppModels
+    - DGMessageAPI
+    - GLABTestingExtension
+    - GLAccountExtension
+    - GLBaseApi
+    - GLCMSSearch_Extension
+    - GLComponentAPI
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLImageProcess
+    - GLMP
+    - GLNetworking
+    - GLNetworkingMessage
+    - GLResource
+    - GLUtils
+    - GLWidget
+  - AWSCore (2.34.2)
+  - AWSS3 (2.34.2):
+    - AWSCore (= 2.34.2)
+  - DGMasonry (1.0.1)
+  - DGMessageAPI (0.15.0)
+  - DGPicker (0.3.2):
+    - DGPicker/Resources (= 0.3.2)
+    - GLResource (>= 0.2.2)
+    - GLUtils
+  - DGPicker/Resources (0.3.2):
+    - GLResource (>= 0.2.2)
+    - GLUtils
+  - ExytePopupView (3.0.0):
+    - SwiftUIIntrospect
+  - Firebase/Analytics (10.22.0):
+    - Firebase/Core
+  - Firebase/Core (10.22.0):
+    - Firebase/CoreOnly
+    - FirebaseAnalytics (~> 10.22.0)
+  - Firebase/CoreOnly (10.22.0):
+    - FirebaseCore (= 10.22.0)
+  - Firebase/Crashlytics (10.22.0):
+    - Firebase/CoreOnly
+    - FirebaseCrashlytics (~> 10.22.0)
+  - FirebaseABTesting (10.23.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseAnalytics (10.22.0):
+    - FirebaseAnalytics/AdIdSupport (= 10.22.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - FirebaseAnalytics/AdIdSupport (10.22.0):
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleAppMeasurement (= 10.22.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - FirebaseCore (10.22.0):
+    - FirebaseCoreInternal (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.12)
+    - GoogleUtilities/Logger (~> 7.12)
+  - FirebaseCoreExtension (10.23.0):
+    - FirebaseCore (~> 10.0)
+  - FirebaseCoreInternal (10.23.0):
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseCrashlytics (10.22.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseSessions (~> 10.5)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.8)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (~> 2.1)
+  - FirebaseInstallations (10.23.0):
+    - FirebaseCore (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - GoogleUtilities/UserDefaults (~> 7.8)
+    - PromisesObjC (~> 2.1)
+  - FirebaseRemoteConfig (10.22.0):
+    - FirebaseABTesting (~> 10.0)
+    - FirebaseCore (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - FirebaseSharedSwift (~> 10.0)
+    - GoogleUtilities/Environment (~> 7.8)
+    - "GoogleUtilities/NSData+zlib (~> 7.8)"
+  - FirebaseSessions (10.23.0):
+    - FirebaseCore (~> 10.5)
+    - FirebaseCoreExtension (~> 10.0)
+    - FirebaseInstallations (~> 10.0)
+    - GoogleDataTransport (~> 9.2)
+    - GoogleUtilities/Environment (~> 7.10)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesSwift (~> 2.1)
+  - FirebaseSharedSwift (10.23.0)
+  - GLABTesting (5.2.0):
+    - GLAccountExtension
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLNetworkingMessage
+    - GLResource
+    - GLTrackingExtension
+  - GLABTestingDebugger (4.2.2):
+    - GLABTestingExtension
+    - GLCore
+    - GLDebugger
+  - GLABTestingExtension (5.2.0):
+    - GLConfig_Extension
+    - GLCore
+  - GLAccount (4.2.1):
+    - GLAdjustExtension (>= 2.1.0)
+    - GLComponentAPI (>= 1.0.1)
+    - GLConfig_Extension (>= 0.13.0)
+    - GLCore
+    - GLDatabase (>= 0.2.2)
+    - GLLogging
+    - GLNetworkingMessage (>= 0.2.9)
+    - GLPurchaseExtension
+    - GLTrackingExtension (>= 0.12.0)
+    - GLUtils (>= 2.0.2)
+    - GLWebImageExtension
+  - GLAccountExtension (4.2.0):
+    - GLComponentAPI/User
+    - GLComponentAPI/Vip
+    - GLCore
+  - GLAccountUI (0.1.12):
+    - GLAccountExtension (>= 3.0.0)
+    - GLAccountUI/Resources (= 0.1.12)
+    - GLAccountUIExtension (>= 0.1.5)
+    - GLAnalyticsUI
+    - GLCore
+    - GLDatabase
+    - GLResource
+    - GLUtils
+    - GLWidget (>= 2.0.9)
+    - SnapKit
+  - GLAccountUI/Resources (0.1.12):
+    - GLAccountExtension (>= 3.0.0)
+    - GLAccountUIExtension (>= 0.1.5)
+    - GLAnalyticsUI
+    - GLCore
+    - GLDatabase
+    - GLResource
+    - GLUtils
+    - GLWidget (>= 2.0.9)
+    - SnapKit
+  - GLAccountUIExtension (0.1.6):
+    - GLCore
+  - GLAdjust (3.2.0):
+    - Adjust (= 4.38.0)
+    - DGMessageAPI
+    - GLAdjustExtension (>= 2.3.0)
+    - GLAgreement_Extension (>= 1.5.4)
+    - GLConfig_Extension (>= 0.20.0)
+    - GLCore
+    - GLTrackingExtension
+  - GLAdjustExtension (3.1.0):
+    - GLCore
+  - GLAgreement (1.6.1):
+    - DGMasonry
+    - GLAccountExtension
+    - GLAdjustExtension (>= 2.2.0)
+    - GLAgreement_Extension
+    - GLConfig_Extension
+    - GLCore
+    - GLRemoteResouce
+    - GLResource (>= 0.2.0)
+    - GLTextKit (>= 1.1.0)
+    - GLTrackingExtension (>= 0.14.0)
+    - GLUtils (>= 2.29.0)
+    - SnapKit
+  - GLAgreement_Extension (1.6.0):
+    - GLCore
+  - GLAnalytics (0.14.6):
+    - GLAnalyticsUI
+    - GLConfig_Extension (>= 0.6.0)
+    - GLCore
+    - GLDatabase (>= 0.2.2)
+    - GLLogging (>= 1.1.0)
+    - GLNetworking (>= 0.2.10)
+    - GLNetworkingMessage (>= 0.5.1)
+    - GLResource (>= 0.2.1)
+    - GLTrackingExtension (>= 0.14.0)
+    - GLUtils (>= 1.5.0)
+  - GLAnalyticsDebugger (0.3.7):
+    - GLAnalyticsDebugger/Bridge (= 0.3.7)
+    - GLAnalyticsDebugger/BridgeExtension (= 0.3.7)
+    - GLAnalyticsDebugger/GLDataV (= 0.3.7)
+    - GLAnalyticsDebugger/GLTrackingDebugger (= 0.3.7)
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+  - GLAnalyticsDebugger/Bridge (0.3.7):
+    - GLAnalytics (>= 0.11.6)
+    - GLAnalyticsDebugger/BridgeExtension
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+  - GLAnalyticsDebugger/BridgeExtension (0.3.7):
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+  - GLAnalyticsDebugger/GLDataV (0.3.7):
+    - DGMessageAPI
+    - GLConfig_Extension
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+  - GLAnalyticsDebugger/GLTrackingDebugger (0.3.7):
+    - GLAnalyticsDebugger/BridgeExtension
+    - GLAnalyticsDebugger/GLTrackingDebugger/Resources (= 0.3.7)
+    - GLAnalyticsUI (>= 0.1.5)
+    - GLConfig_Extension
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+    - GLUtils (>= 2.2.2)
+    - GLWidget (>= 2.0.5)
+  - GLAnalyticsDebugger/GLTrackingDebugger/Resources (0.3.7):
+    - GLAnalyticsDebugger/BridgeExtension
+    - GLAnalyticsUI (>= 0.1.5)
+    - GLConfig_Extension
+    - GLCore
+    - GLDebugger (>= 0.1.8)
+    - GLUtils (>= 2.2.2)
+    - GLWidget (>= 2.0.5)
+  - GLAnalyticsUI (0.6.1):
+    - GLCore
+    - GLTrackingExtension
+    - GLUtils
+  - GLAwsUploader (4.1.0):
+    - AWSCore (= 2.34.2)
+    - AWSS3 (= 2.34.2)
+    - GLAccountExtension
+    - GLConfig_Extension (>= 0.8.0)
+    - GLCore (>= 1.0.1)
+    - GLLogging (>= 1.1.0)
+    - GLNetworkingMessage (>= 0.2.12)
+    - GLTrackingEvents (>= 2.0.0)
+    - GLTrackingExtension (>= 0.8.0)
+  - GLBaseApi (0.7.0)
+  - GLBizStorage (0.1.0):
+    - AppModels
+    - DGMessageAPI
+    - GLABTestingExtension
+    - GLAccountExtension
+    - GLBaseApi
+    - GLCMSSearch_Extension
+    - GLComponentAPI
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLImageProcess
+    - GLMP
+    - GLNetworking
+    - GLNetworkingMessage
+    - GLResource
+    - GLUtils
+    - GLWidget
+    - GRDB.swift
+  - GLCamera (1.3.0):
+    - GLCamera/Resources (= 1.3.0)
+    - GLCore
+    - GLResource (>= 0.2.2)
+    - GLTrackingExtension
+  - GLCamera/Resources (1.3.0):
+    - GLCore
+    - GLResource (>= 0.2.2)
+    - GLTrackingExtension
+  - GLCloudUploader_Extension (4.0.0):
+    - GLCore
+  - GLCMSItemWebView (3.0.0):
+    - DGMasonry
+    - GLComponentAPI (>= 3.0.0)
+    - GLCore
+    - GLTrackingExtension
+    - GLWebView
+  - GLCMSSearch_Extension (5.0.0):
+    - GLCore
+  - GLComponentAPI (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+    - GLComponentAPI/Cms (= 3.2.0)
+    - GLComponentAPI/Item (= 3.2.0)
+    - GLComponentAPI/Share (= 3.2.0)
+    - GLComponentAPI/Support (= 3.2.0)
+    - GLComponentAPI/User (= 3.2.0)
+    - GLComponentAPI/Vip (= 3.2.0)
+  - GLComponentAPI/Cms (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+  - GLComponentAPI/Item (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+    - GLComponentAPI/Cms
+  - GLComponentAPI/Share (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+  - GLComponentAPI/Support (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+    - GLComponentAPI/Cms
+  - GLComponentAPI/User (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+  - GLComponentAPI/Vip (3.2.0):
+    - DGMessageAPI
+    - GLBaseApi
+  - GLConfig (0.1.0):
+    - GLCore
+    - GLPurchaseExtension
+    - GLPurchaseUIExtension
+  - GLConfig_Extension (0.23.0):
+    - GLCore
+  - GLCore (1.0.2)
+  - GLDatabase (0.7.0):
+    - GLConfig_Extension
+    - GLCore
+    - GLTrackingExtension
+  - GLDebugger (0.2.0):
+    - GLDatabase
+    - GLDebugger/Resources (= 0.2.0)
+    - GLResource
+    - GLUtils (>= 2.29.0)
+    - GLWidget
+    - SnapKit (>= 5.0.1)
+  - GLDebugger/Resources (0.2.0):
+    - GLDatabase
+    - GLResource
+    - GLUtils (>= 2.29.0)
+    - GLWidget
+    - SnapKit (>= 5.0.1)
+  - GLDebuggerExtension (0.1.0):
+    - GLCore
+  - GLDependency (1.0.0):
+    - GLAdjust (>= 2.3.2)
+    - GLDatabase (>= 0.2.5)
+  - GLFeedback (1.2.3):
+    - GLCore
+    - GLFeedbackExtension
+    - GLResource
+    - GLTrackingExtension
+    - GLWidget
+  - GLFeedbackExtension (1.2.3):
+    - GLCore
+  - GLFirebase (1.6.3):
+    - Firebase/Analytics (= 10.22.0)
+    - Firebase/Crashlytics (= 10.22.0)
+    - FirebaseABTesting (= 10.23.0)
+    - FirebaseCoreExtension (= 10.23.0)
+    - FirebaseCoreInternal (= 10.23.0)
+    - FirebaseInstallations (= 10.23.0)
+    - FirebaseRemoteConfig (= 10.22.0)
+    - FirebaseSessions (= 10.23.0)
+    - FirebaseSharedSwift (= 10.23.0)
+    - GLLogging (>= 1.1.0)
+    - GoogleUtilities (= 7.13.0)
+  - GLImageProcess (0.5.2)
+  - GLLogging (1.2.3):
+    - GLConfig_Extension
+    - GLCore
+  - GLLottie (1.5.0):
+    - lottie-ios (= 4.4.0)
+  - GLManageSubscriptionBase (2.0.7):
+    - DGMasonry
+    - GLAccountExtension
+    - GLComponentAPI
+    - GLConfig_Extension
+    - GLCore
+    - GLNetworkingMessage
+    - GLPurchaseExtension (>= 2.0.0)
+    - GLTrackingExtension
+    - GLUtils
+  - GLMarkdown (1.1.1):
+    - GLTextKit
+  - GLModules (0.1.0):
+    - AppConfig
+    - GLAnalyticsUI
+    - GLCore
+    - GLModules/AppLanuch (= 0.1.0)
+    - GLModules/AppPurchase (= 0.1.0)
+    - GLModules/Login (= 0.1.0)
+    - GLModules/Resources (= 0.1.0)
+    - GLModules/Support (= 0.1.0)
+    - GLMP
+    - GLUtils
+  - GLModules/AppLanuch (0.1.0):
+    - AppConfig
+    - AppDebuggerExtension
+    - GLAdjustExtension
+    - GLAnalyticsUI
+    - GLCore
+    - GLDebuggerExtension
+    - GLLottie
+    - GLMP
+    - GLPopupExtension
+    - GLTrackingExtension
+    - GLUtils
+    - GLWebView
+  - GLModules/AppPurchase (0.1.0):
+    - AppConfig
+    - GLAnalyticsUI
+    - GLCore
+    - GLMP
+    - GLPurchaseExtension
+    - GLPurchaseUIExtension
+    - GLUtils
+    - GLWidget
+    - SnapKit
+  - GLModules/Login (0.1.0):
+    - AppConfig
+    - GLAnalyticsUI
+    - GLCore
+    - GLMP
+    - GLUtils
+  - GLModules/Resources (0.1.0):
+    - AppConfig
+    - GLAnalyticsUI
+    - GLCore
+    - GLMP
+    - GLUtils
+  - GLModules/Support (0.1.0):
+    - AppConfig
+    - DGMessageAPI
+    - GLAnalyticsUI
+    - GLComponentAPI
+    - GLCore
+    - GLMP
+    - GLUtils
+  - GLMP (0.1.1):
+    - DGMessageAPI
+    - GLABTestingExtension
+    - GLAccountExtension
+    - GLAgreement_Extension
+    - GLBaseApi
+    - GLCloudUploader_Extension
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLNetworkingMessage
+    - GLResource
+    - GLTrackingExtension
+    - GLUtils
+    - GLWebImageExtension
+    - GRDB.swift
+  - GLMSubDefault (1.0.0):
+    - GLAccountExtension
+    - GLAnalyticsUI
+    - GLComponentAPI
+    - GLCore
+    - GLManageSubscriptionBase
+    - GLPurchaseExtension
+    - GLResource
+    - GLTrackingExtension
+    - GLUtils
+    - GLWidget
+  - GLNetworking (0.5.0):
+    - Alamofire (= 5.9.1)
+  - GLNetworkingMessage (0.7.2):
+    - DGMessageAPI (>= 0.8.1)
+    - GLAccountExtension (>= 1.1.0)
+    - GLAgreement_Extension (>= 1.5.0)
+    - GLBaseApi
+    - GLConfig_Extension
+    - GLCore
+    - GLNetworking (<= 1.0.0, >= 0.4.0)
+    - GLSBuilderFramework (~> 1.0.0)
+    - GLTrackingExtension
+  - GLOfferCode (1.0.2):
+    - GLABTestingExtension
+    - GLConfig_Extension
+    - GLCore
+    - GLOfferCode_Extension
+    - GLPurchaseExtension
+    - GLTrackingExtension
+  - GLOfferCode_Extension (1.0.1):
+    - GLCore
+  - GLPopup (0.4.0):
+    - GLABTestingExtension
+    - GLAdjustExtension
+    - GLAnalyticsUI
+    - GLConfig_Extension (>= 0.14.0)
+    - GLCore
+    - GLDatabase
+    - GLPopup/Resources (= 0.4.0)
+    - GLPopupExtension
+    - GLPurchaseUI
+    - GLResource
+    - GLTrackingExtension
+    - GLUtils (>= 0.29.0)
+    - GLWidget
+    - SnapKit
+  - GLPopup/Resources (0.4.0):
+    - GLABTestingExtension
+    - GLAdjustExtension
+    - GLAnalyticsUI
+    - GLConfig_Extension (>= 0.14.0)
+    - GLCore
+    - GLDatabase
+    - GLPopupExtension
+    - GLPurchaseUI
+    - GLResource
+    - GLTrackingExtension
+    - GLUtils (>= 0.29.0)
+    - GLWidget
+    - SnapKit
+  - GLPopupExtension (0.4.0):
+    - GLCore
+  - GLPurchase (4.3.0):
+    - DGMessageAPI
+    - GLAccountExtension
+    - GLAdjustExtension
+    - GLConfig_Extension (>= 0.21.0)
+    - GLCore
+    - GLNetworkingMessage
+    - GLPurchaseExtension (>= 4.0.1)
+    - GLTrackingExtension (>= 0.16.0)
+    - GLUtils
+  - GLPurchaseExtension (4.0.1):
+    - GLCore
+  - GLPurchaseUI (7.2.2):
+    - DGMasonry
+    - GLABTestingExtension
+    - GLAccountExtension (>= 4.0.0)
+    - GLAdjustExtension
+    - GLAgreement_Extension
+    - GLAnalyticsUI (>= 0.3.0)
+    - GLBaseApi
+    - GLComponentAPI
+    - GLConfig_Extension (>= 0.21.0)
+    - GLCore
+    - GLDatabase
+    - GLNetworking (>= 0.4.0)
+    - GLNetworkingMessage (>= 0.6.2)
+    - GLOfferCode_Extension
+    - GLPurchase (>= 4.1.1)
+    - GLPurchaseExtension (>= 2.0.0)
+    - GLPurchaseUIExtension (>= 7.2.0)
+    - GLRemoteResouce
+    - GLTextKit (>= 1.1.1)
+    - GLTrackingExtension
+    - GLUserTag_Extension
+    - GLUtils (>= 2.7.0)
+    - GLWebImageExtension
+    - GLWidget
+    - IQKeyboardManager
+  - GLPurchaseUIExtension (7.2.0):
+    - GLCore
+  - GLRemoteResouce (0.1.1):
+    - GLCore
+    - GLTrackingExtension
+    - GLWebImageExtension
+  - GLResource (0.10.1):
+    - GLResource/Resources (= 0.10.1)
+  - GLResource/Resources (0.10.1)
+  - GLSBuilderFramework (1.0.1)
+  - GLShare (1.0.6):
+    - GLAnalyticsUI
+    - GLCore
+    - GLShareExtension
+    - GLTrackingExtension
+    - SnapKit
+  - GLShareExtension (1.0.4):
+    - GLCore
+  - GLSurvey (1.2.2):
+    - GLABTestingExtension (>= 5.1.1)
+    - GLAccountExtension
+    - GLCore
+    - GLResource (>= 0.2.0)
+    - GLTrackingEvents
+    - GLTrackingExtension
+    - GLUserTag_Extension
+    - GLUtils (>= 1.5.0)
+    - SnapKit
+  - GLSurvey_Extension (1.1.0):
+    - GLCore
+  - GLSurveyStyle1 (1.0.2):
+    - DGMasonry
+    - GLSurvey (>= 1.2.0)
+  - GLTextKit (1.1.4)
+  - GLTrackingEvents (2.2.1):
+    - DGMessageAPI (>= 0.7)
+    - GLCore (>= 1.0.1)
+    - GLTrackingEvents/Core (= 2.2.1)
+    - GLTrackingEvents/GLTrackingItemTag (= 2.2.1)
+    - GLTrackingExtension (>= 0.7.0)
+  - GLTrackingEvents/Core (2.2.1):
+    - DGMessageAPI (>= 0.7)
+    - GLCore (>= 1.0.1)
+    - GLTrackingExtension (>= 0.7.0)
+  - GLTrackingEvents/GLTrackingItemTag (2.2.1):
+    - DGMessageAPI (>= 0.7)
+    - GLCore (>= 1.0.1)
+    - GLTrackingEvents/Core
+    - GLTrackingExtension (>= 0.7.0)
+  - GLTrackingExtension (0.16.0):
+    - GLCore
+  - GLUserTag (1.1.2):
+    - GLABTestingExtension
+    - GLCore
+    - GLDatabase
+  - GLUserTag_Extension (1.1.1):
+    - GLCore
+  - GLUtils (2.32.2):
+    - DGMasonry (= 1.0.1)
+    - ReactiveObjC (= 3.1.1)
+    - SnapKit (= 5.7.1)
+  - GLWebImage (2.4.0):
+    - GLABTestingExtension
+    - GLCore
+    - GLDatabase
+    - GLImageProcess
+    - GLNetworkingMessage (>= 0.2.12)
+    - GLTrackingExtension
+    - GLUtils (>= 2.3.2)
+    - Kingfisher (= 7.10.0)
+  - GLWebImageExtension (2.2.0):
+    - GLCore
+  - GLWebView (1.0.0):
+    - GLUtils (>= 2.31.5)
+  - GLWidget (2.20.4):
+    - GLCore
+    - GLImageProcess
+    - GLLogging
+    - GLResource (>= 0.6.3)
+    - GLTrackingExtension
+    - GLUtils (>= 2.32.2)
+    - GLWebImage (>= 2.2.1)
+    - GLWebImageExtension (>= 2.2.0)
+    - GLWidget/Resources (= 2.20.4)
+    - SnapKit (>= 5.0.1)
+    - SwiftUIIntrospect (>= 1.1.1)
+  - GLWidget/Resources (2.20.4):
+    - GLCore
+    - GLImageProcess
+    - GLLogging
+    - GLResource (>= 0.6.3)
+    - GLTrackingExtension
+    - GLUtils (>= 2.32.2)
+    - GLWebImage (>= 2.2.1)
+    - GLWebImageExtension (>= 2.2.0)
+    - SnapKit (>= 5.0.1)
+    - SwiftUIIntrospect (>= 1.1.1)
+  - GoogleAppMeasurement (10.22.0):
+    - GoogleAppMeasurement/AdIdSupport (= 10.22.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleAppMeasurement/AdIdSupport (10.22.0):
+    - GoogleAppMeasurement/WithoutAdIdSupport (= 10.22.0)
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleAppMeasurement/WithoutAdIdSupport (10.22.0):
+    - GoogleUtilities/AppDelegateSwizzler (~> 7.11)
+    - GoogleUtilities/MethodSwizzler (~> 7.11)
+    - GoogleUtilities/Network (~> 7.11)
+    - "GoogleUtilities/NSData+zlib (~> 7.11)"
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+  - GoogleDataTransport (9.4.1):
+    - GoogleUtilities/Environment (~> 7.7)
+    - nanopb (< 2.30911.0, >= 2.30908.0)
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities (7.13.0):
+    - GoogleUtilities/AppDelegateSwizzler (= 7.13.0)
+    - GoogleUtilities/Environment (= 7.13.0)
+    - GoogleUtilities/ISASwizzler (= 7.13.0)
+    - GoogleUtilities/Logger (= 7.13.0)
+    - GoogleUtilities/MethodSwizzler (= 7.13.0)
+    - GoogleUtilities/Network (= 7.13.0)
+    - "GoogleUtilities/NSData+zlib (= 7.13.0)"
+    - GoogleUtilities/Privacy (= 7.13.0)
+    - GoogleUtilities/Reachability (= 7.13.0)
+    - GoogleUtilities/SwizzlerTestHelpers (= 7.13.0)
+    - GoogleUtilities/UserDefaults (= 7.13.0)
+  - GoogleUtilities/AppDelegateSwizzler (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Network
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Environment (7.13.0):
+    - GoogleUtilities/Privacy
+    - PromisesObjC (< 3.0, >= 1.2)
+  - GoogleUtilities/ISASwizzler (7.13.0):
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Logger (7.13.0):
+    - GoogleUtilities/Environment
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/MethodSwizzler (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Network (7.13.0):
+    - GoogleUtilities/Logger
+    - "GoogleUtilities/NSData+zlib"
+    - GoogleUtilities/Privacy
+    - GoogleUtilities/Reachability
+  - "GoogleUtilities/NSData+zlib (7.13.0)":
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/Privacy (7.13.0)
+  - GoogleUtilities/Reachability (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GoogleUtilities/SwizzlerTestHelpers (7.13.0):
+    - GoogleUtilities/MethodSwizzler
+  - GoogleUtilities/UserDefaults (7.13.0):
+    - GoogleUtilities/Logger
+    - GoogleUtilities/Privacy
+  - GRDB.swift (6.29.3):
+    - GRDB.swift/standard (= 6.29.3)
+  - GRDB.swift/standard (6.29.3)
+  - InjectHotReload (1.4.0)
+  - IQKeyboardManager (6.5.19)
+  - Kingfisher (7.10.0)
+  - lottie-ios (4.4.0)
+  - nanopb (2.30910.0):
+    - nanopb/decode (= 2.30910.0)
+    - nanopb/encode (= 2.30910.0)
+  - nanopb/decode (2.30910.0)
+  - nanopb/encode (2.30910.0)
+  - PromisesObjC (2.4.0)
+  - PromisesSwift (2.4.0):
+    - PromisesObjC (= 2.4.0)
+  - ReactiveObjC (3.1.1)
+  - SnapKit (5.7.1)
+  - SwiftUIIntrospect (1.2.0)
+
+DEPENDENCIES:
+  - AppConfig (from `PodsLocal/AppConfig`)
+  - AppDebugger (from `PodsLocal/AppDebugger/AppDebugger`)
+  - AppDebuggerExtension (from `PodsLocal/AppDebugger/AppDebuggerExtension`)
+  - AppModels (from `PodsLocal/AppModels`)
+  - AppRepository (from `PodsLocal/AppRepository`)
+  - DGMasonry (= 1.0.1)
+  - DGMessageAPI (= 0.15.0)
+  - DGPicker (= 0.3.2)
+  - ExytePopupView (= 3.0.0)
+  - GLABTesting (= 5.2.0)
+  - GLABTestingDebugger (= 4.2.2)
+  - GLABTestingExtension (= 5.2.0)
+  - GLAccount (= 4.2.1)
+  - GLAccountExtension (= 4.2.0)
+  - GLAccountUI (= 0.1.12)
+  - GLAccountUIExtension (= 0.1.6)
+  - GLAdjust (= 3.2.0)
+  - GLAdjustExtension (= 3.1.0)
+  - GLAgreement (= 1.6.1)
+  - GLAgreement_Extension (= 1.6.0)
+  - GLAnalytics (= 0.14.6)
+  - GLAnalyticsDebugger (= 0.3.7)
+  - GLAnalyticsUI (= 0.6.1)
+  - GLAwsUploader (= 4.1.0)
+  - GLBaseApi (= 0.7.0)
+  - GLBizStorage (from `PodsLocal/GLBizStorage`)
+  - GLCamera (= 1.3.0)
+  - GLCloudUploader_Extension (= 4.0.0)
+  - GLCMSItemWebView (= 3.0.0)
+  - GLComponentAPI (= 3.2.0)
+  - GLConfig (from `PodsLocal/GLConfig`)
+  - GLConfig_Extension (= 0.23.0)
+  - GLCore (= 1.0.2)
+  - GLDatabase (= 0.7.0)
+  - GLDebugger (= 0.2.0)
+  - GLDebuggerExtension (= 0.1.0)
+  - GLDependency (= 1.0.0)
+  - GLFeedback (= 1.2.3)
+  - GLFeedbackExtension (= 1.2.3)
+  - GLFirebase (= 1.6.3)
+  - GLImageProcess (= 0.5.2)
+  - GLLogging (= 1.2.3)
+  - GLLottie (= 1.5.0)
+  - GLManageSubscriptionBase (= 2.0.7)
+  - GLMarkdown (= 1.1.1)
+  - GLModules (from `PodsLocal/GLModules`)
+  - GLMP (from `PodsLocal/GLMP`)
+  - GLMSubDefault (from `PodsLocal/GLMSubDefault`)
+  - GLNetworking (= 0.5.0)
+  - GLNetworkingMessage (= 0.7.2)
+  - GLOfferCode (= 1.0.2)
+  - GLOfferCode_Extension (= 1.0.1)
+  - "GLPopup (from `https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git`, branch `dev/#000-Handler`)"
+  - "GLPopupExtension (from `https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git`, branch `dev/#000-Handler`)"
+  - GLPurchase (= 4.3.0)
+  - GLPurchaseExtension (= 4.0.1)
+  - GLPurchaseUI (= 7.2.2)
+  - GLPurchaseUIExtension (= 7.2.0)
+  - GLRemoteResouce (= 0.1.1)
+  - GLResource (= 0.10.1)
+  - GLSBuilderFramework (= 1.0.1)
+  - GLShare (= 1.0.6)
+  - GLShareExtension (= 1.0.4)
+  - GLSurvey (= 1.2.2)
+  - GLSurvey_Extension (= 1.1.0)
+  - GLSurveyStyle1 (= 1.0.2)
+  - GLTextKit (= 1.1.4)
+  - GLTrackingEvents (= 2.2.1)
+  - GLTrackingExtension (= 0.16.0)
+  - GLUserTag (= 1.1.2)
+  - GLUserTag_Extension (= 1.1.1)
+  - GLUtils (= 2.32.2)
+  - GLWebImage (= 2.4.0)
+  - GLWebImageExtension (= 2.2.0)
+  - GLWebView (= 1.0.0)
+  - GLWidget (= 2.20.4)
+  - GRDB.swift (from `https://github.com/groue/GRDB.swift.git`, tag `v6.29.3`)
+  - InjectHotReload (from `PodsLocal/Inject`)
+  - IQKeyboardManager (= 6.5.19)
+  - SnapKit (= 5.7.1)
+  - SwiftUIIntrospect (= 1.2.0)
+
+SPEC REPOS:
+  https://gitlab.glority.cn/clients/component/ios/Specs.git:
+    - DGMasonry
+    - DGMessageAPI
+    - DGPicker
+    - GLABTesting
+    - GLABTestingDebugger
+    - GLABTestingExtension
+    - GLAccount
+    - GLAccountExtension
+    - GLAccountUI
+    - GLAccountUIExtension
+    - GLAdjust
+    - GLAdjustExtension
+    - GLAgreement
+    - GLAgreement_Extension
+    - GLAnalytics
+    - GLAnalyticsDebugger
+    - GLAnalyticsUI
+    - GLAwsUploader
+    - GLBaseApi
+    - GLCamera
+    - GLCloudUploader_Extension
+    - GLCMSItemWebView
+    - GLCMSSearch_Extension
+    - GLComponentAPI
+    - GLConfig_Extension
+    - GLCore
+    - GLDatabase
+    - GLDebugger
+    - GLDebuggerExtension
+    - GLDependency
+    - GLFeedback
+    - GLFeedbackExtension
+    - GLFirebase
+    - GLImageProcess
+    - GLLogging
+    - GLLottie
+    - GLManageSubscriptionBase
+    - GLMarkdown
+    - GLNetworking
+    - GLNetworkingMessage
+    - GLOfferCode
+    - GLOfferCode_Extension
+    - GLPurchase
+    - GLPurchaseExtension
+    - GLPurchaseUI
+    - GLPurchaseUIExtension
+    - GLRemoteResouce
+    - GLResource
+    - GLSBuilderFramework
+    - GLShare
+    - GLShareExtension
+    - GLSurvey
+    - GLSurvey_Extension
+    - GLSurveyStyle1
+    - GLTextKit
+    - GLTrackingEvents
+    - GLTrackingExtension
+    - GLUserTag
+    - GLUserTag_Extension
+    - GLUtils
+    - GLWebImage
+    - GLWebImageExtension
+    - GLWebView
+    - GLWidget
+  trunk:
+    - Adjust
+    - Alamofire
+    - AWSCore
+    - AWSS3
+    - ExytePopupView
+    - Firebase
+    - FirebaseABTesting
+    - FirebaseAnalytics
+    - FirebaseCore
+    - FirebaseCoreExtension
+    - FirebaseCoreInternal
+    - FirebaseCrashlytics
+    - FirebaseInstallations
+    - FirebaseRemoteConfig
+    - FirebaseSessions
+    - FirebaseSharedSwift
+    - GoogleAppMeasurement
+    - GoogleDataTransport
+    - GoogleUtilities
+    - IQKeyboardManager
+    - Kingfisher
+    - lottie-ios
+    - nanopb
+    - PromisesObjC
+    - PromisesSwift
+    - ReactiveObjC
+    - SnapKit
+    - SwiftUIIntrospect
+
+EXTERNAL SOURCES:
+  AppConfig:
+    :path: PodsLocal/AppConfig
+  AppDebugger:
+    :path: PodsLocal/AppDebugger/AppDebugger
+  AppDebuggerExtension:
+    :path: PodsLocal/AppDebugger/AppDebuggerExtension
+  AppModels:
+    :path: PodsLocal/AppModels
+  AppRepository:
+    :path: PodsLocal/AppRepository
+  GLBizStorage:
+    :path: PodsLocal/GLBizStorage
+  GLConfig:
+    :path: PodsLocal/GLConfig
+  GLModules:
+    :path: PodsLocal/GLModules
+  GLMP:
+    :path: PodsLocal/GLMP
+  GLMSubDefault:
+    :path: PodsLocal/GLMSubDefault
+  GLPopup:
+    :branch: "dev/#000-Handler"
+    :git: https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git
+  GLPopupExtension:
+    :branch: "dev/#000-Handler"
+    :git: https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git
+  GRDB.swift:
+    :git: https://github.com/groue/GRDB.swift.git
+    :tag: v6.29.3
+  InjectHotReload:
+    :path: PodsLocal/Inject
+
+CHECKOUT OPTIONS:
+  GLPopup:
+    :commit: ac4835134b306c450cd38b111faef6e9dbecdb84
+    :git: https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git
+  GLPopupExtension:
+    :commit: ac4835134b306c450cd38b111faef6e9dbecdb84
+    :git: https://gitlab.glority.cn/clients/component/ios/base/gl-popup.git
+  GRDB.swift:
+    :git: https://github.com/groue/GRDB.swift.git
+    :tag: v6.29.3
+
+SPEC CHECKSUMS:
+  Adjust: c98d85594a746ff9f2bafe424c5beb6db66cd6a8
+  Alamofire: f36a35757af4587d8e4f4bfa223ad10be2422b8c
+  AppConfig: 5ff56602f7f2f318e4050a25ed6ceb77f0c31950
+  AppDebugger: 33ebab42545319be7c1b368db7f3179c796d9bb9
+  AppDebuggerExtension: aba41ca9336dc334d4243886b0659d48e9859ed7
+  AppModels: 6dede0213b07c8959d4a3483a29f3a09f0f485ff
+  AppRepository: e31bfb2e3b68fd0c79795f91774199dcae0e5399
+  AWSCore: 13649d9063a6807ec37bde35c8f2da329d63d4e2
+  AWSS3: a7fc64d7126d105699b2414e4e961abf7a4a34dc
+  DGMasonry: 4951ae829ce96bd88013e33c6b75c6bf0dba2122
+  DGMessageAPI: 207b9997d0ccac8980fd2877eee042981e82b80f
+  DGPicker: e69eb07a16e03744e8401ee9dafe7a281bd4aac3
+  ExytePopupView: 1f81f30bdd259e9210307ff4e5d0002ba21364a5
+  Firebase: 797fd7297b7e1be954432743a0b3f90038e45a71
+  FirebaseABTesting: aec61ed9a34d85a95e2013a3fdf051426a2419df
+  FirebaseAnalytics: 8d0ff929c63b7f72260f332b86ccf569776b75d3
+  FirebaseCore: 0326ec9b05fbed8f8716cddbf0e36894a13837f7
+  FirebaseCoreExtension: cb88851781a24e031d1b58e0bd01eb1f46b044b5
+  FirebaseCoreInternal: 6a292e6f0bece1243a737e81556e56e5e19282e3
+  FirebaseCrashlytics: e568d68ce89117c80cddb04073ab9018725fbb8c
+  FirebaseInstallations: 42d6ead4605d6eafb3b6683674e80e18eb6f2c35
+  FirebaseRemoteConfig: e1b992a94d3674dddbcaf5d0d31a0312156ceb1c
+  FirebaseSessions: f06853e30f99fe42aa511014d7ee6c8c319f08a3
+  FirebaseSharedSwift: c92645b392db3c41a83a0aa967de16f8bad25568
+  GLABTesting: 1de9396eda9c1eeef5040d5c52ce5272c09bb1dc
+  GLABTestingDebugger: 1c56a75acb98ea333c9e94accdf9dcbf65407205
+  GLABTestingExtension: a85b32c48d8109ff15164877b481aa646a0e0818
+  GLAccount: 98b76cc91cf512732777a17fee992165089934d7
+  GLAccountExtension: 32b2d181fb0c6ebf064d74485f9a698dc34590cf
+  GLAccountUI: 7fdb40d6c0e3417489a7d9b77b7e0fce9cc2100b
+  GLAccountUIExtension: 47f1ea1e66da8850fadef40a7e46b7e2ac465224
+  GLAdjust: b983f51e4691d7252099bbd2078756fdc0859f50
+  GLAdjustExtension: 352b566d4534a12eb2605d52220c1226dec7d229
+  GLAgreement: 6233c4eb39358369e65776e87eaea458cd748943
+  GLAgreement_Extension: aebffc164e0e1bb71572dd8ce80678dc752421cd
+  GLAnalytics: 54978effd70d78c85356693a3ad24d839c8b1cbe
+  GLAnalyticsDebugger: 61e6f8b87e32f697302efd0dd66203a958440274
+  GLAnalyticsUI: efa46251f461db61677033bb4a1d8a910f56efe2
+  GLAwsUploader: 6ba64c038158ccb2d68d09ef7c2e835c2af783bc
+  GLBaseApi: d8d185ace1831d224b96ee34241fd491f490ccf5
+  GLBizStorage: 27c9ab0ef28e5a0fb6526d4766485ec38eb5421b
+  GLCamera: 4816cfd3d6a8e7644b0a1024361a3135ec932424
+  GLCloudUploader_Extension: 64487f430a8b976c5481763cfaa6500da999a66b
+  GLCMSItemWebView: 28556ba2acef08bbaacffb8a428a4871e97d0286
+  GLCMSSearch_Extension: 6accb06886f57bcd08160301fe3387cf0ee90985
+  GLComponentAPI: 42d4a837aaaf8f4dbdfec1410df5e7214e474d52
+  GLConfig: 71c8f06c466792561fb81bcefb0bb61d60e1d2e7
+  GLConfig_Extension: 838aae377850eb02aec70b478984503173b7ced4
+  GLCore: cba1e303b0843c7aec06c813aaed7dd5a8ea4c45
+  GLDatabase: 39c20434ec90ef3e623ae728b73603c640a75c6d
+  GLDebugger: 0ce8b7c825dda3de2892376f96294b6d5085b083
+  GLDebuggerExtension: bb8a262199d50d6000e1447f46bead3cbc40f95d
+  GLDependency: 998e0009cbb984898791187d46475bbf3e704f10
+  GLFeedback: 0fa8d7efc21fa49522fac67ff52f677edaff007d
+  GLFeedbackExtension: b2bcdad0e6c05f84989c28ea0b943143a0118c93
+  GLFirebase: 377594cfa1bf0a2de03e78fdab0c7be27af4a2d1
+  GLImageProcess: fbb29415cf074882f042389238eee6ed42954dc7
+  GLLogging: 090389035574d722241fdb7227dc33290345dd64
+  GLLottie: 941f1126da3585261fb2f1001d4999a62d6508a3
+  GLManageSubscriptionBase: e4e7ad9c8b0169dfbeadd2d929603cbf36ef29b7
+  GLMarkdown: a56ce004c79eb73413d8b0d93af2b1cd8f7ee620
+  GLModules: 19e3cf1934303f2bf0533d4e72eb3f7524cfb3ad
+  GLMP: 379291c51382ae32ccb757bb461f71b36b7a33ac
+  GLMSubDefault: ce63c9303b34737ddd98b49056e1c0588d870a18
+  GLNetworking: 6f5afe2783267c5d94344cc99075a39830473b1e
+  GLNetworkingMessage: 6aea3542c1f2fc3dbf1883be42b0c8b1c48b0728
+  GLOfferCode: 2241ad957587e1685f28d9707320c00a60d81007
+  GLOfferCode_Extension: ffac06552123d7f6de4705b59ee1e67f4c2257bc
+  GLPopup: e617d5d2f56bd3b180d33498bd61563de2d9be92
+  GLPopupExtension: 9f450a029d0ee0e92161a325012b86ef8254a021
+  GLPurchase: bf7612955b84bc4d7b83689d7f1c1c3561547197
+  GLPurchaseExtension: 818fa8fab9611cc78b0e0d19a4a7d8ed4b21e055
+  GLPurchaseUI: 9a6f72e51bde0545430ecc525b4c15eb8aac65d4
+  GLPurchaseUIExtension: a161dd016182c7cbd523aa863a7d8c914363178d
+  GLRemoteResouce: 3d170f2e8e79c3cc0bc55e54feafacf6782ac39c
+  GLResource: 2b35af9da0129129546cbdf98936362d558b4a2c
+  GLSBuilderFramework: b74dc17d11481bccbe36c14b3d1c031713eecdbb
+  GLShare: cd3eb9e21a4326c8b80731bd4087e9e53a546f39
+  GLShareExtension: f64228536bf16c0039a20a731ba96507a6e38ff9
+  GLSurvey: 0c6d7dad91709ce420e9564e43429bca33c027f9
+  GLSurvey_Extension: 465c56c24b96defa237b1b1a0b634b48643dec36
+  GLSurveyStyle1: ad1f2f67f5e87d7894bd0186e43d8f0bd1e8adc9
+  GLTextKit: 2a254a2928bbd8029ffcc10ea00126f40aa39c0d
+  GLTrackingEvents: b35fb1c62723559e05c7066d47045113adb65e61
+  GLTrackingExtension: 1e924a228a28e5493d00b6a2b7e62a163757fc53
+  GLUserTag: 65ea12c4b97f839ffb92f11d1d66b6a50c81c63e
+  GLUserTag_Extension: ba88111a59526abd8abaaa999c8044987f71b69e
+  GLUtils: bde2a2a3b781cfe449c79b682239e6884e587dfe
+  GLWebImage: 01a6c7f9e93a2823e0af1ea14e2c018fdf892427
+  GLWebImageExtension: a217270751481d53ca63210673742be56619201f
+  GLWebView: 05abbb96ef0a2c390ffd87159713e34f3260bbf7
+  GLWidget: 8226b56a4bac132c5c3a7b4c93eb58537b8a5899
+  GoogleAppMeasurement: ccefe3eac9b0aa27f96066809fb1a7fe4b462626
+  GoogleDataTransport: 6c09b596d841063d76d4288cc2d2f42cc36e1e2a
+  GoogleUtilities: d053d902a8edaa9904e1bd00c37535385b8ed152
+  GRDB.swift: 764235dee4a4fbe3ddcb4f85c61752e8d8da9ad0
+  InjectHotReload: ed44712de2633eb1d20977633c2692c403842702
+  IQKeyboardManager: c8665b3396bd0b79402b4c573eac345a31c7d485
+  Kingfisher: a18f05d3b6d37d8650ee4a3e61d57a28fc6207f6
+  lottie-ios: ef1be1f90d54255f08e09d767950e43714661178
+  nanopb: 438bc412db1928dac798aa6fd75726007be04262
+  PromisesObjC: f5707f49cb48b9636751c5b2e7d227e43fba9f47
+  PromisesSwift: 9d77319bbe72ebf6d872900551f7eeba9bce2851
+  ReactiveObjC: 011caa393aa0383245f2dcf9bf02e86b80b36040
+  SnapKit: d612e99e678a2d3b95bf60b0705ed0a35c03484a
+  SwiftUIIntrospect: 35fbc9ae46c869ae7290afdecf6f70c2b8c86b13
+
+PODFILE CHECKSUM: aa6c1eddf95a8430f8279146fdc3077a63825986
+
+COCOAPODS: 1.13.0

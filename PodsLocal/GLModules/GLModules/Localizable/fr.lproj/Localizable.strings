@@ -1,0 +1,6 @@
+"text_continue" = "Continuer";
+"text_failed" = "Échec";
+"text_retore_empty" = "Vous n'avez aucun enregistrement d'achat";
+"text_no_connection" = "Pas de connexion internet";
+"text_restore_membership" = "Restaurer l'abonnement";
+"text_restore_membership_desc" = "Pour restaurer votre adhésion, nous devons nous connecter à votre compte VIP. Cela remplacera les données dans l'appareil actuel. Voulez-vous continuer ?";

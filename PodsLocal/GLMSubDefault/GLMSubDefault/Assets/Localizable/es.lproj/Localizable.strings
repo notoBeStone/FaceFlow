@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Gestionar suscripción";
+
+"text_member_since" = "Miembro desde: %@";
+
+"text_membership_s" = "Suscripción: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 días gratis)";
+
+"text_premium_free_day" = "Premium (%@ días gratis)";
+
+"text_next_billing" = "Próximo pago: %@";
+
+"text_1_year" = "1 año";
+
+"text_billing_period" = "Periodo de pago: %@";
+
+"TEXT_SDAY" = "%@/día";
+
+"text_1_month" = "1 mes";
+
+"text_3_month" = "3 meses";
+
+"text_1_week" = "1 semana";
+
+"text_free_trial_end" = "La prueba termina el: %@";
+
+"text_s_days" = "%@ días";
+
+"text_s_day" = "%@ día";
+
+"text_manage_desc" = "El botón \"Ir a App Store\" que hay más abajo te llevará directamente al menú de suscripción. %@ no tiene acceso al sistema de cobros de Apple, por lo que no podemos cancelar por ti.";
+
+"text_manage_notice" = "Avisos";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "La suscripción se renovará automáticamente y el pago se cargará en tu cuenta de iTunes.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "El sistema de facturación de Apple comienza el cobro 24 horas antes de que finalice la prueba. Para cancelar la suscripción con éxito, hazlo al menos 24 horas antes de que finalice la prueba o es posible que se te cobre.";
+
+"text_manage_notice_item2_2" = "El sistema de facturación de Apple comienza el cobro 24 horas antes de que finalice el período de suscripción actual. Para cancelar la suscripción con éxito, hazlo al menos 24 horas antes de que finalice el período actual o es posible que se te cobre.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "No se cancelará la suscripción si desinstalas la aplicación.";
+
+"text_go_cancel" = "Ir a App Store a cancelar";
+
+"text_keep_plan" = "Mantener plan";
+
+"text_manage_desc" = "Puede hacerlo en la Configuración de tu teléfono. El siguiente botón te llevará directamente al menú de suscripción. %@ no tiene acceso al sistema de pagos de Apple, por lo que no podemos cancelarla de tu parte.";
+
+"TEXT_PLEASE_NOTE" = "Ten en cuenta que no se cancela la suscripción automáticamente si desinstalas la aplicación.";
+

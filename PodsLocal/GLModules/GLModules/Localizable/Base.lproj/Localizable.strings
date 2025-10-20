@@ -1,0 +1,6 @@
+"text_continue" = "Continue";
+"text_failed" = "Failed";
+"text_retore_empty" = "You have no purchase record";
+"text_no_connection" = "No internet connection";
+"text_restore_membership" = "Restore Membership";
+"text_restore_membership_desc" = "To restore your membership, please log into your VIP account. This will overwrite the data on your current device. Do you wish to proceed?";

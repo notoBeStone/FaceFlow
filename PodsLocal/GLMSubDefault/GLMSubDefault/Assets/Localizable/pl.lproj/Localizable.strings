@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Zarządzaj subskrypcją";
+
+"text_member_since" = "Członkostwo od %@";
+
+"text_membership_s" = "Plan: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 dniowy, darmowy okres próbny)";
+
+"text_premium_free_day" = "Premium (%@ dniowy, darmowy okres próbny)";
+
+"text_next_billing" = "Data następnego okresu rozliczeniowego: %@";
+
+"text_1_year" = "1 rok";
+
+"text_billing_period" = "Okres rozliczeniowy: %@";
+
+"TEXT_SDAY" = "%@/dziennie";
+
+"text_1_month" = "1 miesiąc";
+
+"text_3_month" = "3 miesiące";
+
+"text_1_week" = "1 tydzień";
+
+"text_free_trial_end" = "Darmowa wersja próbna kończy się: %@";
+
+"text_s_days" = "%@ dni";
+
+"text_s_day" = "%@ dzień";
+
+"text_manage_desc" = "Poniższy przycisk \"Przejdź do App Store\" przeniesie Cię bezpośrednio do menu subskrypcji. %@ nie ma dostępu do systemu rozliczeniowego Apple, więc nie jesteśmy w stanie anulować subskrypcji w Twoim imieniu.";
+
+"text_manage_notice" = "Powiadomienia";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Subskrypcja zostanie automatycznie odnowiona, a płatność zostanie pobrana z konta iTunes.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "System rozliczeniowy Apple rozpoczyna naliczanie opłat na 24 godziny przed zakończeniem okresu próbnego. Aby pomyślnie anulować subskrypcję, należy to zrobić co najmniej 24 godziny przed zakończeniem okresu próbnego, w przeciwnym razie opłata może zostać naliczona.";
+
+"text_manage_notice_item2_2" = "System rozliczeniowy Apple rozpoczyna naliczanie opłat na 24 godziny przed zakończeniem bieżącego okresu subskrypcji. W celu pomyślnego anulowania subskrypcji należy to zrobić co najmniej 24 godziny przed zakończeniem bieżącego okresu, w przeciwnym razie opłata może zostać naliczona.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Usunięcie aplikacji nie spowoduje anulowania subskrypcji.";
+
+"text_go_cancel" = "Anuluj w App Store";
+
+"text_keep_plan" = "Zatrzymaj mój plan";
+
+"text_manage_desc" = "Możesz to zrobić w opcji ustawień w telefonie. Poniższy przycisk przeniesie Cię bezpośrednio do menu subskrypcji. Aplikacja %@ nie ma dostępu do systemu rozliczeniowego Apple, więc nie możemy anulować subskrypcji w Twoim imieniu.";
+
+"TEXT_PLEASE_NOTE" = "Pamiętaj, że odinstalowanie aplikacji nie anuluje automatycznie Twojej subskrypcji.";
+

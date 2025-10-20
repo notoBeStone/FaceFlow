@@ -1,0 +1,6 @@
+"text_continue" = "Devam et";
+"text_failed" = "Başarısız";
+"text_retore_empty" = "Satın alma kaydınız yok.";
+"text_no_connection" = "İnternet bağlantısı yok";
+"text_restore_membership" = "Üyeliği Yenile";
+"text_restore_membership_desc" = "Üyeliğinizi geri yüklemek için VIP hesabınıza giriş yapmamız gerekiyor. Bu, mevcut cihazdaki verileri değiştirecektir. Devam etmek ister misiniz?";

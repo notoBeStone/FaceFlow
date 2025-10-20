@@ -1,0 +1,6 @@
+"text_continue" = "続ける";
+"text_failed" = "失敗しました";
+"text_retore_empty" = "購入履歴がありません";
+"text_no_connection" = "インターネットに接続していません。";
+"text_restore_membership" = "メンバーシップの復元";
+"text_restore_membership_desc" = "メンバーシップを復元するには、VIPアカウントでのログインが必要です。現在お使いのデバイスから、これまでのデータがすべて失われます。続行してもよろしいですか？";

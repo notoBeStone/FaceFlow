@@ -1,0 +1,59 @@
+"text_manage_subscription" = "サブスクリプションの管理";
+
+"text_member_since" = "会員登録日： %@";
+
+"text_membership_s" = "会員の状態: %@";
+
+"text_premium" = "プレミアム";
+
+"TEXT_PREMIUM_7DAY" = "プレミアム(7日間の無料トライアル)";
+
+"text_premium_free_day" = "プレミアム(%@日間の無料トライアル)";
+
+"text_next_billing" = "次回請求日: %@";
+
+"text_1_year" = "1年";
+
+"text_billing_period" = "課金期間: %@";
+
+"TEXT_SDAY" = "%@/日";
+
+"text_1_month" = "1ヶ月";
+
+"text_3_month" = "3ヶ月";
+
+"text_1_week" = "1週間";
+
+"text_free_trial_end" = "無料お試し残日数：%@";
+
+"text_s_days" = "%@ 日";
+
+"text_s_day" = "%@ 日";
+
+"text_manage_desc" = "下にある「App Storeに進む」ボタンをタップするとサブスクリプションのメニューに直接移動します。%@はAppleの課金システムにアクセスできないため、お客様に代わって解約することはできません。";
+
+"text_manage_notice" = "ご注意";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "サブスクリプションは自動更新され、お支払いはiTunesアカウントに請求されます。";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Appleの請求システムはトライアルが終了する24時間前に課金を開始します。サブスクリプションを確実に解約するには、トライアルが終了する少なくとも24時間前までに解約してください。解約していない場合は引き続き課金されることがあります。";
+
+"text_manage_notice_item2_2" = "Appleの請求システムは現行のサブスクリプション期間が終了する24時間前に課金を開始します。サブスクリプションを確実に解約するには、現行の期間が終了する少なくとも24時間前までに解約してください。解約していない場合は引き続き課金されることがあります。";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "アプリをアンインストールしてもサブスクリプションは解約されません。";
+
+"text_go_cancel" = "App Storeでキャンセルする";
+
+"text_keep_plan" = "プランを維持する";
+
+"text_manage_desc" = "解約は、携帯電話の「設定」から行うことができます。下のボタンをクリックすると、登録メニューに直接移動します。%@はAppleの課金システムにアクセスできないため、お客様に代わって解約することはできません。";
+
+"TEXT_PLEASE_NOTE" = "アプリをアンインストールしても
+自動的に解約されることはありませんのでご注意ください。";
+

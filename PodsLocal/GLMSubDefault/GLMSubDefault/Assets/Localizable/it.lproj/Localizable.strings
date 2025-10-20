@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Gestisci abbonamenti";
+
+"text_member_since" = "Membro dal: %@";
+
+"text_membership_s" = "Abbonamento: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (prova gratuita di 7 giorni)";
+
+"text_premium_free_day" = "Premium (prova gratuita di %@ giorni)";
+
+"text_next_billing" = "Prossimo pagamento: %@";
+
+"text_1_year" = "1 anno";
+
+"text_billing_period" = "Periodo di addebito: %@";
+
+"TEXT_SDAY" = "%@/giorno";
+
+"text_1_month" = "1 mese";
+
+"text_3_month" = "3 mesi";
+
+"text_1_week" = "1 settimana";
+
+"text_free_trial_end" = "La prova gratuita termina in: %@";
+
+"text_s_days" = "%@ giorni";
+
+"text_s_day" = "%@ giorno";
+
+"text_manage_desc" = "Il pulsante \"Vai all'App Store\" qui sotto ti porterà direttamente al menu di abbonamento. %@ non ha accesso al sistema di fatturazione di Apple, quindi non siamo in grado di annullare per tuo conto.";
+
+"text_manage_notice" = "Avvisi";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Il tuo abbonamento si rinnoverà automaticamente, con il pagamento addebitato sul tuo account iTunes.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Il sistema di fatturazione di Apple inizia ad addebitare 24 ore prima della fine del periodo di prova. Per annullare con successo il tuo abbonamento, fallo almeno 24 ore prima della fine del periodo di prova, altrimenti potresti avere comunque un addebito.";
+
+"text_manage_notice_item2_2" = "Il sistema di fatturazione di Apple inizia ad addebitare il costo 24 ore prima della scadenza del periodo di abbonamento in corso. Per annullare l'abbonamento, è necessario farlo almeno 24 ore prima della scadenza del periodo in corso, altrimenti l'addebito potrebbe verificarsi.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "La disinstallazione dell'app non annulla l'abbonamento.";
+
+"text_go_cancel" = "Vai su App Store per cancellare";
+
+"text_keep_plan" = "Mantieni il mio piano";
+
+"text_manage_desc" = "Potrai farlo nelle Impostazioni del tuo telefono. Il pulsante qui sotto di porterà direttamente al menù degli abbonamenti. %@ non ha accesso al sistema di pagamento di Apple, perciò non possiamo cancellare l'abbonamento per te.";
+
+"TEXT_PLEASE_NOTE" = "Si prega di notare che la disinstallazione dell'app non comporta l'annullamento dell'abbonamento.";
+

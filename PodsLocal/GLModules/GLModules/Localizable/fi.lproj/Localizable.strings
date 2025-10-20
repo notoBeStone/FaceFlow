@@ -1,0 +1,6 @@
+"text_continue" = "Jatka";
+"text_failed" = "Epäonnistunut";
+"text_retore_empty" = "Sinulla ei ole rekisteröityä ostosta";
+"text_no_connection" = "Ei internet-yhteyttä";
+"text_restore_membership" = "Palauta jäsenyys";
+"text_restore_membership_desc" = "Jäsenyytesi palauttamiseksi meidän on kirjauduttava VIP-tilillesi. Tämä korvaa tiedot kyseisessä yksikössä. Haluatko jatkaa?";

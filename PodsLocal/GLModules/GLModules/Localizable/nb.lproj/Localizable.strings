@@ -1,0 +1,6 @@
+"text_continue" = "Fortsett";
+"text_failed" = "Mislykket";
+"text_retore_empty" = "Du har ikke registrert noe kjøp";
+"text_no_connection" = "Ingen internettforbindelse";
+"text_restore_membership" = "Gjenopprette medlemskap";
+"text_restore_membership_desc" = "For å gjenopprette medlemskapet ditt må vi logge inn på VIP-kontoen din. Dette vil erstatte dataene på den aktuelle enheten. Ønsker du å fortsette?";

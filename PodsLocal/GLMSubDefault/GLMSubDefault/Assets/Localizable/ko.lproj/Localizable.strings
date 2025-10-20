@@ -1,0 +1,58 @@
+"text_manage_subscription" = "구독 관리";
+
+"text_member_since" = "회원 가입일: %@";
+
+"text_membership_s" = "멤버십: %@";
+
+"text_premium" = "프리미엄";
+
+"TEXT_PREMIUM_7DAY" = "프리미엄 (7일 무료 체험)";
+
+"text_premium_free_day" = "프리미엄 (%@일 무료 체험)";
+
+"text_next_billing" = "다음 결제일: %@";
+
+"text_1_year" = "1년";
+
+"text_billing_period" = "결제 기간: %@";
+
+"TEXT_SDAY" = "%@/일";
+
+"text_1_month" = "1개월";
+
+"text_3_month" = "3개월";
+
+"text_1_week" = "1주";
+
+"text_free_trial_end" = "무료 체험 종료 날짜: %@";
+
+"text_s_days" = "%@ 일";
+
+"text_s_day" = "%@ 일";
+
+"text_manage_desc" = "아래의 \"앱 스토어로 이동\" 버튼을 클릭하면 구독 메뉴로 바로 이동합니다. %@ Apple의 결제 시스템에 액세스할 수 없으므로 사용자를 대신하여 취소할 수 없습니다.";
+
+"text_manage_notice" = "공지";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "구독이 자동 갱신되며 iTunes 계정으로 요금이 청구됩니다.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple의 결제 시스템은 체험판 종료 24시간 전에 요금이 청구되기 시작합니다. 체험판이 종료되기 최소 24시간 전에 구독을 취소하지 않으면 요금이 청구될 수 있습니다.";
+
+"text_manage_notice_item2_2" = "Apple의 결제 시스템은 현재 구독 기간이 종료되기 24시간 전에 요금이 청구되기 시작합니다. 구독을 성공적으로 취소하려면 현재 기간이 종료되기 최소 24시간 전에 취소해야 하며, 그렇지 않으면 요금이 청구될 수 있습니다.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "앱을 제거해도 구독이 취소되지는 않습니다.";
+
+"text_go_cancel" = "취소하려면 App Store로 이동하세요";
+
+"text_keep_plan" = "내 플랜 유지";
+
+"text_manage_desc" = "휴대폰의 설정을 통해 취소할 수 있습니다. 아래 버튼을 누르면 구독 메뉴로 바로 이동합니다. %@는 Apple의 결제 시스템에 액세스 할 수 없으므로 회원님을 대신하여 취소할 수 없습니다.";
+
+"TEXT_PLEASE_NOTE" = "앱을 제거해도 구독이 자동으로 취소되지는 않습니다.";
+

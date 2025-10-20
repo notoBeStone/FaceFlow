@@ -1,0 +1,59 @@
+"text_manage_subscription" = "Διαχείριση συνδρομής";
+
+"text_member_since" = "Μέλος από: %@";
+
+"text_membership_s" = "Ιδιότητα μέλους: %@";
+
+"text_premium" = "Ασφάλιστρο";
+
+"TEXT_PREMIUM_7DAY" = "Premium (δωρεάν δοκιμή 7 ημερών)";
+
+"text_premium_free_day" = "Premium (δωρεάν δοκιμή %@ ημερών)";
+
+"text_next_billing" = "Επόμενη ημερομηνία τιμολόγησης: %@";
+
+"text_1_year" = "1 Ετος";
+
+"text_billing_period" = "Περίοδος χρέωσης: %@";
+
+"TEXT_SDAY" = "%@/ημέρα";
+
+"text_1_month" = "1 μήνα";
+
+"text_3_month" = "3 μήνες";
+
+"text_1_week" = "1 εβδομάδα";
+
+"text_free_trial_end" = "Η δωρεάν δοκιμή τελειώνει σε: %@";
+
+"text_s_days" = "%@ ημέρες";
+
+"text_s_day" = "%@ ημέρα";
+
+"text_manage_desc" = "The \"Go to App Store\" button below will take you directly to the subscription menu. %@ does not have access to Apple's billing system, so we are not able to cancel on your behalf.";
+
+"text_manage_notice" = "Notices";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Your subscription will auto-renew, with payment charged to your iTunes account.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apple's billing system starts charging 24 hours before the trial ends. To successfully cancel your subscription, please do so at least 24 hours before the trial ends, or you may still be charged.";
+
+"text_manage_notice_item2_2" = "Apple's billing system starts charging 24 hours before the current subscription period ends. To successfully cancel your subscription, please do so at least 24 hours before the current period ends, or you may still be charged.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Uninstalling the app won't cancel your subscription.";
+
+
+"text_go_cancel" = "Μεταβείτε στο App Store για Ακύρωση";
+
+"text_keep_plan" = "Κρατήστε το σχέδιό μου";
+
+"text_manage_desc" = "Μπορείτε να το κάνετε μέσω των ρυθμίσεων στο τηλέφωνό σας. Το παρακάτω κουμπί θα σας μεταφέρει απευθείας στο μενού συνδρομής. Το %@ δεν έχει πρόσβαση στο σύστημα χρέωσης της Apple, οπότε δεν είμαστε σε θέση να ακυρώσουμε για λογαριασμό σας.";
+
+"TEXT_PLEASE_NOTE" = "Παρακαλείστε να σημειώσετε ότι η απεγκατάσταση της εφαρμογής δεν ακυρώνει αυτόματα τη συνδρομή σας για εσάς.";
+

@@ -1,0 +1,6 @@
+"text_continue" = "Melanjutkan";
+"text_failed" = "Gagal";
+"text_retore_empty" = "Anda tidak memiliki catatan pembelian.";
+"text_no_connection" = "Tidak ada koneksi internet.";
+"text_restore_membership" = "Kembalikan Keanggotaan";
+"text_restore_membership_desc" = "Untuk memulihkan keanggotaan Anda, kami perlu masuk ke akun VIP Anda. Ini akan menimpa data pada perangkat Anda saat ini. Apakah Anda ingin melanjutkan?";

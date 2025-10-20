@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Gerenciar assinatura";
+
+"text_member_since" = "Membro desde: %@";
+
+"text_membership_s" = "Assinatura: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 dias de teste)";
+
+"text_premium_free_day" = "Premium (%@ dias de teste)";
+
+"text_next_billing" = "Próx. cobrança: %@";
+
+"text_1_year" = "1 ano";
+
+"text_billing_period" = "Períod. cobrança: %@";
+
+"TEXT_SDAY" = "%@/dia";
+
+"text_1_month" = "1 mês";
+
+"text_3_month" = "3 meses";
+
+"text_1_week" = "1 sem.";
+
+"text_free_trial_end" = "Teste termina em: %@";
+
+"text_s_days" = "%@ dias";
+
+"text_s_day" = "%@ dia";
+
+"text_manage_desc" = "O botão \"Ir para a App Store\" abaixo levará você diretamente ao menu de assinatura. O %@ não tem acesso ao sistema de cobrança da Apple, então não podemos cancelar em seu nome.";
+
+"text_manage_notice" = "Notificações";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Sua assinatura será renovada automaticamente, com pagamento cobrado na sua conta do iTunes.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "O sistema de cobrança da Apple começa a cobrar 24 horas antes do término do teste. Para cancelar com sucesso a sua assinatura, por favor faça-o pelo menos 24 horas antes do término do teste, ou você ainda pode ser cobrado.";
+
+"text_manage_notice_item2_2" = "O sistema de cobrança da Apple começa a cobrar 24 horas antes do término do período de assinatura atual. Para cancelar com sucesso a sua assinatura, por favor faça-o pelo menos 24 horas antes do término do período atual, ou você ainda pode ser cobrado.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Desinstalar o aplicativo não cancelará sua assinatura.";
+
+"text_go_cancel" = "Cancele no App Store";
+
+"text_keep_plan" = "Manter plano";
+
+"text_manage_desc" = "Isso pode ser feito nas configurações do aparelho. O botão abaixo te levará ao menu de assinatura. O %@ não tem acesso ao sistema de cobrança da Apple, por isso, não podemos cancelar a assinatura.";
+
+"TEXT_PLEASE_NOTE" = "Por favor, note que desinstalar o aplicativo não cancela a assinatura automaticamente.";
+

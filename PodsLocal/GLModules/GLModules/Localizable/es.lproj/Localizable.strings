@@ -1,0 +1,6 @@
+"text_continue" = "Continuar";
+"text_failed" = "Error";
+"text_retore_empty" = "No tienes registro de compras";
+"text_no_connection" = "Sin conexión a Internet";
+"text_restore_membership" = "Restablecer Membresía";
+"text_restore_membership_desc" = "Para restablecer tu membresía, necesitamos iniciar sesión en tu cuenta VIP. Se reemplazarán los datos en tu dispositivo. ¿Quieres continuar?";

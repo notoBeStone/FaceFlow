@@ -1,0 +1,14 @@
+/*
+ InfoPlist.strings
+ BeVocal
+ 
+ Created by User on 2018/12/19.
+ Copyright © 2018 Glority. All rights reserved.
+ */
+NSCameraUsageDescription = "Capture images and videos of your aquarium to optimize the environment for your aquatic pets";
+NSMotionUsageDescription = "Allow motion access to accurately monitor changes in the aquarium environment and fish activity";
+NSPhotoLibraryUsageDescription = "Select photos to document and share the growth of your aquarium";
+DeviceRegion = "en";
+NSPhotoLibraryAddUsageDescription = "Allow us to save photos and monitoring videos of your aquarium to your album";
+NSUserTrackingUsageDescription = "This helps us provide more personalized advice for your fish-keeping experience";
+NSMicrophoneUsageDescription = "Allow microphone access to record ambient sounds for optimizing the aquarium environment";

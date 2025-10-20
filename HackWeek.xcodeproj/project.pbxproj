@@ -1,0 +1,757 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 77;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2C1E4F18DFA3B919765D7FE4 /* Pods_HackWeek.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 06249266CE67E030C4876289 /* Pods_HackWeek.framework */; };
+		7A08F6A92B318E0F00D9BB37 /* StoreKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08F6A82B318E0F00D9BB37 /* StoreKit.framework */; };
+		7A08F6AB2B318E6300D9BB37 /* AdServices.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08F6AA2B318E6300D9BB37 /* AdServices.framework */; };
+		7A08F6AD2B318E6800D9BB37 /* AdSupport.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08F6AC2B318E6800D9BB37 /* AdSupport.framework */; };
+		7A08F6AF2B318E6E00D9BB37 /* AppTrackingTransparency.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7A08F6AE2B318E6E00D9BB37 /* AppTrackingTransparency.framework */; };
+		CE020EC72D01DC57002C56FF /* MarkdownUI in Frameworks */ = {isa = PBXBuildFile; productRef = CE020EC62D01DC57002C56FF /* MarkdownUI */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		728765342CD0AA2B008BBC15 /* Embed Foundation Extensions */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 13;
+			files = (
+			);
+			name = "Embed Foundation Extensions";
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		06249266CE67E030C4876289 /* Pods_HackWeek.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_HackWeek.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		19C2BCE8E3E4299F6C8FA6D4 /* Pods-KnitAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnitAI.release.xcconfig"; path = "Target Support Files/Pods-KnitAI/Pods-KnitAI.release.xcconfig"; sourceTree = "<group>"; };
+		28E91DDF2CF5D02DA0025EDA /* Pods-AquaAI.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AquaAI.release.xcconfig"; path = "Target Support Files/Pods-AquaAI/Pods-AquaAI.release.xcconfig"; sourceTree = "<group>"; };
+		69231218F349630CAF510BFA /* Pods-EasySing.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySing.release.xcconfig"; path = "Target Support Files/Pods-EasySing/Pods-EasySing.release.xcconfig"; sourceTree = "<group>"; };
+		72357FDC2844E256D9288447 /* Pods-EasySing.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-EasySing.debug.xcconfig"; path = "Target Support Files/Pods-EasySing/Pods-EasySing.debug.xcconfig"; sourceTree = "<group>"; };
+		7280CC5A28E538D600ABF38C /* HackWeek.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HackWeek.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		728765212CD0AA2A008BBC15 /* WidgetKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = WidgetKit.framework; path = System/Library/Frameworks/WidgetKit.framework; sourceTree = SDKROOT; };
+		728765232CD0AA2A008BBC15 /* SwiftUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SwiftUI.framework; path = System/Library/Frameworks/SwiftUI.framework; sourceTree = SDKROOT; };
+		7A08F6A82B318E0F00D9BB37 /* StoreKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = StoreKit.framework; path = System/Library/Frameworks/StoreKit.framework; sourceTree = SDKROOT; };
+		7A08F6AA2B318E6300D9BB37 /* AdServices.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdServices.framework; path = System/Library/Frameworks/AdServices.framework; sourceTree = SDKROOT; };
+		7A08F6AC2B318E6800D9BB37 /* AdSupport.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AdSupport.framework; path = System/Library/Frameworks/AdSupport.framework; sourceTree = SDKROOT; };
+		7A08F6AE2B318E6E00D9BB37 /* AppTrackingTransparency.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = AppTrackingTransparency.framework; path = System/Library/Frameworks/AppTrackingTransparency.framework; sourceTree = SDKROOT; };
+		9241C2456F0D805EE34A66B4 /* Pods-KnitAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-KnitAI.debug.xcconfig"; path = "Target Support Files/Pods-KnitAI/Pods-KnitAI.debug.xcconfig"; sourceTree = "<group>"; };
+		B9C190184C4E6166D2C3AEAF /* Pods_AINoteTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_AINoteTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		CF3C14B2C9270E7AA74CA8CC /* Pods-AquaAI.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-AquaAI.debug.xcconfig"; path = "Target Support Files/Pods-AquaAI/Pods-AquaAI.debug.xcconfig"; sourceTree = "<group>"; };
+		D631F7FF95C1E42A82760E0E /* Pods-HackWeek.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackWeek.release.xcconfig"; path = "Target Support Files/Pods-HackWeek/Pods-HackWeek.release.xcconfig"; sourceTree = "<group>"; };
+		F42254AA55E773DC1898EEC4 /* Pods-HackWeek.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-HackWeek.debug.xcconfig"; path = "Target Support Files/Pods-HackWeek/Pods-HackWeek.debug.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5314EFAC2DFAB4B2006B439C /* Exceptions for "HackWeek" folder in "HackWeek" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				Deprecated/Generated/Lokalise/.gitignore,
+				"Deprecated/Generated/Lokalise/.gitlab-ci.yml",
+				Deprecated/Generated/Lokalise/README.md,
+				Features/Onboarding/CLAUDE.md,
+				Features/Survey/README.md,
+				Features/VipConversion/CLAUDE.md,
+				Features/WordBook/CLAUDE.md,
+				Incubator/ViewStack/CLAUDE.md,
+				SupportingFiles/Info.plist,
+			);
+			target = 7280CC5928E538D600ABF38C /* HackWeek */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
+/* Begin PBXFileSystemSynchronizedRootGroup section */
+		53CD524C2DB8B05D0092B075 /* HackWeek */ = {
+			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5314EFAC2DFAB4B2006B439C /* Exceptions for "HackWeek" folder in "HackWeek" target */,
+			);
+			path = HackWeek;
+			sourceTree = "<group>";
+		};
+/* End PBXFileSystemSynchronizedRootGroup section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		7280CC5728E538D600ABF38C /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				7A08F6AF2B318E6E00D9BB37 /* AppTrackingTransparency.framework in Frameworks */,
+				7A08F6AD2B318E6800D9BB37 /* AdSupport.framework in Frameworks */,
+				7A08F6A92B318E0F00D9BB37 /* StoreKit.framework in Frameworks */,
+				CE020EC72D01DC57002C56FF /* MarkdownUI in Frameworks */,
+				7A08F6AB2B318E6300D9BB37 /* AdServices.framework in Frameworks */,
+				2C1E4F18DFA3B919765D7FE4 /* Pods_HackWeek.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		514F82B3ACBCA7AB0B98CDD7 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				7A08F6AE2B318E6E00D9BB37 /* AppTrackingTransparency.framework */,
+				7A08F6AC2B318E6800D9BB37 /* AdSupport.framework */,
+				7A08F6AA2B318E6300D9BB37 /* AdServices.framework */,
+				7A08F6A82B318E0F00D9BB37 /* StoreKit.framework */,
+				B9C190184C4E6166D2C3AEAF /* Pods_AINoteTests.framework */,
+				728765212CD0AA2A008BBC15 /* WidgetKit.framework */,
+				728765232CD0AA2A008BBC15 /* SwiftUI.framework */,
+				06249266CE67E030C4876289 /* Pods_HackWeek.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		7280CC5128E538D600ABF38C = {
+			isa = PBXGroup;
+			children = (
+				514F82B3ACBCA7AB0B98CDD7 /* Frameworks */,
+				53CD524C2DB8B05D0092B075 /* HackWeek */,
+				EE175367954C4E5023D083FF /* Pods */,
+				7280CC5B28E538D600ABF38C /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		7280CC5B28E538D600ABF38C /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				7280CC5A28E538D600ABF38C /* HackWeek.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		EE175367954C4E5023D083FF /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				9241C2456F0D805EE34A66B4 /* Pods-KnitAI.debug.xcconfig */,
+				19C2BCE8E3E4299F6C8FA6D4 /* Pods-KnitAI.release.xcconfig */,
+				72357FDC2844E256D9288447 /* Pods-EasySing.debug.xcconfig */,
+				69231218F349630CAF510BFA /* Pods-EasySing.release.xcconfig */,
+				CF3C14B2C9270E7AA74CA8CC /* Pods-AquaAI.debug.xcconfig */,
+				28E91DDF2CF5D02DA0025EDA /* Pods-AquaAI.release.xcconfig */,
+				F42254AA55E773DC1898EEC4 /* Pods-HackWeek.debug.xcconfig */,
+				D631F7FF95C1E42A82760E0E /* Pods-HackWeek.release.xcconfig */,
+			);
+			path = Pods;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		7280CC5928E538D600ABF38C /* HackWeek */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 7280CC6E28E538D800ABF38C /* Build configuration list for PBXNativeTarget "HackWeek" */;
+			buildPhases = (
+				8C05DC0A1014C03452D3767F /* [CP] Check Pods Manifest.lock */,
+				7280CC5628E538D600ABF38C /* Sources */,
+				7280CC5728E538D600ABF38C /* Frameworks */,
+				7280CC5828E538D600ABF38C /* Resources */,
+				5F0760A37EB62B23F0737A3A /* [CP] Embed Pods Frameworks */,
+				728765342CD0AA2B008BBC15 /* Embed Foundation Extensions */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			fileSystemSynchronizedGroups = (
+				53CD524C2DB8B05D0092B075 /* HackWeek */,
+			);
+			name = HackWeek;
+			productName = AINote;
+			productReference = 7280CC5A28E538D600ABF38C /* HackWeek.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		7280CC5228E538D600ABF38C /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1600;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					7280CC5928E538D600ABF38C = {
+						CreatedOnToolsVersion = 14.0.1;
+						LastSwiftMigration = 1500;
+					};
+				};
+			};
+			buildConfigurationList = 7280CC5528E538D600ABF38C /* Build configuration list for PBXProject "HackWeek" */;
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				Base,
+				en,
+				"ro-Ro",
+				no,
+			);
+			mainGroup = 7280CC5128E538D600ABF38C;
+			packageReferences = (
+				CE020EC52D01DC57002C56FF /* XCRemoteSwiftPackageReference "swift-markdown-ui" */,
+			);
+			preferredProjectObjectVersion = 77;
+			productRefGroup = 7280CC5B28E538D600ABF38C /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				7280CC5928E538D600ABF38C /* HackWeek */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		7280CC5828E538D600ABF38C /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		5F0760A37EB62B23F0737A3A /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackWeek/Pods-HackWeek-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-HackWeek/Pods-HackWeek-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-HackWeek/Pods-HackWeek-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8C05DC0A1014C03452D3767F /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-HackWeek-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		7280CC5628E538D600ABF38C /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		7280CC6C28E538D800ABF38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		7280CC6D28E538D800ABF38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_LOCALIZABILITY_NONLOCALIZED = YES;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 16.6;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		7280CC6F28E538D800ABF38C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = F42254AA55E773DC1898EEC4 /* Pods-HackWeek.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/HackWeek/SupportingFiles/HackWeek.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8DHYPVL45R;
+				EMIT_FRONTEND_COMMAND_LINES = YES;
+				INFOPLIST_FILE = HackWeek/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FaceFlow;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				OTHER_LDFLAGS = (
+					"-Xlinker",
+					"-interposable",
+					"$(inherited)",
+					"-ObjC",
+					"-l\"c++\"",
+					"-l\"sqlite3\"",
+					"-l\"swiftCoreGraphics\"",
+					"-l\"z\"",
+					"-framework",
+					"\"AWSCore\"",
+					"-framework",
+					"\"AWSS3\"",
+					"-framework",
+					"\"Accelerate\"",
+					"-framework",
+					"\"Adjust\"",
+					"-framework",
+					"\"Alamofire\"",
+					"-framework",
+					"\"AppConfig\"",
+					"-framework",
+					"\"AppDebugger\"",
+					"-framework",
+					"\"AppDebuggerExtension\"",
+					"-framework",
+					"\"AppModels\"",
+					"-framework",
+					"\"AppRepository\"",
+					"-framework",
+					"\"CFNetwork\"",
+					"-framework",
+					"\"CocoaMarkdown\"",
+					"-framework",
+					"\"CoreGraphics\"",
+					"-framework",
+					"\"CoreTelephony\"",
+					"-framework",
+					"\"DGMasonry\"",
+					"-framework",
+					"\"DGMessageAPI\"",
+					"-framework",
+					"\"DGPicker\"",
+					"-framework",
+					"\"ExytePopupView\"",
+					"-framework",
+					"\"FBLPromises\"",
+					"-framework",
+					"\"FirebaseABTesting\"",
+					"-framework",
+					"\"FirebaseAnalytics\"",
+					"-framework",
+					"\"FirebaseCore\"",
+					"-framework",
+					"\"FirebaseCoreExtension\"",
+					"-framework",
+					"\"FirebaseCoreInternal\"",
+					"-framework",
+					"\"FirebaseCrashlytics\"",
+					"-framework",
+					"\"FirebaseInstallations\"",
+					"-framework",
+					"\"FirebaseRemoteConfig\"",
+					"-framework",
+					"\"FirebaseSessions\"",
+					"-framework",
+					"\"FirebaseSharedSwift\"",
+					"-framework",
+					"\"Foundation\"",
+					"-framework",
+					"\"GLABTesting\"",
+					"-framework",
+					"\"GLABTestingDebugger\"",
+					"-framework",
+					"\"GLABTestingExtension\"",
+					"-framework",
+					"\"GLAccount\"",
+					"-framework",
+					"\"GLAccountExtension\"",
+					"-framework",
+					"\"GLAccountUI\"",
+					"-framework",
+					"\"GLAccountUIExtension\"",
+					"-framework",
+					"\"GLAdjust\"",
+					"-framework",
+					"\"GLAdjustExtension\"",
+					"-framework",
+					"\"GLAgreement\"",
+					"-framework",
+					"\"GLAgreement_Extension\"",
+					"-framework",
+					"\"GLAnalytics\"",
+					"-framework",
+					"\"GLAnalyticsDebugger\"",
+					"-framework",
+					"\"GLAnalyticsUI\"",
+					"-framework",
+					"\"GLAwsUploader\"",
+					"-framework",
+					"\"GLBaseApi\"",
+					"-framework",
+					"\"GLBizStorage\"",
+					"-framework",
+					"\"GLCMSItemWebView\"",
+					"-framework",
+					"\"GLCMSSearch_Extension\"",
+					"-framework",
+					"\"GLCamera\"",
+					"-framework",
+					"\"GLCloudUploader_Extension\"",
+					"-framework",
+					"\"GLComponentAPI\"",
+					"-framework",
+					"\"GLConfig\"",
+					"-framework",
+					"\"GLConfig_Extension\"",
+					"-framework",
+					"\"GLCore\"",
+					"-framework",
+					"\"GLDatabase\"",
+					"-framework",
+					"\"GLDebugger\"",
+					"-framework",
+					"\"GLDebuggerExtension\"",
+					"-framework",
+					"\"GLDependency\"",
+					"-framework",
+					"\"GLFeedback\"",
+					"-framework",
+					"\"GLFeedbackExtension\"",
+					"-framework",
+					"\"GLFirebase\"",
+					"-framework",
+					"\"GLImageProcess\"",
+					"-framework",
+					"\"GLLogging\"",
+					"-framework",
+					"\"GLLottie\"",
+					"-framework",
+					"\"GLMP\"",
+					"-framework",
+					"\"GLMSubDefault\"",
+					"-framework",
+					"\"GLManageSubscriptionBase\"",
+					"-framework",
+					"\"GLMarkdown\"",
+					"-framework",
+					"\"GLModules\"",
+					"-framework",
+					"\"GLNetworking\"",
+					"-framework",
+					"\"GLNetworkingMessage\"",
+					"-framework",
+					"\"GLOfferCode\"",
+					"-framework",
+					"\"GLOfferCode_Extension\"",
+					"-framework",
+					"\"GLPopup\"",
+					"-framework",
+					"\"GLPopupExtension\"",
+					"-framework",
+					"\"GLPurchase\"",
+					"-framework",
+					"\"GLPurchaseExtension\"",
+					"-framework",
+					"\"GLPurchaseUI\"",
+					"-framework",
+					"\"GLPurchaseUIExtension\"",
+					"-framework",
+					"\"GLRemoteResouce\"",
+					"-framework",
+					"\"GLResource\"",
+					"-framework",
+					"\"GLSBuilder\"",
+					"-framework",
+					"\"GLShare\"",
+					"-framework",
+					"\"GLShareExtension\"",
+					"-framework",
+					"\"GLSurvey\"",
+					"-framework",
+					"\"GLSurveyStyle1\"",
+					"-framework",
+					"\"GLSurvey_Extension\"",
+					"-framework",
+					"\"GLTextKit\"",
+					"-framework",
+					"\"GLTrackingEvents\"",
+					"-framework",
+					"\"GLTrackingExtension\"",
+					"-framework",
+					"\"GLUserTag\"",
+					"-framework",
+					"\"GLUserTag_Extension\"",
+					"-framework",
+					"\"GLUtils\"",
+					"-framework",
+					"\"GLWebImage\"",
+					"-framework",
+					"\"GLWebImageExtension\"",
+					"-framework",
+					"\"GLWebView\"",
+					"-framework",
+					"\"GLWidget\"",
+					"-framework",
+					"\"GRDB\"",
+					"-framework",
+					"\"GoogleAppMeasurement\"",
+					"-framework",
+					"\"GoogleAppMeasurementIdentitySupport\"",
+					"-framework",
+					"\"GoogleDataTransport\"",
+					"-framework",
+					"\"GoogleUtilities\"",
+					"-framework",
+					"\"IQKeyboardManager\"",
+					"-framework",
+					"\"InjectHotReload\"",
+					"-framework",
+					"\"Kingfisher\"",
+					"-framework",
+					"\"Lottie\"",
+					"-framework",
+					"\"Promises\"",
+					"-framework",
+					"\"QuartzCore\"",
+					"-framework",
+					"\"ReactiveObjC\"",
+					"-framework",
+					"\"Security\"",
+					"-framework",
+					"\"SnapKit\"",
+					"-framework",
+					"\"StoreKit\"",
+					"-framework",
+					"\"SwiftUIIntrospect\"",
+					"-framework",
+					"\"SystemConfiguration\"",
+					"-framework",
+					"\"UIKit\"",
+					"-framework",
+					"\"WebKit\"",
+					"-framework",
+					"\"nanopb\"",
+					"-weak_framework",
+					"\"AdServices\"",
+					"-weak_framework",
+					"\"AdSupport\"",
+					"-weak_framework",
+					"\"Combine\"",
+					"-weak_framework",
+					"\"SwiftUI\"",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = com.aquariumai.fishkeeping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HackWeek/SupportingFiles/HackWeek-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		7280CC7028E538D800ABF38C /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = D631F7FF95C1E42A82760E0E /* Pods-HackWeek.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				ASSETCATALOG_COMPILER_INCLUDE_ALL_APPICON_ASSETS = YES;
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_ENTITLEMENTS = "$(SRCROOT)/HackWeek/SupportingFiles/HackWeek.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_ASSET_PATHS = "";
+				DEVELOPMENT_TEAM = 8DHYPVL45R;
+				EMIT_FRONTEND_COMMAND_LINES = "";
+				INFOPLIST_FILE = HackWeek/SupportingFiles/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = FaceFlow;
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.1.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.aquariumai.fishkeeping;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = YES;
+				SWIFT_OBJC_BRIDGING_HEADER = "$(SRCROOT)/HackWeek/SupportingFiles/HackWeek-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		7280CC5528E538D600ABF38C /* Build configuration list for PBXProject "HackWeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7280CC6C28E538D800ABF38C /* Debug */,
+				7280CC6D28E538D800ABF38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		7280CC6E28E538D800ABF38C /* Build configuration list for PBXNativeTarget "HackWeek" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				7280CC6F28E538D800ABF38C /* Debug */,
+				7280CC7028E538D800ABF38C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		CE020EC52D01DC57002C56FF /* XCRemoteSwiftPackageReference "swift-markdown-ui" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/gonzalezreal/swift-markdown-ui";
+			requirement = {
+				kind = exactVersion;
+				version = 2.4.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		CE020EC62D01DC57002C56FF /* MarkdownUI */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = CE020EC52D01DC57002C56FF /* XCRemoteSwiftPackageReference "swift-markdown-ui" */;
+			productName = MarkdownUI;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = 7280CC5228E538D600ABF38C /* Project object */;
+}

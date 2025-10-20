@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Administrér abonnement";
+
+"text_member_since" = "Medlem siden: %@";
+
+"text_membership_s" = "Medlemskab: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (første 7 dage gratis)";
+
+"text_premium_free_day" = "Premium (første %@ dage gratis)";
+
+"text_next_billing" = "Næste faktureringsdato: %@";
+
+"text_1_year" = "1 år";
+
+"text_billing_period" = "Faktureringsperiode: %@";
+
+"TEXT_SDAY" = "%@/dag";
+
+"text_1_month" = "1 måned";
+
+"text_3_month" = "3 måneder";
+
+"text_1_week" = "1 uge";
+
+"text_free_trial_end" = "Gratis prøveversion slutter i: %@";
+
+"text_s_days" = "%@ dage";
+
+"text_s_day" = "%@ dag";
+
+"text_manage_desc" = "Knappen \"Gå til App Store\" nedenfor fører dig direkte til abonnementsmenuen. %@ har ikke adgang til Apples faktureringssystem, så vi kan ikke annullere på dine vegne.";
+
+"text_manage_notice" = "Bemærk venligst";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Abonnementet fornyes automatisk, og betalingen debiteres din iTunes-konto.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Apples faktureringssystem begynder at opkræve betaling 24 timer før prøveperiodens udløb. Hvis du vil annullere dit abonnement, skal du gøre det mindst 24 timer før prøveperioden slutter, ellers kan du stadig blive opkrævet.";
+
+"text_manage_notice_item2_2" = "Apples faktureringssystem begynder at opkræve 24 timer før udløbet af den aktuelle abonnementsperiode. Hvis du ønsker at opsige dit abonnement, skal du gøre det mindst 24 timer før udgangen af den aktuelle periode, ellers kan du stadig blive opkrævet.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Hvis du afinstallerer appen, vil dit abonnement ikke blive annulleret.";
+
+"text_go_cancel" = "Gå til App Store for annullering";
+
+"text_keep_plan" = "Behold aftalen";
+
+"text_manage_desc" = "Opsig aftalen under Indstillinger på din telefon. Knappen nedenfor vil lede dig direkte til menuen med abonnementer. Da %@ ikke har adgang til Apples betalingssystem, kan vi ikke opsige abonnementet på dine vegne.";
+
+"TEXT_PLEASE_NOTE" = "Bemærk venligst, at abonnementet ikke automatisk bliver opsagt, når du afinstallerer appen.";
+

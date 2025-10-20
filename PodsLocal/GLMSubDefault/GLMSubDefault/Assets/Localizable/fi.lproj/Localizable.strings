@@ -1,0 +1,58 @@
+"text_manage_subscription" = "Tilauksen hallinta";
+
+"text_member_since" = "Jäsen vuodesta: %@";
+
+"text_membership_s" = "Jäsenyys: %@";
+
+"text_premium" = "Premium";
+
+"TEXT_PREMIUM_7DAY" = "Premium (7 pv kokeilu 0€)";
+
+"text_premium_free_day" = "Premium (%@ pv kokeilu 0€)";
+
+"text_next_billing" = "Seuraava laskutus: %@";
+
+"text_1_year" = "1 vuosi";
+
+"text_billing_period" = "Laskutuskausi: %@";
+
+"TEXT_SDAY" = "%@/pv";
+
+"text_1_month" = "1 kk";
+
+"text_3_month" = "3 kuukautta";
+
+"text_1_week" = "1 vk";
+
+"text_free_trial_end" = "Ilmainen kokeilu päättyy: %@";
+
+"text_s_days" = "%@ päivää";
+
+"text_s_day" = "%@ päivä";
+
+"text_manage_desc" = "Alla oleva \Siirry App Storeen\ -painike vie sinut suoraan tilausvalikkoon. %@illa ei ole pääsyä Applen laskutusjärjestelmään, joten emme voi peruuttaa tilausta puolestasi.";
+
+"text_manage_notice" = "Huomaa";
+
+"text_manage_notice_count1" = "1. ";
+
+"text_manage_notice_item1" = "Tilauksesi uusitaan automaattisesti ja maksu veloitetaan iTunes-tililtäsi.";
+
+"text_manage_notice_count2" = "2. ";
+
+"text_manage_notice_item2_1" = "Applen laskutusjärjestelmä aloittaa laskutuksen 24 tuntia ennen koejakson päättymistä. Jos haluat peruuttaa tilauksesi, sinun on tehtävä se vähintään 24 tuntia ennen koejakson päättymistä, muuten saatat silti olla veloituksen kohteena.";
+
+"text_manage_notice_item2_2" = "Applen veloitusjärjestelmä alkaa veloittaa 24 tuntia ennen kuin nykyinen tilausjakso päättyy. Jos haluat peruuttaa tilauksesi, sinun on tehtävä se vähintään 24 tuntia ennen nykyisen jakson päättymistä, muuten sinua saatetaan silti veloittaa.";
+
+"text_manage_notice_count3" = "3. ";
+
+"text_manage_notice_item3" = "Jos poistat sovelluksen, tilauksesi ei pääty.";
+
+"text_go_cancel" = "Mene App Storehin peruaksesi";
+
+"text_keep_plan" = "Pidä tilaus";
+
+"text_manage_desc" = "Voit tehdä sen puhelimen asetusten kautta. Alla oleva painike vie sinut suoraan tilausvalikkoon. %@ ei voi käyttää Applen laskutusjärjestelmää, joten emme voi peruuttaa sitä puolestasi.";
+
+"TEXT_PLEASE_NOTE" = "Huomaa, että sovelluksen asennuksen poistaminen ei peruuta tilausta automaattisesti puolestasi.";
+
