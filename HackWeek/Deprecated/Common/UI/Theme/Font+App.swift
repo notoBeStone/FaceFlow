@@ -17,6 +17,7 @@ import GLUtils
 
 extension Font {
     public static let avenirBody2Roman = Font.custom("Avenir-Roman", size: 14.rpx)
+    public static let avenirBody2Medium = Font.custom("Avenir-Medium", size: 14.rpx)
     public static let avenirBodyHeavy = Font.custom("Avenir-Heavy", size: 16.rpx)
     public static let avenirBodyMedium = Font.custom("Avenir-Medium", size: 16.rpx)
     public static let avenirBodyRoman = Font.custom("Avenir-Roman", size: 16.rpx)
@@ -40,6 +41,7 @@ extension Font {
 
 extension UIFont {
     public static let avenirBody2Roman = UIFont.custom("Avenir-Roman", size: 14.rpx)
+    public static let avenirBody2Medium = UIFont.custom("Avenir-Medium", size: 14.rpx)
     public static let avenirBodyHeavy = UIFont.custom("Avenir-Heavy", size: 16.rpx)
     public static let avenirBodyMedium = UIFont.custom("Avenir-Medium", size: 16.rpx)
     public static let avenirBodyRoman = UIFont.custom("Avenir-Roman", size: 16.rpx)

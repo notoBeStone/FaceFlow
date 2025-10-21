@@ -444,6 +444,26 @@ extension GLMPLanguage {
     
     static var home_aquascape_idea_title: String { "Aquascape Idea" }
     static var home_aquascape_idea_desc: String { "Get inspired with AI-generated aquascaping designs" }
+    
+    // MARK: - Main Tab Bar
+    static var tab_home: String { "Home" }
+    static var tab_scan: String { "Scan" }
+    static var tab_me: String { "Me" }
+    
+    // MARK: - Main App
+    static var main_app_title: String { "Tutorial" }
+    static var home_welcome: String { "Welcome to FaceFlow" }
+    static var home_discover: String { "Discover your beauty journey" }
+    static var home_section_beginner: String { "Beginner" }
+    static var home_section_advanced: String { "Advanced" }
+    static var scan_title: String { "Scan" }
+    static var scan_description: String { "Scan makeup products" }
+    static var me_title: String { "Profile" }
+    static var me_description: String { "Manage your profile" }
+    
+    // MARK: - Common
+    static var common_more: String { "More" }
+    static var common_more_arrow: String { "More >" }
 }
 
 extension GLMPLanguage {

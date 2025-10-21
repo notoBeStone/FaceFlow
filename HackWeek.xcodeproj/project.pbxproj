@@ -58,7 +58,6 @@
 				Features/Onboarding/CLAUDE.md,
 				Features/Survey/README.md,
 				Features/VipConversion/CLAUDE.md,
-				Features/WordBook/CLAUDE.md,
 				Incubator/ViewStack/CLAUDE.md,
 				SupportingFiles/Info.plist,
 			);

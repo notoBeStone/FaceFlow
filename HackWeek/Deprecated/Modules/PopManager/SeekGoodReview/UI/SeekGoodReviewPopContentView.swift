@@ -61,15 +61,7 @@ struct SeekGoodReviewPopContentView: View {
         .padding(.bottom, 34.rpx)
         .padding(.horizontal, 24.rpx)
         .backgroundMain
-//        .overlay(alignment: .topTrailing) {
-//            Image("common_close_24")
-//                .size(width: 24.rpx)
-//                .padding(.all, 8.rpx)
-//                .controlSize(.large)
-//                .onTapGesture {
-//                    self.handler(.close)
-//                }
-//        }
+
     }
     
     private var top: Double {

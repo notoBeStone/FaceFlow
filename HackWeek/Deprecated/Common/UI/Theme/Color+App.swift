@@ -38,13 +38,10 @@ extension Color {
 
 
 extension Color {
-    public static let mainColor1: Color = Color(hex: 0x1E90FF)
     public static let mainColor2: Color = Color(hex: 0xFBD2D0)
     public static let mainBG: Color = Color(hex: 0xf0f5fa)
     public static let mainSecondary: Color = Color(hex: 0xA719D2)
+    public static let mainColor: Color = Color(hex: 0xff4d8e)
+   
 }
 
-extension UIColor {
-    public static let mainColor1: UIColor = UIColor.gl_color(0x1E90FF)
-    public static let mainColor2: UIColor = UIColor.gl_color(0xFBD2D0)
-}

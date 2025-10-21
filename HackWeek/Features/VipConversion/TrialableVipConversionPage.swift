@@ -112,7 +112,7 @@ struct TrialableVipConversionPage: View {
         }
         .overlay(alignment: .center) {
             if viewModel.skus.isEmpty == false {
-                Rectangle().fill(Color.mainColor1)
+                Rectangle().fill(Color.mainColor)
                     .width(1)
             }
         }
@@ -150,11 +150,11 @@ struct TrialableVipConversionPage: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : "1 week")
                     .fontBold(isIPad ? 20 : 16)
-                    .color(isSelected ? .mainColor1 : .gwL)
+                    .color(isSelected ? .mainColor : .gwL)
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : discountPrice(for: sku.product))
                     .fontMedium(isIPad ? 14 : 12)
-                    .color(isSelected ? .mainColor1 : .gwL)
+                    .color(isSelected ? .mainColor : .gwL)
                     .blockLeading
                 Spacer()
             }
@@ -169,11 +169,11 @@ struct TrialableVipConversionPage: View {
         .frame(maxWidth: .infinity)
         .background {
             RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
-                .fill(isSelected ? Color.mainColor1.opacity(0.35) : Color.clear)
+                .fill(isSelected ? Color.mainColor.opacity(0.35) : Color.clear)
         }
         .overlay {
             RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
-                .stroke(isSelected ? Color.mainColor1 : Color(hex: 0x464646), lineWidth: 1)
+                .stroke(isSelected ? Color.mainColor : Color(hex: 0x464646), lineWidth: 1)
                 .padding(0.5)
         }
     }
@@ -255,7 +255,7 @@ struct TrialableVipConversionPage: View {
             })) {
                 EmptyView()
             }
-            .tint(.mainColor1)
+            .tint(.mainColor)
             .scaleEffect(0.8)
             .width(50)
         }
@@ -284,7 +284,7 @@ struct TrialableVipConversionPage: View {
                 .foregroundColor(.white)
                 .blockCenter
                 .height(isIPad ? 76 : 56)
-                .capsuleBG(.mainColor1)
+                .capsuleBG(.mainColor)
         }
         .opacity(viewModel.selectedSkuId == nil ? 0.3 : 1.0)
         .disabled(viewModel.selectedSkuId == nil)

@@ -125,11 +125,11 @@ struct HistoryVipConversionView: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : priceString(for: sku.product))
                     .fontSemiBold(18.rpx)
-                    .color(isSelected ? .mainColor1 : .gwL)
+                    .color(isSelected ? .mainColor : .gwL)
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : periodString(for: sku.period))
                     .fontMedium(16.rpx)
-                    .color(isSelected ? .mainColor1 : .gwL)
+                    .color(isSelected ? .mainColor : .gwL)
                     .blockLeading
             }
             Image(isSelected ? .vipSelectIcon : .vipUnselectIcon)
@@ -138,8 +138,8 @@ struct HistoryVipConversionView: View {
         .pv(18)
         .ph(16)
         .block()
-        .roundedBG(12, color: isSelected ? .mainColor1.opacity(0.08) : .clear)
-        .roundedBorder(12, color: isSelected ? .mainColor1 : .gwL.opacity(0.29))
+        .roundedBG(12, color: isSelected ? .mainColor.opacity(0.08) : .clear)
+        .roundedBorder(12, color: isSelected ? .mainColor : .gwL.opacity(0.29))
     }
     
     private func periodString(for period: ConversionSku.SkuPeriod) -> String {
@@ -192,7 +192,7 @@ struct HistoryVipConversionView: View {
                 })) {
                     EmptyView()
                 }
-                .tint(.mainColor1)
+                .tint(.mainColor)
                 .scaleEffect(0.8)
                 .width(50)
             })
@@ -222,7 +222,7 @@ struct HistoryVipConversionView: View {
                 .foregroundColor(.white)
                 .blockCenter
                 .height(isIPad ? 76 : 56)
-                .capsuleBG(.mainColor1)
+                .capsuleBG(.mainColor)
         }
     }
     
