@@ -465,6 +465,139 @@ extension GLMPLanguage {
     static var common_more: String { "More" }
     static var common_more_arrow: String { "More >" }
     static var common_loading: String { "Loading..." }
+
+    static var common_start_exploring: String { "Start Exploring" }
+    
+    // MARK: - Face Attributes Onboarding
+    
+    // Stage Titles
+    static var faceAttributes_stage1_title: String { "About Your Face" }
+    static var faceAttributes_stage1_subtitle: String { "Help us recommend the best looks for you" }
+    static var faceAttributes_stage1_emoji: String { "✨" }
+    
+    static var faceAttributes_stage2_title: String { "Your Facial Features" }
+    static var faceAttributes_stage2_subtitle: String { "Match your unique beauty style" }
+    static var faceAttributes_stage2_emoji: String { "👁️" }
+    
+    static var faceAttributes_stage3_title: String { "Your Skin Profile" }
+    static var faceAttributes_stage3_subtitle: String { "Personalized beauty solutions just for you" }
+    static var faceAttributes_stage3_emoji: String { "💎" }
+    
+    // Encouragement
+    static var faceAttributes_encouragement_awesome: String { "Awesome!" }
+    
+    // Completion
+    static var faceAttributes_completion_perfect: String { "Perfect!" }
+    static var faceAttributes_completion_message: String { "We've learned about your unique features\nYour personalized beauty plan is ready" }
+    
+    // Questions - Age
+    static var faceAttributes_question_ageRange: String { "What's your age range?" }
+    static var faceAttributes_question_ageRange_subtitle: String { "Help us recommend age-appropriate content" }
+    static var faceAttributes_age_under18: String { "Under 18" }
+    static var faceAttributes_age_19to25: String { "19-25" }
+    static var faceAttributes_age_26to35: String { "26-35" }
+    static var faceAttributes_age_36to45: String { "36-45" }
+    static var faceAttributes_age_over45: String { "Over 45" }
+    
+    // Questions - Face Shape
+    static var faceAttributes_question_faceShape: String { "What's your face shape?" }
+    static var faceAttributes_question_faceShape_subtitle: String { "Choose the closest match" }
+    static var faceAttributes_faceShape_round: String { "Round" }
+    static var faceAttributes_faceShape_oval: String { "Oval" }
+    static var faceAttributes_faceShape_square: String { "Square" }
+    static var faceAttributes_faceShape_oblong: String { "Oblong" }
+    static var faceAttributes_faceShape_heart: String { "Heart" }
+    static var faceAttributes_faceShape_invertedTriangle: String { "Inverted Triangle" }
+    
+    // Questions - Cheekbone
+    static var faceAttributes_question_cheekbone: String { "Your cheekbones?" }
+    static var faceAttributes_question_cheekbone_subtitle: String { "Describe your cheekbone position" }
+    static var faceAttributes_cheekbone_high: String { "High" }
+    static var faceAttributes_cheekbone_normal: String { "Normal" }
+    static var faceAttributes_cheekbone_low: String { "Low" }
+    
+    // Questions - Jawline
+    static var faceAttributes_question_jawline: String { "Your jawline?" }
+    static var faceAttributes_question_jawline_subtitle: String { "Choose the best match" }
+    static var faceAttributes_jawline_round: String { "Round" }
+    static var faceAttributes_jawline_sharp: String { "Sharp" }
+    static var faceAttributes_jawline_square: String { "Square" }
+    static var faceAttributes_jawline_defined: String { "Defined" }
+    
+    // Questions - Chin
+    static var faceAttributes_question_chin: String { "Your chin shape?" }
+    static var faceAttributes_question_chin_subtitle: String { "Select your chin type" }
+    static var faceAttributes_chin_pointed: String { "Pointed" }
+    static var faceAttributes_chin_round: String { "Round" }
+    static var faceAttributes_chin_wide: String { "Wide" }
+    
+    // Questions - Eye Size
+    static var faceAttributes_question_eyeSize: String { "Your eye size?" }
+    static var faceAttributes_eyeSize_small: String { "Small" }
+    static var faceAttributes_eyeSize_normal: String { "Normal" }
+    static var faceAttributes_eyeSize_large: String { "Large" }
+    
+    // Questions - Eye Shape
+    static var faceAttributes_question_eyeShape: String { "Your eye shape?" }
+    static var faceAttributes_eyeShape_monolid: String { "Monolid" }
+    static var faceAttributes_eyeShape_doubleLid: String { "Double Lid" }
+    static var faceAttributes_eyeShape_innerDouble: String { "Inner Double" }
+    static var faceAttributes_eyeShape_puffy: String { "Puffy" }
+    
+    // Questions - Eye Distance
+    static var faceAttributes_question_eyeDistance: String { "Your eye distance?" }
+    static var faceAttributes_question_eyeDistance_subtitle: String { "Space between your eyes" }
+    static var faceAttributes_eyeDistance_wide: String { "Wide" }
+    static var faceAttributes_eyeDistance_normal: String { "Normal" }
+    static var faceAttributes_eyeDistance_narrow: String { "Narrow" }
+    
+    // Questions - Eyebrow
+    static var faceAttributes_question_eyebrow: String { "Your eyebrow shape?" }
+    static var faceAttributes_eyebrow_straight: String { "Straight" }
+    static var faceAttributes_eyebrow_curved: String { "Curved" }
+    static var faceAttributes_eyebrow_arched: String { "Arched" }
+    static var faceAttributes_eyebrow_angular: String { "Angular" }
+    
+    // Questions - Nose Length
+    static var faceAttributes_question_noseLength: String { "Your nose length?" }
+    static var faceAttributes_noseLength_short: String { "Short" }
+    static var faceAttributes_noseLength_normal: String { "Normal" }
+    static var faceAttributes_noseLength_long: String { "Long" }
+    
+    // Questions - Nose Width
+    static var faceAttributes_question_noseWidth: String { "Your nose width?" }
+    static var faceAttributes_noseWidth_narrow: String { "Narrow" }
+    static var faceAttributes_noseWidth_normal: String { "Normal" }
+    static var faceAttributes_noseWidth_wide: String { "Wide" }
+    
+    // Questions - Lips Thickness
+    static var faceAttributes_question_lipsThickness: String { "Your lip thickness?" }
+    static var faceAttributes_lipsThickness_thin: String { "Thin" }
+    static var faceAttributes_lipsThickness_medium: String { "Medium" }
+    static var faceAttributes_lipsThickness_thick: String { "Thick" }
+    
+    // Questions - Lips Shape
+    static var faceAttributes_question_lipsShape: String { "Your lip shape?" }
+    static var faceAttributes_lipsShape_topHeavy: String { "Top Heavy" }
+    static var faceAttributes_lipsShape_bottomHeavy: String { "Bottom Heavy" }
+    static var faceAttributes_lipsShape_balanced: String { "Balanced" }
+    
+    // Questions - Skin Type
+    static var faceAttributes_question_skinType: String { "Your skin type?" }
+    static var faceAttributes_question_skinType_subtitle: String { "Choose the one that matches best" }
+    static var faceAttributes_skinType_dry: String { "Dry" }
+    static var faceAttributes_skinType_oily: String { "Oily" }
+    static var faceAttributes_skinType_normal: String { "Normal" }
+    static var faceAttributes_skinType_combination: String { "Combination" }
+    static var faceAttributes_skinType_sensitive: String { "Sensitive" }
+    
+    // Questions - Skin Tone
+    static var faceAttributes_question_skinTone: String { "Your skin tone?" }
+    static var faceAttributes_skinTone_coolFair: String { "Cool Fair" }
+    static var faceAttributes_skinTone_warmFair: String { "Warm Fair" }
+    static var faceAttributes_skinTone_natural: String { "Natural" }
+    static var faceAttributes_skinTone_healthy: String { "Healthy" }
+    static var faceAttributes_skinTone_wheat: String { "Wheat" }
 }
 
 extension GLMPLanguage {

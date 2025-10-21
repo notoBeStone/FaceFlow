@@ -52,8 +52,7 @@ class HomeViewModel: ObservableObject {
                 duration: 600, // 10分钟
                 tags: [
                     TutorialTag.beginner.rawValue,
-                    TutorialTag.everyday.rawValue,
-                    TutorialTag.stepByStep.rawValue
+            
                 ]
             ),
             TutorialVideo(
@@ -64,8 +63,7 @@ class HomeViewModel: ObservableObject {
                 duration: 480, // 8分钟
                 tags: [
                     TutorialTag.beginner.rawValue,
-                    TutorialTag.naturalLook.rawValue,
-                    TutorialTag.quickTips.rawValue
+             
                 ]
             ),
             TutorialVideo(
@@ -76,7 +74,6 @@ class HomeViewModel: ObservableObject {
                 duration: 420, // 7分钟
                 tags: [
                     TutorialTag.beginner.rawValue,
-                    TutorialTag.eyeMakeup.rawValue
                 ]
             ),
             TutorialVideo(
@@ -87,7 +84,6 @@ class HomeViewModel: ObservableObject {
                 duration: 300, // 5分钟
                 tags: [
                     TutorialTag.beginner.rawValue,
-                    TutorialTag.quickTips.rawValue
                 ]
             )
         ]
@@ -102,8 +98,7 @@ class HomeViewModel: ObservableObject {
                 duration: 900, // 15分钟
                 tags: [
                     TutorialTag.advanced.rawValue,
-                    TutorialTag.glamorous.rawValue,
-                    TutorialTag.professional.rawValue
+                   
                 ]
             ),
             TutorialVideo(
@@ -114,8 +109,7 @@ class HomeViewModel: ObservableObject {
                 duration: 720, // 12分钟
                 tags: [
                     TutorialTag.advanced.rawValue,
-                    TutorialTag.smokyEye.rawValue,
-                    TutorialTag.eyeMakeup.rawValue
+                
                 ]
             ),
             TutorialVideo(
@@ -126,8 +120,7 @@ class HomeViewModel: ObservableObject {
                 duration: 840, // 14分钟
                 tags: [
                     TutorialTag.advanced.rawValue,
-                    TutorialTag.contouring.rawValue,
-                    TutorialTag.professional.rawValue
+                  
                 ]
             ),
             TutorialVideo(
@@ -138,7 +131,6 @@ class HomeViewModel: ObservableObject {
                 duration: 660, // 11分钟
                 tags: [
                     TutorialTag.advanced.rawValue,
-                    TutorialTag.highlighting.rawValue
                 ]
             )
         ]

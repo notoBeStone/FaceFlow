@@ -55,7 +55,6 @@
 				Deprecated/Generated/Lokalise/.gitignore,
 				"Deprecated/Generated/Lokalise/.gitlab-ci.yml",
 				Deprecated/Generated/Lokalise/README.md,
-				Features/Onboarding/CLAUDE.md,
 				Features/Survey/README.md,
 				Features/VipConversion/CLAUDE.md,
 				Incubator/ViewStack/CLAUDE.md,
