@@ -58,6 +58,7 @@ class FaceAttributesOnboardingFlow: ObservableObject {
     @Published var currentStageIndex: Int = 0
     @Published var currentQuestionIndex: Int = 0
     @Published var isShowingEncouragement: Bool = false
+    @Published var isCompleted: Bool = false
     @Published var selectedAnswers: [String: String] = [:] // questionId: value
     
     // 三个阶段的问题 - 使用本地化文案
@@ -101,6 +102,8 @@ class FaceAttributesOnboardingFlow: ObservableObject {
     }
     
     var currentQuestion: AttributeQuestion? {
+        // 如果已完成，返回 nil 以显示完成页面
+        guard !isCompleted else { return nil }
         guard currentQuestionIndex < currentStage.questions.count else { return nil }
         return currentStage.questions[currentQuestionIndex]
     }
@@ -149,8 +152,13 @@ class FaceAttributesOnboardingFlow: ObservableObject {
     }
     
     func completeFlow() {
-        // 流程完成后的处理
-        print("✅ 面部属性收集完成: \(selectedAnswers)")
+        // 标记问卷流程为已完成
+        isCompleted = true
+        
+        // 打印完成信息
+        print("🎉 Face Attributes Onboarding 完成！")
+        print("📊 用户选择的答案: \(selectedAnswers)")
+        print("✅ 总共回答了 \(selectedAnswers.count) 个问题")
     }
     
     func skipQuestion() {

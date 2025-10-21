@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GLUtils
 
 /// 通用的属性选择页面 - 支持图片网格和列表两种样式
 struct AttributeSelectionPage: View {
@@ -68,6 +69,7 @@ struct AttributeSelectionPage: View {
                     .padding(.bottom, 20)
                 }
             }
+            .padding(.top, GLSafeStatusBarHeight)
         }
     }
     
@@ -90,7 +92,6 @@ struct AttributeSelectionPage: View {
             .padding(.horizontal, 20)
             .padding(.top, 16)
         }
-        .background(Color.white.opacity(0.95))
     }
     
     // MARK: - Question Header

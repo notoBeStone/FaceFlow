@@ -65,6 +65,7 @@ struct FaceAttributesOnboardingContainer: View {
         }
         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.currentQuestionIndex)
         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.isShowingEncouragement)
+        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.isCompleted)
     }
     
     // MARK: - Save & Complete
