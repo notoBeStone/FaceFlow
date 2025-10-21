@@ -13,6 +13,8 @@ struct HomeView: View {
     // MARK: - Properties
     
     @StateObject private var viewModel = HomeViewModel()
+    @Environment(\.videoPlayerManager) private var videoPlayerManager
+    @Environment(\.animationNamespace) private var animationNamespace
     
     // 网格列配置：2列
     private let columns = [
@@ -66,7 +68,14 @@ struct HomeView: View {
             // 2*2 网格
             LazyVGrid(columns: columns, spacing: 16) {
                 ForEach(videos.prefix(4)) { video in
-                    makeContentCard(video: video)
+                    SimpleVideoCardView(
+                        video: video,
+                        namespace: animationNamespace,
+                        isPlaying: videoPlayerManager.playingVideoId == video.id
+                    )
+                    .onTapGesture {
+                        videoPlayerManager.showPlayer(for: video)
+                    }
                 }
             }
             
@@ -85,26 +94,6 @@ struct HomeView: View {
         }
     }
     
-    /// 创建内容卡片
-    private func makeContentCard(video: TutorialVideo) -> some View {
-        VStack(alignment: .leading, spacing: 8) {
-            // 图片区域
-            VideoThumbnailView(
-                thumbnailURL: video.thumbnailURL,
-                duration: video.formattedDuration
-            )
-            .aspectRatio(1.2, contentMode: .fit)
-            
-            // 标题
-            Text(video.title)
-                .font(.avenirBodyMedium)
-                .foregroundColor(.g9L)
-                .lineLimit(2)
-                .fixedSize(horizontal: false, vertical: true)
-            
-            Spacer()
-        }
-    }
 }
 
 #Preview {

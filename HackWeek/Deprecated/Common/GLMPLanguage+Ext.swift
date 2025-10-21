@@ -464,6 +464,7 @@ extension GLMPLanguage {
     // MARK: - Common
     static var common_more: String { "More" }
     static var common_more_arrow: String { "More >" }
+    static var common_loading: String { "Loading..." }
 }
 
 extension GLMPLanguage {

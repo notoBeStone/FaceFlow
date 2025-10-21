@@ -15,6 +15,9 @@ struct VideoListView: View {
     let tag: TutorialTag
     let videos: [TutorialVideo]
     
+    @Environment(\.videoPlayerManager) private var videoPlayerManager
+    @Environment(\.animationNamespace) private var animationNamespace
+    
     // MARK: - Body
     
     var body: some View {
@@ -25,7 +28,14 @@ struct VideoListView: View {
             ScrollView {
                 LazyVStack(spacing: 16) {
                     ForEach(videos) { video in
-                        makeContentCard(video: video)
+                        SimpleVideoListCardView(
+                            video: video,
+                            namespace: animationNamespace,
+                            isPlaying: videoPlayerManager.playingVideoId == video.id
+                        )
+                        .onTapGesture {
+                            videoPlayerManager.showPlayer(for: video)
+                        }
                     }
                 }
                 .padding(.horizontal, 20)
@@ -34,40 +44,6 @@ struct VideoListView: View {
         }
         .navigationTitle(tag.rawValue)
         .navigationBarTitleDisplayMode(.large)
-    }
-    
-    // MARK: - Helper Views
-    
-    /// 创建内容卡片（横向布局）
-    private func makeContentCard(video: TutorialVideo) -> some View {
-        HStack(alignment: .top, spacing: 12) {
-            // 左侧：缩略图
-            VideoThumbnailView(
-                thumbnailURL: video.thumbnailURL,
-                duration: video.formattedDuration,
-                width: 120,
-                height: 100,
-                playIconSize: 32
-            )
-            
-            // 右侧：标题和摘要
-            VStack(alignment: .leading, spacing: 6) {
-                Text(video.title)
-                    .font(.avenirBodyMedium)
-                    .foregroundColor(.g9L)
-                    .lineLimit(2)
-                
-                if let summary = video.summary {
-                    Text(summary)
-                        .font(.avenirBody2Roman)
-                        .foregroundColor(.g6L)
-                        .lineLimit(2)
-                }
-                Spacer()
-            }
-            .frame(maxWidth: .infinity, alignment: .leading)
-        }
-        .frame(height: 100)
     }
 }
 

@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import Kingfisher
 
 /// 视频缩略图视图组件
 struct VideoThumbnailView: View {
@@ -39,31 +40,47 @@ struct VideoThumbnailView: View {
     // MARK: - Body
     
     var body: some View {
-        AsyncImage(url: URL(string: thumbnailURL)) { phase in
-            switch phase {
-            case .empty:
-                // 加载中
-                placeholderView
-                    .overlay(
-                        ProgressView()
-                            .tint(.mainColor)
-                    )
-            case .success(let image):
-                // 图片加载成功
-                successView(image: image)
-            case .failure:
-                // 加载失败，显示占位符
-                placeholderView
-                    .overlay(
-                        Image(systemName: "photo")
-                            .font(.system(size: playIconSize))
-                            .foregroundColor(.mainColor.opacity(0.5))
-                    )
-            @unknown default:
-                EmptyView()
+        Group {
+            if let width = width, let height = height {
+                // 固定尺寸模式
+                KFImage(URL(string: thumbnailURL))
+                    .placeholder {
+                        placeholderView
+                            .overlay(
+                                ProgressView()
+                                    .tint(.mainColor)
+                            )
+                    }
+                    .onFailure { _ in
+                        // Kingfisher 失败不需要手动处理，会自动显示 placeholder
+                    }
+                    .resizable()
+                    .aspectRatio(contentMode: .fill)
+                    .frame(width: width, height: height)
+                    .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                    .overlay(overlayContent)
+            } else {
+                // 自适应尺寸模式
+                GeometryReader { geometry in
+                    KFImage(URL(string: thumbnailURL))
+                        .placeholder {
+                            placeholderView
+                                .overlay(
+                                    ProgressView()
+                                        .tint(.mainColor)
+                                )
+                        }
+                        .onFailure { _ in
+                            // Kingfisher 失败不需要手动处理，会自动显示 placeholder
+                        }
+                        .resizable()
+                        .aspectRatio(contentMode: .fill)
+                        .frame(width: geometry.size.width, height: geometry.size.height)
+                        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
+                }
+                .overlay(overlayContent)
             }
         }
-        .frame(width: width, height: height)
     }
     
     // MARK: - Helper Views
@@ -80,30 +97,6 @@ struct VideoThumbnailView: View {
             )
     }
     
-    /// 成功加载的图片视图
-    private func successView(image: Image) -> some View {
-        Group {
-            if let width = width, let height = height {
-                // 固定尺寸模式
-                image
-                    .resizable()
-                    .aspectRatio(contentMode: .fill)
-                    .frame(width: width, height: height)
-                    .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-                    .overlay(overlayContent)
-            } else {
-                // 自适应尺寸模式
-                GeometryReader { geometry in
-                    image
-                        .resizable()
-                        .aspectRatio(contentMode: .fill)
-                        .frame(width: geometry.size.width, height: geometry.size.height)
-                        .clipShape(RoundedRectangle(cornerRadius: cornerRadius))
-                }
-                .overlay(overlayContent)
-            }
-        }
-    }
     
     /// 叠加内容（播放按钮和时长）
     private var overlayContent: some View {
