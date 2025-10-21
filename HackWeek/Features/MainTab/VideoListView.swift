@@ -22,7 +22,7 @@ struct VideoListView: View {
     
     var body: some View {
         ZStack {
-            Color.g0L
+            Color.mainBG
                 .ignoresSafeArea()
             
             ScrollView {

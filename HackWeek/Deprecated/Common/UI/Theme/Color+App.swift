@@ -39,9 +39,10 @@ extension Color {
 
 extension Color {
     public static let mainColor2: Color = Color(hex: 0xFBD2D0)
-    public static let mainBG: Color = Color(hex: 0xf0f5fa)
     public static let mainSecondary: Color = Color(hex: 0xA719D2)
+    
     public static let mainColor: Color = Color(hex: 0xff4d8e)
+    public static let mainBG: Color = Color(hex: 0xFFF5F7)
    
 }
 

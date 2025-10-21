@@ -41,27 +41,25 @@ struct SimpleVideoPlayerView: View {
                                 
                 // 视频播放器区域
                 ZStack {
-                    // 视频播放器 - 使用系统原生 VideoPlayer
+                    // 视频播放器层 - 使用系统原生 VideoPlayer
                     Group {
                         if let player = playerViewModel.player {
                             VideoPlayer(player: player)
-                                .frame(maxWidth: .infinity)
-                                .aspectRatio(16/9, contentMode: .fit)
                         } else {
                             // 加载中或错误状态
-                            RoundedRectangle(cornerRadius: 0)
-                                .fill(Color.black)
-                                .aspectRatio(16/9, contentMode: .fit)
-                        }
-                        
-                        // 封面图和加载动效覆盖层
-                        if !playerViewModel.isVideoReady {
-                            thumbnailLoadingOverlay
-                                
+                            Color.black
                         }
                     }
                     .matchedGeometryEffect(id: "videoPlayer_\(video.id)", in: namespace)
+                    
+                    // 封面图和加载动效覆盖层 - 独立的一层
+                    if !playerViewModel.isVideoReady {
+                        thumbnailLoadingOverlay
+                            .transition(.opacity)
+                    }
                 }
+                .frame(maxWidth: .infinity)
+                .aspectRatio(16/9, contentMode: .fit)
                 .animation(.easeOut(duration: 0.3), value: playerViewModel.isVideoReady)
                 
                 // 视频信息区域
@@ -142,33 +140,34 @@ struct SimpleVideoPlayerView: View {
     
     /// 封面图和加载动效覆盖层
     private var thumbnailLoadingOverlay: some View {
-        ZStack {
-            // 封面图 - 使用 Kingfisher 强力缓存
-            KFImage(URL(string: video.thumbnailURL))
-                .placeholder {
-                    Color.black
-                }
-                .onFailure { _ in
-                    // 加载失败时显示黑色背景
-                }
-                .resizable()
-                .aspectRatio(contentMode: .fill)
-                .frame(maxWidth: .infinity)
-                .aspectRatio(16/9, contentMode: .fit)
-                .clipped()
-            
-            // 半透明遮罩
-            Color.black.opacity(0.4)
-            
-            // Loading 动效
-            VStack(spacing: 12) {
-                ProgressView()
-                    .progressViewStyle(CircularProgressViewStyle(tint: .white))
-                    .scaleEffect(1.2)
+        GeometryReader { geometry in
+            ZStack {
+                // 封面图 - 使用 Kingfisher 强力缓存
+                KFImage(URL(string: video.thumbnailURL))
+                    .placeholder {
+                        Color.black
+                    }
+                    .onFailure { _ in
+                        // 加载失败时显示黑色背景
+                    }
+                    .resizable()
+                    .scaledToFill()
+                    .frame(width: geometry.size.width, height: geometry.size.height)
+                    .clipped()
                 
-                Text(GLMPLanguage.common_loading)
-                    .font(.avenirBodyRegular)
-                    .foregroundColor(.white)
+                // 半透明遮罩
+                Color.black.opacity(0.4)
+                
+                // Loading 动效
+                VStack(spacing: 12) {
+                    ProgressView()
+                        .progressViewStyle(CircularProgressViewStyle(tint: .white))
+                        .scaleEffect(1.2)
+                    
+                    Text(GLMPLanguage.common_loading)
+                        .font(.avenirBodyRegular)
+                        .foregroundColor(.white)
+                }
             }
         }
     }
