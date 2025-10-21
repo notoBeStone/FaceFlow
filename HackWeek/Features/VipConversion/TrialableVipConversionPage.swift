@@ -8,27 +8,21 @@
 import SwiftUI
 import StoreKit
 
-let paywallFeatures = [
-    "Snap photos to learn new words",
-    "Practice Spanish, Japanese, Chinese & more",
-    "Turn anything into a language lesson"
-]
-
 let paywallFeatures1 = [
     "Enjoy your first 3 days, it's free",
     "Cancel from the app or your iCloud account",
-    "Snap photos to learn new words",
-    "Practice Spanish, Japanese, Chinese & more",
-    "Turn anything into a language lesson"
+    "Personalized makeup tutorials for your style",
+    "Learn from professional makeup artists",
+    "Scan products to analyze ingredient safety"
 ]
 
 let paywallFeatures2 = [
     "Enjoy your first week, it's affordable",
     "Cancel from the app or your iCloud account",
-    "Snap photos to learn new words",
-    "Practice Spanish, Japanese, Chinese & more",
-    "Turn anything into a language lesson"
-]
+    "Personalized makeup tutorials for your style",
+    "Learn from professional makeup artists",
+    "Scan products to analyze ingredient safety"
+] 
 
 
 struct TrialableVipConversionPage: View {
@@ -46,9 +40,7 @@ struct TrialableVipConversionPage: View {
     }
     
     var headImage: some View {
-        Image(isIPad ? .headerPad : .headerPhone)
-            .resizable()
-            .aspectRatio(isIPad ? 834/552 : 375/360, contentMode: .fit)
+        VipHeaderVideoPlayer(videoName: "vip_header", aspectRatio: 2502/1656)
     }
     
     var gradient: some View {
@@ -58,11 +50,11 @@ struct TrialableVipConversionPage: View {
                 Rectangle()
                     .fill(
                         LinearGradient(colors: [
-                            Color.clear,
-                            Color(hex: 0x000D1A)
+                            Color.white.opacity(0.0),
+                            Color.white.opacity(1.0)
                         ], startPoint: .top, endPoint: .bottom)
                     )
-                    .frame(height: proxy.size.height / 2)
+                    .frame(height: proxy.size.height / 1.5)
             }
         }
     }
@@ -70,7 +62,7 @@ struct TrialableVipConversionPage: View {
     var titleArea: some View {
         Text("Design Your Trial")
             .fontBold(isIPad ? 44 : 24)
-            .colorGWL
+            .foregroundColor(Color(hex: 0x1A1A1A))
             .blockCenter
     }
     
@@ -80,10 +72,13 @@ struct TrialableVipConversionPage: View {
             ForEach(Array(features.enumerated()), id: \.offset) { index, item in
                 HStack(alignment: .top, spacing: 10) {
                     Image(.vipCheckIcon)
+                        .renderingMode(.template)
                         .resizableSquare(isIPad ? 24 : 16)
+                        .foregroundColor(.mainColor)
+                    
                     Text(item)
                         .font(.custom("Montserrat-Medium", size: isIPad ? 22 : 16))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(hex: 0x3B3B3B))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .pv(6)
@@ -123,16 +118,18 @@ struct TrialableVipConversionPage: View {
             VStack(spacing: 3) {
                 Text("--")
                     .fontBold(isIPad ? 20 : 16)
-                    .color(.gwL)
+                    .color(Color(hex: 0x3B3B3B))
                     .blockLeading
                 Text("--")
                     .fontMedium(isIPad ? 14 : 12)
-                    .color(.gwL)
+                    .color(Color(hex: 0x6C6C6C))
                     .blockLeading
                 Spacer()
             }
-            Image(.vipUnselectIcon)
-                .resizableSquare(isIPad ? 28 : 24)
+            Image(systemName: "circle")
+                .resizable()
+                .frame(width: isIPad ? 28 : 24, height: isIPad ? 28 : 24)
+                .foregroundColor(Color(hex: 0xD8D8D8))
         }
         .pv(isIPad ? 16 : 10)
         .ph(isIPad ? 16 : 12)
@@ -140,7 +137,7 @@ struct TrialableVipConversionPage: View {
         .frame(height: isIPad ? 110 : 77)
         .overlay {
             RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
-                .stroke(Color(hex: 0x464646), lineWidth: 1)
+                .stroke(Color(hex: 0xD8D8D8), lineWidth: 1)
         }
     }
     
@@ -150,17 +147,19 @@ struct TrialableVipConversionPage: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : "1 week")
                     .fontBold(isIPad ? 20 : 16)
-                    .color(isSelected ? .mainColor : .gwL)
+                    .color(isSelected ? .mainColor : Color(hex: 0x3B3B3B))
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : discountPrice(for: sku.product))
                     .fontMedium(isIPad ? 14 : 12)
-                    .color(isSelected ? .mainColor : .gwL)
+                    .color(isSelected ? .mainColor : Color(hex: 0x6C6C6C))
                     .blockLeading
                 Spacer()
             }
             Spacer()
-            Image(isSelected ? .vipSelectIcon : .vipUnselectIcon)
-                .resizableSquare(isIPad ? 28 : 24)
+            Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
+                .resizable()
+                .frame(width: isIPad ? 28 : 24, height: isIPad ? 28 : 24)
+                .foregroundColor(isSelected ? Color.mainColor : Color(hex: 0xD8D8D8))
         }
         .pv(isIPad ? 16 : 10)
         .ph(isIPad ? 16 : 12)
@@ -173,7 +172,7 @@ struct TrialableVipConversionPage: View {
         }
         .overlay {
             RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
-                .stroke(isSelected ? Color.mainColor : Color(hex: 0x464646), lineWidth: 1)
+                .stroke(isSelected ? Color.mainColor : Color(hex: 0xD8D8D8), lineWidth: 1)
                 .padding(0.5)
         }
     }
@@ -218,7 +217,7 @@ struct TrialableVipConversionPage: View {
                     Text("/week")
                         .fontRegular(isIPad ? 20 : 14)
                 )
-                .foregroundColor(Color(hex: 0xe1e1e1))
+                .foregroundColor(Color(hex: 0x6C6C6C))
                 .anyView
             } else {
                 (
@@ -231,7 +230,7 @@ struct TrialableVipConversionPage: View {
                     Text("/week")
                         .fontRegular(isIPad ? 20 : 14)
                 )
-                .foregroundColor(Color(hex: 0xe1e1e1))
+                .foregroundColor(Color(hex: 0x6C6C6C))
                 .anyView
             }
         } else {
@@ -243,7 +242,7 @@ struct TrialableVipConversionPage: View {
         HStack(spacing: 8) {
             Text("Remind me before my trial ends")
                 .fontMedium(isIPad ? 16 : 14)
-                .colorGWL
+                .foregroundColor(Color(hex: 0x3B3B3B))
                 .blockLeading
                 .lineLimit(1)
             Toggle(isOn: Binding(get: { viewModel.reminderEnable }, set: { newValue in
@@ -261,7 +260,7 @@ struct TrialableVipConversionPage: View {
         }
         .pv(8)
         .ph(16)
-        .capsuleBorder(.gwL.opacity(0.3))
+        .capsuleBorder(Color(hex: 0xD8D8D8))
     }
     
     func hintForSku(sku: ConversionSku) -> String {
@@ -358,7 +357,7 @@ struct TrialableVipConversionPage: View {
             .padding(.horizontal, isIPad ? 150 : 20)
         }
         .ignoresSafeArea()
-        .background(Color(hex: 0x000D1A))
+        .background(Color.white)
         .onReceive(conversionObserver.updateUIEvent) { _ in
             TemplateAPI.Conversion.enableCurrentSkus(viewModel.availableSkus)
             Task {

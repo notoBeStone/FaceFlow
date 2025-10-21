@@ -9,9 +9,9 @@ import SwiftUI
 import StoreKit
 
 let historyPaywallFeatures = [
-    "Snap photos to learn new words",
-    "Practice Spanish, Japanese, Chinese & more",
-    "Turn anything into a language lesson"
+    "Personalized makeup tutorials for your style",
+    "Learn from professional makeup artists",
+    "Scan products to analyze ingredient safety"
 ]
 
 struct HistoryVipConversionView: View {
@@ -28,9 +28,7 @@ struct HistoryVipConversionView: View {
     }
     
     var headImage: some View {
-        Image(isIPad ? .headerPad : .headerPhone)
-            .resizable()
-            .aspectRatio(isIPad ? 834/552 : 375/360, contentMode: .fit)
+        VipHeaderVideoPlayer(videoName: "vip_header", aspectRatio: 2250/1156)
     }
     
     var gradient: some View {
@@ -40,11 +38,11 @@ struct HistoryVipConversionView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(colors: [
-                            Color.clear,
-                            Color(hex: 0x000D1A)
+                            Color.white.opacity(0.0),
+                            Color.white.opacity(1.0)
                         ], startPoint: .top, endPoint: .bottom)
                     )
-                    .frame(height: proxy.size.height / 2)
+                    .frame(height: proxy.size.height / 1.5)
             }
         }
     }
@@ -52,11 +50,11 @@ struct HistoryVipConversionView: View {
     var titleArea: some View {
         VStack(spacing: 0) {
             (
-                Text("Make Fishkeeping Easier\nWith ")
-                    .foregroundColor(.white)
+                Text("Makeup Easier\nWith ")
+                    .foregroundColor(Color(hex: 0x1A1A1A))
                 +
                 Text("FaceFlow")
-                    .foregroundColor(.accentColor)
+                    .foregroundColor(.mainColor)
             )
             .font(.custom("Montserrat-Bold", size: isIPad ? 34 : 22))
             .multilineTextAlignment(.center)
@@ -73,7 +71,7 @@ struct HistoryVipConversionView: View {
                         .frame(width: isIPad ? 24 : 16, height: isIPad ? 24 : 16)
                     Text(item)
                         .font(.custom("Montserrat-Medium", size: isIPad ? 20 : 16))
-                        .foregroundColor(.white)
+                        .foregroundColor(Color(hex: 0x3B3B3B))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
@@ -102,11 +100,11 @@ struct HistoryVipConversionView: View {
             VStack(spacing: 3) {
                 Text("--")
                     .fontSemiBold(18.rpx)
-                    .color(.gwL)
+                    .color(Color(hex: 0x3B3B3B))
                     .blockLeading
                 Text("--")
                     .fontMedium(16.rpx)
-                    .color(.gwL)
+                    .color(Color(hex: 0x6C6C6C))
                     .blockLeading
             }
             Image(.vipUnselectIcon)
@@ -116,7 +114,7 @@ struct HistoryVipConversionView: View {
         .ph(16)
         .block()
         .roundedBG(12, color:.clear)
-        .roundedBorder(12, color:.gwL.opacity(0.29))
+        .roundedBorder(12, color: Color(hex: 0xD8D8D8))
     }
     
     @ViewBuilder
@@ -125,11 +123,11 @@ struct HistoryVipConversionView: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : priceString(for: sku.product))
                     .fontSemiBold(18.rpx)
-                    .color(isSelected ? .mainColor : .gwL)
+                    .color(isSelected ? .mainColor : Color(hex: 0x3B3B3B))
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : periodString(for: sku.period))
                     .fontMedium(16.rpx)
-                    .color(isSelected ? .mainColor : .gwL)
+                    .color(isSelected ? .mainColor : Color(hex: 0x6C6C6C))
                     .blockLeading
             }
             Image(isSelected ? .vipSelectIcon : .vipUnselectIcon)
@@ -139,7 +137,7 @@ struct HistoryVipConversionView: View {
         .ph(16)
         .block()
         .roundedBG(12, color: isSelected ? .mainColor.opacity(0.08) : .clear)
-        .roundedBorder(12, color: isSelected ? .mainColor : .gwL.opacity(0.29))
+        .roundedBorder(12, color: isSelected ? .mainColor : Color(hex: 0xD8D8D8))
     }
     
     private func periodString(for period: ConversionSku.SkuPeriod) -> String {
@@ -163,7 +161,7 @@ struct HistoryVipConversionView: View {
         if let skuId = viewModel.selectedSkuId, let item = viewModel.skus.first(where: { $0.id == skuId}) {
             Text(hintForSku(sku: item))
                 .fontSemiBold(isIPad ? 20 : 14)
-                .colorGWL
+                .foregroundColor(Color(hex: 0x6C6C6C))
                 .blockCenter
                 .anyView
         } else {
@@ -177,7 +175,7 @@ struct HistoryVipConversionView: View {
                 Image(.vipReminderIcon).resizableSquare(24.rpx)
                 Text("Remind me before my trial ends")
                     .fontMedium(isIPad ? 16 : 14)
-                    .colorGWL
+                    .foregroundColor(Color(hex: 0x3B3B3B))
                     .blockLeading
                     .lineLimit(1)
             }
@@ -280,7 +278,7 @@ struct HistoryVipConversionView: View {
             .padding(.horizontal, isIPad ? 150 : 24)
         }
         .pb(20)
-        .background(Color(hex: 0x000D1A))
+        .background(Color.white)
         .ignoresSafeArea()
         .onReceive(conversionObserver.updateUIEvent) { _ in
             TemplateAPI.Conversion.enableCurrentSkus(viewModel.availableSkus)
@@ -299,4 +297,5 @@ struct HistoryVipConversionView: View {
 
 #Preview {
     HistoryVipConversionView()
+        .environmentObject(ConversionEventObserver())
 }

@@ -51,7 +51,7 @@ open class ConversionController: GLOCVipBaseViewController, PaywallNotifierDeleg
         let button = UIButton()
         button.setTitle("Cancel", for: .normal)
         button.titleLabel?.font = UIFont.systemFont(ofSize: IsIPad ? 18 : 16, weight: .medium)
-        button.setTitleColor(.gl_color(0xb4b4b4).withAlphaComponent(0.5), for: .normal)
+        button.setTitleColor(.gl_color(0xb4b4b4).withAlphaComponent(0.8), for: .normal)
         button.gl_enlargeEdge(10)
         button.rac_signal(for: .touchUpInside).subscribeNext {[weak self] _ in
             self?.closeAction()

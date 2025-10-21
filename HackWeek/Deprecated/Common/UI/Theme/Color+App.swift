@@ -42,7 +42,7 @@ extension Color {
     public static let mainSecondary: Color = Color(hex: 0xA719D2)
     
     public static let mainColor: Color = Color(hex: 0xff4d8e)
-    public static let mainBG: Color = Color(hex: 0xFFF5F7)
+    public static let mainBG: Color = Color(hex: 0xf5f5f5)
    
 }
 
