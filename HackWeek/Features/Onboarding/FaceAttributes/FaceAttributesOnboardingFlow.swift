@@ -157,9 +157,9 @@ class FaceAttributesOnboardingFlow: ObservableObject {
         isCompleted = true
         
         // 打印完成信息
-        print("🎉 Face Attributes Onboarding 完成！")
-        print("📊 用户选择的答案: \(selectedAnswers)")
-        print("✅ 总共回答了 \(selectedAnswers.count) 个问题")
+        debugPrint("🎉 Face Attributes Onboarding 完成！")
+        debugPrint("📊 用户选择的答案: \(selectedAnswers)")
+        debugPrint("✅ 总共回答了 \(selectedAnswers.count) 个问题")
     }
     
     func skipQuestion() {

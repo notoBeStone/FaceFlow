@@ -22,7 +22,12 @@ Step 2 - Evaluation Dimensions: Evaluate the makeup look based on the following 
 * Aegyo Sal (Undereye Bags): The size should be less than or equal to 1/2 of the eye height, keeping the under-eye area clean, and should not be entirely highlighted.
 * Eyelashes: Length should not be higher than the eyebrows, and should not oppress the eyes.
 * Lips: Should be balanced and neutralized, with even color that coordinates with the eyeshadow; if the eyeshadow has high saturation, the lip color should adopt low saturation.
-Step 3 - Makeup Scoring: Score the makeup look objectively based on the evaluation dimensions.
+Step 3 - Makeup Scoring: Score EACH makeup dimension objectively. The overall score will be calculated as the weighted average of all dimensions.
+
+DIMENSION SCORING (Each dimension gets its own score 0-100):
+- Each dimension should be scored independently based on its execution quality
+- DO NOT give all dimensions the same score
+- Be objective and specific for each dimension
 
 DEFINITION OF MAKEUP QUALITY LEVELS:
 
@@ -173,39 +178,182 @@ CRITICAL OUTPUT REQUIREMENTS:
 
 Output Format:
 {
-	"Score": "[numeric score as string, or 'N/A' if no makeup detected]",
-	"Review": "[Detailed evaluation mentioning specific strengths and weaknesses across dimensions. Be specific about what was done well and what needs improvement. Include score level (Excellent/Very Good/Good/Fair/Poor).]",
-	"Suggestion": "[Actionable suggestions for improvement, prioritizing the most impactful changes. Consider face shape, feature placement, and current trends.]"
+	"BaseMakeup": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Specific evaluation of base makeup quality, coverage, texture, color match]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"Contouring": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Evaluation of contouring shadows and highlight placement, blending, shade selection]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"Blush": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Evaluation of blush color, placement, blending]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"EyeMakeup": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Comprehensive evaluation covering: Eyeshadow (blending, colors), Eyeliner (technique, symmetry), Aegyo sal (if present), Eyelashes (curl, separation)]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"Eyebrows": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Evaluation of eyebrow shape, color, technique, symmetry]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"Lips": {
+		"Score": "[0-100, or 'N/A' if not applicable]",
+		"Review": "[Evaluation of lip color, application, coordination with overall look]",
+		"Suggestion": "[OPTIONAL - Only include if there are issues. Omit this field if well done]"
+	},
+	"OverallHarmony": "[Brief comment on how all elements work together and overall impression]"
 }
+
+NOTE: DO NOT include an overall "Score" field. The overall score will be calculated automatically from the dimension scores using weighted average:
+- BaseMakeup: 20%
+- Eyebrows: 15%
+- EyeMakeup: 25%
+- Contouring: 10%
+- Blush: 10%
+- Highlight: 10%
+- Lips: 10%
+
+IMPORTANT: 
+- If a dimension is well-executed with no issues, DO NOT include the "Suggestion" field for that dimension
+- Only include "Suggestion" when there are actual problems or areas for improvement
+- This makes the output cleaner and highlights only what needs attention
 
 Output Examples:
 
 Example 1 - Excellent Makeup (High Score):
 {
-	"Score": "92",
-	"Review": "Excellent professional-level makeup execution. Base makeup is flawless with invisible texture, perfect face-neck match, and natural airbrushed finish (20/20). Eyebrows show perfect natural hair strokes, ideal shape, and complete symmetry (15/15). Eyeshadow demonstrates masterful seamless blending with no harsh lines, colors transition smoothly enhancing eye shape (14/15 - minor: could be slightly more symmetrical). Eyeliner is perfectly smooth, completely symmetrical with clean edges (10/10). Eyelashes are evenly curled and separated (10/10). Contouring is invisible yet effective with natural shadows (9/10). Blush creates natural flush with seamless blending (9/10). Overall harmony is exceptional.",
-	"Suggestion": "To achieve a perfect 95+: Consider slightly more precise symmetry in the outer corner eyeshadow application. Add a touch more highlight on inner eye corners for extra dimension while maintaining the subtle natural glow."
+	"BaseMakeup": {
+		"Score": "95",
+		"Review": "Flawless base makeup with invisible texture, perfect face-neck color match, and natural airbrushed finish. No visible pores or oxidation. Coverage is even throughout. Professional-level application."
+	},
+	"Contouring": {
+		"Score": "88",
+		"Review": "Contouring is invisible yet highly effective, creating natural shadows that enhance bone structure. Highlight is subtle and placed strategically on high points. Blending is seamless.",
+		"Suggestion": "Could add a touch more highlight on the brow bone for extra dimension."
+	},
+	"Blush": {
+		"Score": "94",
+		"Review": "Natural flush appearance with perfect placement on apple of cheeks. Color harmonizes beautifully with the overall look. Seamless blending creating a healthy, natural glow."
+	},
+	"EyeMakeup": {
+		"Score": "90",
+		"Review": "Eyeshadow: Masterful seamless blending with smooth color transitions, enhances eye shape beautifully. Eyeliner: Perfectly smooth, completely symmetrical, clean edges. Aegyo sal: Subtle and natural. Eyelashes: Evenly curled, separated, natural length.",
+		"Suggestion": "Minor asymmetry in outer corner eyeshadow - practice slightly more precise symmetry. Consider adding shimmer to inner corners for extra brightness."
+	},
+	"Eyebrows": {
+		"Score": "97",
+		"Review": "Perfect natural hair strokes, ideal shape for face, color matches hair perfectly. Soft gradient from brow head to tail. Completely symmetrical. Textbook perfect eyebrows."
+	},
+	"Lips": {
+		"Score": "93",
+		"Review": "Even color application, well-defined edges, color balances the eye makeup perfectly. No feathering or patchiness. Flawless application."
+	},
+	"OverallHarmony": "Exceptional professional-level makeup. All elements work together cohesively creating a polished, harmonious look that enhances natural features beautifully. Calculated overall score: 92."
 }
 
 Example 2 - Good Makeup with Issues (Mid Score):
 {
-	"Score": "73",
-	"Review": "Good overall makeup showing competent technique but with several areas needing refinement. Base makeup has even coverage but visible texture and slight patchiness around nose area (16/20 - minor texture visible). Eyebrows have good shape but are too harsh/blocky without natural hair strokes, and color is slightly too dark (9/15 - needs softer technique). Eyeshadow shows some blending but has visible harsh lines in crease area (10/15 - blending issues). Eyeliner has uneven thickness and noticeable asymmetry between eyes (6/10 - technique needs work). Eyelashes have good curl but show some clumping (7/10). Blush color is appropriate but placement could be better and blending is patchy (7/10). Lips are evenly applied (4/5). Overall: presentable but improvements clearly visible.",
-	"Suggestion": "Priority improvements: 1) Practice eyeshadow blending using fluffy transition brushes and windshield wiper motions. 2) Learn eyebrow hair stroke technique or use a lighter hand for softer appearance. 3) Practice eyeliner symmetry by marking points first before drawing full lines. 4) Use setting spray and powder to prevent base makeup from separating around nose. 5) Blend blush in circular motions for seamless finish."
+	"BaseMakeup": {
+		"Score": "72",
+		"Review": "Generally well-applied with even coverage overall. However, visible texture and slight patchiness around nose area. Some separation showing.",
+		"Suggestion": "Use setting spray and powder to prevent base makeup from separating around nose. Apply with damp beauty sponge for smoother texture."
+	},
+	"Contouring": {
+		"Score": "68",
+		"Review": "Contouring and highlight are present but blending could be improved. Some visible lines where contour meets foundation.",
+		"Suggestion": "Spend more time blending with a clean fluffy brush. Use lighter hand for more natural shadows."
+	},
+	"Blush": {
+		"Score": "70",
+		"Review": "Appropriate color choice but placement could be better optimized. Blending is patchy with some streaks visible.",
+		"Suggestion": "Apply blush to apple of cheeks and blend upward toward temples in circular motions for seamless finish."
+	},
+	"EyeMakeup": {
+		"Score": "74",
+		"Review": "Eyeshadow: Shows some blending effort but visible harsh lines in crease area. Colors are acceptable but transitions need work. Eyeliner: Uneven thickness with noticeable asymmetry between eyes. Eyelashes: Good curl but shows clumping in places.",
+		"Suggestion": "Practice eyeshadow blending using fluffy transition brushes with windshield wiper motions. For eyeliner, mark points first before drawing full lines to ensure symmetry. Comb through lashes to separate clumps."
+	},
+	"Eyebrows": {
+		"Score": "71",
+		"Review": "Good shape overall but execution is too harsh and blocky without natural hair strokes. Color is slightly too dark for hair color.",
+		"Suggestion": "Learn eyebrow hair stroke technique using short flicking motions. Use a lighter hand or choose one shade lighter for more natural appearance."
+	},
+	"Lips": {
+		"Score": "82",
+		"Review": "Evenly applied with good color coordination. Well executed."
+	},
+	"OverallHarmony": "Good overall makeup showing competent technique but with several areas needing refinement. Presentable appearance but improvements are clearly visible to a trained eye. Calculated overall score: 73."
 }
 
 Example 3 - Basic Makeup (Lower Score):
 {
-	"Score": "58",
-	"Review": "Fair makeup application demonstrating beginner skills with multiple significant issues. Base makeup is very patchy with heavy visible texture, cakey appearance in some areas, and poor color match creating obvious line at jawline (11/20 - patchy, wrong shade). Eyebrows are very harsh and blocky, drawn-on appearance with no natural hair strokes, wrong color tone (6/15 - fundamental technique issues). Eyeshadow has poor blending throughout creating muddy colors, harsh visible lines, and asymmetrical application (7/15 - needs blending practice). Eyeliner is very crooked with extremely asymmetrical wings and gaps in line (3/10 - messy application). Eyelashes show heavy clumping (4/10). Contouring has harsh unblended lines and wrong shade appearing too orange (3/10 - looks dirty). Blush placement is wrong (3/10). Lips are uneven (2/5). Colors don't harmonize - warm orange contour clashes with cool-toned eyeshadow.",
-	"Suggestion": "Fundamental improvements needed: 1) Start with proper skincare prep and primer, use damp beauty sponge for base application. 2) Learn basic eyebrow hair stroke technique through tutorials - use short flicking motions. 3) Invest significant time practicing eyeshadow blending - start with 2 shades max until technique improves. 4) Use eyeliner stencil or tape guide for symmetry practice. 5) Choose cool-toned contour shade that matches natural shadows. 6) Study basic color theory for makeup. Consider taking a beginner makeup class for hands-on guidance."
+	"BaseMakeup": {
+		"Score": "55",
+		"Review": "Very patchy with heavy visible texture creating cakey appearance in multiple areas. Poor color match creating obvious demarcation line at jawline. Foundation appears too heavy and not properly blended.",
+		"Suggestion": "Start with proper skincare prep and primer. Use damp beauty sponge with stippling motions for smoother application. Choose correct shade that matches neck color. Less product, build coverage gradually."
+	},
+	"Contouring": {
+		"Score": "48",
+		"Review": "Harsh unblended lines clearly visible. Wrong shade selection - appears too orange/warm and looks muddy rather than creating natural shadows.",
+		"Suggestion": "Choose cool-toned contour shade that mimics natural shadows. Blend thoroughly with fluffy brush. Watch tutorials on proper contour placement. Use much lighter hand."
+	},
+	"Blush": {
+		"Score": "52",
+		"Review": "Wrong placement - not on apple of cheeks. Color doesn't coordinate with overall look.",
+		"Suggestion": "Apply blush to apple of cheeks (smile to find the right spot). Choose color that complements both skin tone and eye makeup."
+	},
+	"EyeMakeup": {
+		"Score": "58",
+		"Review": "Eyeshadow: Poor blending throughout creating muddy, patchy colors. Harsh visible lines everywhere. Very asymmetrical between eyes. Eyeliner: Very crooked with extremely asymmetrical wings. Visible gaps in line. Messy application. Eyelashes: Heavy clumping throughout, appear spider-like.",
+		"Suggestion": "Eyeshadow: Start with only 2 shades and practice basic blending before attempting complex looks. Use transition shade first. Practice on paper to understand brush movements. Eyeliner: Use tape or stencil as guide. Draw small dashes first, then connect. Practice symmetry daily. Eyelashes: Apply mascara in thin coats, let dry between layers. Comb through with clean spoolie to separate."
+	},
+	"Eyebrows": {
+		"Score": "54",
+		"Review": "Very harsh and blocky with drawn-on appearance. No natural hair strokes visible. Wrong color tone - doesn't match hair. Very asymmetrical.",
+		"Suggestion": "Learn basic eyebrow hair stroke technique through tutorials. Use short, light flicking motions to mimic hair. Choose color matching hair. Start with light pressure and build gradually. Consider visiting professional for initial shaping."
+	},
+	"Lips": {
+		"Score": "62",
+		"Review": "Uneven application with patchy areas. Edges are not defined. Color doesn't coordinate with the overall look.",
+		"Suggestion": "Use lip liner to define edges first. Apply lipstick with brush for precision. Choose color that balances eye makeup intensity."
+	},
+	"OverallHarmony": "Fair makeup demonstrating beginner skills with fundamental technique issues across all dimensions. Colors don't harmonize (warm orange contour clashes with cool eyeshadow tones). Significant practice needed. Consider taking beginner makeup class for proper foundation in techniques. Calculated overall score: 55."
 }
 
 Example 4 - No Makeup Detected:
 {
-	"Score": "N/A",
-	"Review": "No visible makeup detected in the image. The face appears natural without cosmetic enhancement.",
-	"Suggestion": "If you'd like to enhance your natural features, consider starting with: 1) A light BB cream or tinted moisturizer for even skin tone, 2) Filling in eyebrows lightly to frame the face, 3) A coat of mascara to open up the eyes, 4) A natural pink or nude lip tint for a healthy flush."
+	"BaseMakeup": {
+		"Score": "N/A",
+		"Review": "No base makeup detected. Natural skin visible."
+	},
+	"Contouring": {
+		"Score": "N/A",
+		"Review": "No contouring or highlight detected."
+	},
+	"Blush": {
+		"Score": "N/A",
+		"Review": "No blush detected."
+	},
+	"EyeMakeup": {
+		"Score": "N/A",
+		"Review": "No eye makeup detected. Eyes appear natural without eyeshadow, eyeliner, or mascara enhancement."
+	},
+	"Eyebrows": {
+		"Score": "N/A",
+		"Review": "Natural eyebrows without makeup enhancement."
+	},
+	"Lips": {
+		"Score": "N/A",
+		"Review": "Natural lips without color products."
+	},
+	"OverallHarmony": "No visible makeup detected. If you'd like to enhance your natural features, consider: BB cream for even tone, light brow fill, mascara, and natural lip tint."
 }
 
 HOW TO USE THESE STANDARDS:

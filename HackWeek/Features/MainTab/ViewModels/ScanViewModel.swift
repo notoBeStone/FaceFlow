@@ -53,7 +53,7 @@ class ScanViewModel: ObservableObject {
             
             // 2. 上传图片到 S3 获取 URL
             let imageUrl = try await TemplateAPI.S3.upload(data: imageData, fileExtension: "jpg")
-            print("✅ 图片上传成功：\(imageUrl)")
+            debugPrint("✅ 图片上传成功：\(imageUrl)")
             
             // 3. 构建消息
             let prompt = scanType == .makeup ? makeupPrompt : productPrompt
@@ -84,11 +84,11 @@ class ScanViewModel: ObservableObject {
                 responseFormat: nil
             )
             
-            print("📝 AI 返回结果：\(resultJSON)")
+            debugPrint("📝 AI 返回结果：\(resultJSON)")
             
             // 6. 提取纯 JSON（移除可能的 markdown 代码块）
             let cleanJSON = extractJSON(from: resultJSON)
-            print("🧹 清洗后的 JSON：\(cleanJSON)")
+            debugPrint("🧹 清洗后的 JSON：\(cleanJSON)")
             
             // 7. 验证 JSON 格式
             guard let jsonData = cleanJSON.data(using: .utf8) else {
@@ -98,10 +98,10 @@ class ScanViewModel: ObservableObject {
             // 8. 验证 JSON 可以解析
             do {
                 let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
-                print("✅ JSON 解析成功：\(jsonObject)")
+                debugPrint("✅ JSON 解析成功：\(jsonObject)")
             } catch {
-                print("❌ JSON 解析失败：\(error)")
-                print("📝 原始返回：\(resultJSON)")
+                debugPrint("❌ JSON 解析失败：\(error)")
+                debugPrint("📝 原始返回：\(resultJSON)")
                 throw NSError(domain: "JSONError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to parse JSON: \(error.localizedDescription)"])
             }
             
@@ -111,7 +111,7 @@ class ScanViewModel: ObservableObject {
                 if let result = try? JSONDecoder().decode(ProductAnalysisResult.self, from: jsonData) {
                     if result.score == "N/A" {
                         // 识别失败，设置失败状态并返回 nil
-                        print("⚠️ 产品识别失败：Score = N/A")
+                        debugPrint("⚠️ 产品识别失败：Score = N/A")
                         recognitionFailed = true
                         failedImage = image
                         failedReason = result.summary
@@ -122,12 +122,13 @@ class ScanViewModel: ObservableObject {
             } else if scanType == .makeup {
                 // 妆容评分也可能返回 N/A（虽然不太常见）
                 if let result = try? JSONDecoder().decode(MakeupAnalysisResult.self, from: jsonData) {
-                    if result.score == "N/A" {
-                        print("⚠️ 妆容识别失败：Score = N/A")
+                    if result.calculatedScore == "N/A" {
+                        debugPrint("⚠️ 妆容识别失败：Calculated Score = N/A")
                         recognitionFailed = true
                         failedImage = image
-                        failedReason = result.review
-                        failedSuggestions = result.suggestion
+                        // 对于妆容识别失败，从各个维度或整体和谐性获取原因
+                        failedReason = result.baseMakeup.review
+                        failedSuggestions = result.overallHarmony
                         return nil
                     }
                 }
@@ -142,7 +143,7 @@ class ScanViewModel: ObservableObject {
             
             modelContext.insert(record)
             try modelContext.save()
-            print("✅ 记录保存成功")
+            debugPrint("✅ 记录保存成功")
             
             // 11. 刷新列表
             fetchRecords(modelContext: modelContext)
@@ -153,7 +154,7 @@ class ScanViewModel: ObservableObject {
         } catch {
             errorMessage = error.localizedDescription
             showError = true
-            print("❌ 分析图片失败：\(error)")
+            debugPrint("❌ 分析图片失败：\(error)")
             return nil
         }
     }
@@ -176,7 +177,7 @@ class ScanViewModel: ObservableObject {
             makeupRecords = allRecords.filter { $0.type == .makeup }
             productRecords = allRecords.filter { $0.type == .product }
         } catch {
-            print("Failed to fetch records: \(error)")
+            debugPrint("Failed to fetch records: \(error)")
         }
     }
     
@@ -204,7 +205,7 @@ class ScanViewModel: ObservableObject {
                let match = regex.firstMatch(in: text, options: [], range: NSRange(text.startIndex..., in: text)),
                let range = Range(match.range(at: 1), in: text) {
                 let extracted = String(text[range]).trimmingCharacters(in: .whitespacesAndNewlines)
-                print("🔍 从 markdown 代码块中提取到 JSON")
+                debugPrint("🔍 从 markdown 代码块中提取到 JSON")
                 return extracted
             }
         }
@@ -213,12 +214,12 @@ class ScanViewModel: ObservableObject {
         if let firstBrace = text.firstIndex(of: "{"),
            let lastBrace = text.lastIndex(of: "}") {
             let jsonPart = String(text[firstBrace...lastBrace])
-            print("🔍 通过大括号提取到 JSON")
+            debugPrint("🔍 通过大括号提取到 JSON")
             return jsonPart
         }
         
         // 如果都失败了，返回原文本
-        print("⚠️ 无法提取 JSON，返回原文本")
+        debugPrint("⚠️ 无法提取 JSON，返回原文本")
         return text
     }
     

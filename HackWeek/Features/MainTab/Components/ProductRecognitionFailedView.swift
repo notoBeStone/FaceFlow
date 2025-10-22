@@ -207,7 +207,7 @@ private struct TipRow: View {
         reason: "The image is too blurry to read the ingredient list. Please ensure the product label is clearly focused.",
         suggestions: "Please take a clearer photo of the ingredient list with better lighting conditions and ensure the camera is properly focused on the text."
     ) {
-        print("Retake tapped")
+        debugPrint("Retake tapped")
     }
 }
 

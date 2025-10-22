@@ -676,6 +676,21 @@ extension GLMPLanguage {
     static var scan_recognition_failed_retake: String { "Retake Photo" }
     static var scan_recognition_failed_close: String { "Close" }
     
+    static var scan_makeup_base: String { "Base Makeup" }
+    static var scan_makeup_contouring: String { "Contouring & Highlight" }
+    static var scan_makeup_blush: String { "Blush" }
+    static var scan_makeup_eyemakeup: String { "Eye Makeup" }
+    static var scan_makeup_eyebrows: String { "Eyebrows" }
+    static var scan_makeup_lips: String { "Lips" }
+    static var scan_makeup_harmony: String { "Overall Harmony" }
+    static var scan_makeup_step: String { "Step" }
+    static var scan_makeup_show_details: String { "Show Details" }
+    static var scan_makeup_hide_details: String { "Hide Details" }
+    static var scan_makeup_score_label: String { "Score" }
+    static var scan_makeup_overall_score: String { "Overall Score" }
+    static var scan_makeup_calculated_from: String { "Calculated from dimension scores" }
+    static var scan_makeup_suggestion: String { "Suggestion" }
+    
     // MARK: - Feedback
     static var feedback_analysis_helpful: String { "Was this analysis helpful?" }
     static var feedback_video_helpful: String { "Was this tutorial helpful?" }

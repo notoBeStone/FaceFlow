@@ -32,14 +32,14 @@ class OnboardingManager: ObservableObject {
     func markOnboardingCompleted() {
         UserDefaults.standard.set(true, forKey: Self.onboardingCompletedKey)
         isOnboardingCompleted = true
-        print("✅ Onboarding 已标记为完成")
+        debugPrint("✅ Onboarding 已标记为完成")
     }
     
     /// 重置 Onboarding 状态（仅用于调试）
     func resetOnboarding() {
         UserDefaults.standard.removeObject(forKey: Self.onboardingCompletedKey)
         isOnboardingCompleted = false
-        print("🔄 Onboarding 状态已重置")
+        debugPrint("🔄 Onboarding 状态已重置")
     }
     
     // MARK: - Private Methods

@@ -267,7 +267,7 @@ private struct ScanRecordCard: View {
                                 .font(.system(size: 12))
                                 .foregroundColor(.mainColor)
                             
-                            Text(result.score)
+                            Text(result.calculatedScore)
                                 .font(.avenirBodyHeavy)
                                 .foregroundColor(.g9L)
                         }

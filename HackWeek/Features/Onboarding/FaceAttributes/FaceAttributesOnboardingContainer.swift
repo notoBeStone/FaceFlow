@@ -81,9 +81,9 @@ struct FaceAttributesOnboardingContainer: View {
                     flow.completeFlow()
                 }
                 
-                print("✅ 用户面部属性已保存")
+                debugPrint("✅ 用户面部属性已保存")
             } catch {
-                print("❌ 保存用户属性失败: \(error)")
+                debugPrint("❌ 保存用户属性失败: \(error)")
             }
         }
     }
@@ -123,7 +123,7 @@ struct FaceAttributesOnboardingContainer: View {
         
         try modelContext.save()
         
-        print("✅ 保存的属性: \(attributes.getAllTags())")
+        debugPrint("✅ 保存的属性: \(attributes.getAllTags())")
     }
 }
 
@@ -205,7 +205,7 @@ struct CompletionView: View {
 #if DEBUG
 #Preview {
     FaceAttributesOnboardingContainer {
-        print("Onboarding completed")
+        debugPrint("Onboarding completed")
     }
 }
 #endif

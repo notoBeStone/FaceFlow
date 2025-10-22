@@ -298,9 +298,9 @@ struct MeView: View {
         
         do {
             try modelContext.save()
-            print("✅ 成功更新属性 \(attributeId) 为: \(value)")
+            debugPrint("✅ 成功更新属性 \(attributeId) 为: \(value)")
         } catch {
-            print("❌ 保存属性失败: \(error)")
+            debugPrint("❌ 保存属性失败: \(error)")
         }
     }
     

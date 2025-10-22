@@ -198,11 +198,11 @@ class SimpleVideoPlayerViewModel: ObservableObject {
     
     private func setupPlayer(with urlString: String) {
         guard let url = URL(string: urlString) else {
-            print("❌ 无效的视频 URL: \(urlString)")
+            debugPrint("❌ 无效的视频 URL: \(urlString)")
             return
         }
         
-        print("✅ 开始加载视频: \(url)")
+        debugPrint("✅ 开始加载视频: \(url)")
         
         // 创建播放器
         let player = AVPlayer(url: url)
@@ -212,7 +212,7 @@ class SimpleVideoPlayerViewModel: ObservableObject {
             try AVAudioSession.sharedInstance().setCategory(.playback, mode: .moviePlayback)
             try AVAudioSession.sharedInstance().setActive(true)
         } catch {
-            print("❌ 音频会话配置失败: \(error)")
+            debugPrint("❌ 音频会话配置失败: \(error)")
         }
         
         self.player = player
@@ -221,10 +221,10 @@ class SimpleVideoPlayerViewModel: ObservableObject {
         statusObserver = player.currentItem?.observe(\.status, options: [.new]) { [weak self] item, _ in
             DispatchQueue.main.async {
                 if item.status == .readyToPlay {
-                    print("✅ 视频准备就绪")
+                    debugPrint("✅ 视频准备就绪")
                     self?.isVideoReady = true
                 } else if item.status == .failed {
-                    print("❌ 视频加载失败: \(item.error?.localizedDescription ?? "未知错误")")
+                    debugPrint("❌ 视频加载失败: \(item.error?.localizedDescription ?? "未知错误")")
                 }
             }
         }
@@ -232,12 +232,12 @@ class SimpleVideoPlayerViewModel: ObservableObject {
     
     func play() {
         player?.play()
-        print("▶️ 开始播放")
+        debugPrint("▶️ 开始播放")
     }
     
     func pause() {
         player?.pause()
-        print("⏸️ 暂停播放")
+        debugPrint("⏸️ 暂停播放")
     }
     
     func cleanup() {
@@ -247,7 +247,7 @@ class SimpleVideoPlayerViewModel: ObservableObject {
         player?.replaceCurrentItem(with: nil)
         player = nil
         isVideoReady = false
-        print("🧹 清理播放器")
+        debugPrint("🧹 清理播放器")
     }
     
     deinit {

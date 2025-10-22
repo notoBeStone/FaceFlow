@@ -254,10 +254,10 @@ struct SingleAttributeEditor: View {
         question: FaceAttributesQuestionFactory.createEyebrowQuestion(),
         currentValue: EyebrowShape.angular.rawValue,
         onSave: { value in
-            print("Saved: \(value)")
+            debugPrint("Saved: \(value)")
         },
         onCancel: {
-            print("Cancelled")
+            debugPrint("Cancelled")
         }
     )
 }
