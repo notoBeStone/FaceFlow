@@ -26,12 +26,16 @@ struct AttributeSelectionPage: View {
     private var gridColumns: [GridItem] {
         let optionCount = question.options.count
         
+        // 根据选项数量决定列数
         if optionCount <= 2 {
-            // 1-2个选项：2列固定布局
+            // 1-2个选项：固定2列
             return [GridItem(.flexible()), GridItem(.flexible())]
+        } else if optionCount <= 4 {
+            // 3-4个选项：固定2列，每列平均分配
+            return [GridItem(.flexible(), spacing: 12), GridItem(.flexible(), spacing: 12)]
         } else {
-            // 3-4个选项：自适应布局，最小宽度100，最多2列
-            return [GridItem(.adaptive(minimum: 100, maximum: 200), spacing: 12)]
+            // 5个以上选项：自适应布局
+            return [GridItem(.adaptive(minimum: 140), spacing: 12)]
         }
     }
     

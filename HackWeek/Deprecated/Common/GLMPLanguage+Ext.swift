@@ -598,6 +598,33 @@ extension GLMPLanguage {
     static var faceAttributes_skinTone_natural: String { "Natural" }
     static var faceAttributes_skinTone_healthy: String { "Healthy" }
     static var faceAttributes_skinTone_wheat: String { "Wheat" }
+    
+    // MARK: - Me Page - Face Attributes Section
+    static var me_face_attributes_title: String { "Your Face Profile" }
+    static var me_section_face_structure: String { "Face Structure" }
+    static var me_section_eye_features: String { "Eye Features" }
+    static var me_section_nose_lips: String { "Nose & Lips" }
+    static var me_section_skin_profile: String { "Skin Profile" }
+    static var me_edit_your_profile: String { "Edit Your Profile" }
+    static var me_empty_profile: String { "Complete your face profile to get personalized recommendations" }
+    static var me_complete_profile: String { "Complete Profile" }
+    static var me_not_set: String { "Not Set" }
+    static var me_edit_profile: String { "Edit Profile" }
+    static var me_attribute_face_shape: String { "Face Shape" }
+    static var me_attribute_cheekbone: String { "Cheekbone" }
+    static var me_attribute_jawline: String { "Jawline" }
+    static var me_attribute_chin: String { "Chin Shape" }
+    static var me_attribute_eye_size: String { "Eye Size" }
+    static var me_attribute_eye_shape: String { "Eye Shape" }
+    static var me_attribute_eye_distance: String { "Eye Distance" }
+    static var me_attribute_eyebrow: String { "Eyebrow Shape" }
+    static var me_attribute_nose_length: String { "Nose Length" }
+    static var me_attribute_nose_width: String { "Nose Width" }
+    static var me_attribute_lips_thickness: String { "Lip Thickness" }
+    static var me_attribute_lips_shape: String { "Lip Shape" }
+    static var me_attribute_skin_type: String { "Skin Type" }
+    static var me_attribute_skin_tone: String { "Skin Tone" }
+    static var me_attribute_age_range: String { "Age Range" }
 }
 
 extension GLMPLanguage {
