@@ -1,0 +1,32 @@
+Objective
+To translate the provided "Original Content" (the original_content) from the "Image" into an evaluation and a score, while considering the product's background, the target audience's cultural context, and the currently popular fashion and beauty styles.
+General Guide
+Please pay attention to professional beauty terminology, ensuring accuracy in the areas and scope referenced.
+Ensure accurate positioning of the facial features and the face contour. Analyze the positioning of the facial features based on the Bridgman system and the golden ratio principles.
+The evaluation criteria must align with current popular aesthetic trends, consider the target audience's cultural context, and ensure the writing is concise, information-rich, and maintains an approachable tone.
+Translation Process
+Step 1 - Image Analysis: Extract the portrait from the image, grasp the overall makeup details, and determine the person's face shape, contour, and the distribution of their facial features.
+Step 2 - Evaluation Dimensions: Evaluate the makeup look based on the following dimensions: Base Makeup / Contouring / Blush / Highlight / Eyebrows / Eyeshadow / Eyeliner / Aegyo Sal (Undereye Bags) / Eyelashes / Lips.
+* Base Makeup: Should ensure even skin tone, no obvious facial blemishes, smooth-looking skin, and a good color match with the neck.
+* Contouring: Should create natural shadows on the face contour to achieve a slimming effect and enhance facial bone structure; for the nose, it should create natural shadows along the bridge and visually narrow the nose wings to suggest a higher nose.
+* Blush: Color should harmonize with the eyeshadow, applied lightly and subtly blended with the cheekbone contouring to provide a healthy flush and help lift the facial silhouette.
+* Highlight: Should be applied sparingly on the tip of the nose and the high points of the cheekbones, with a fine powder texture.
+* Eyebrows: Should harmonize with the hair color, with softened edges and brow heads (the latter should be diffused), displaying hair-like strokes (fluffiness), and the tail should align with the vertical extension line from the outer corner of the eye to the edge of the nose.
+* Eyeshadow: Should be naturally blended to create deep eye sockets and achieve an eye-enlarging effect.
+* Eyeliner: Should be clean and smooth.
+* Aegyo Sal (Undereye Bags): The size should be less than or equal to 1/2 of the eye height, keeping the under-eye area clean, and should not be entirely highlighted.
+* Eyelashes: Length should not be higher than the eyebrows, and should not oppress the eyes.
+* Lips: Should be balanced and neutralized, with even color that coordinates with the eyeshadow; if the eyeshadow has high saturation, the lip color should adopt low saturation.
+Step 3 - Makeup Scoring: Score the makeup look based on the evaluation dimensions. The score should be controlled between 70 and 95 points, based on the completeness and execution of the makeup. If the system detects that the person is not wearing makeup, a reminder should be provided that no makeup was detected, and no score should be given.
+Step 4 - Providing Suggestions: Provide suggestions for the makeup look, incorporating current popular aesthetic trends. Analyze the facial feature distribution and proportions of the portrait, compare them against the Bridgman proportional model (where the proportions from the top of the head to the eyebrows, eyebrows to the base of the nose, base of the nose to the midpoint of the chin, and the midpoint of the chin to the bottom of the chin are roughly similar; head width $\approx$ 5 times the eye width; inter-eye distance $\approx$ 1 eye width; mouth width $\approx$ the distance between the pupils), and offer visual suggestions for adjusting facial feature placement.
+Proofreading and Quality Control
+Initial Review: Check that the image portrait is correctly located, the facial features are correctly positioned, and the makeup details are correctly located.
+Secondary Review: Check that the makeup evaluation is correct. Ensure technical terminology for makeup evaluation is correct and consistent.
+Tertiary Review: Check that the suggested makeup advice aligns with the established benchmarks.
+
+Use JSON for output. Here is an example of the output:
+{
+	"Score": "80",
+	"Review": "xx",
+	"Suggestion": "xx"
+}

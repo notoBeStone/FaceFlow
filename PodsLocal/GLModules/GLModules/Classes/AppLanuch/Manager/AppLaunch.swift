@@ -50,7 +50,7 @@ public class AppLaunch {
         //启动占位
         workflow.addItem(SplashItem(splashVC: launchImpl.LoadingUI()))
         //配置debugger工具
-        workflow.addItem(DebuggerConfigItem())
+//        workflow.addItem(DebuggerConfigItem())
         //Adjust
         workflow.addItem(launchImpl.adjustConfigItem ?? AdjustConfigItem())
         //预加载自定义

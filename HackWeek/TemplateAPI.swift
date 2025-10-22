@@ -33,7 +33,7 @@ struct TemplateConfig {
     static var rootView: AnyView {
         return AnyView(
             OnboardingRootView()
-                .modelContainer(for: [WordBook.self, WordModel.self, UserFaceAttributes.self])
+                .modelContainer(for: [UserFaceAttributes.self, ScanRecord.self])
         )
     }
  /// 是否启动时展示转化页？（付费墙）

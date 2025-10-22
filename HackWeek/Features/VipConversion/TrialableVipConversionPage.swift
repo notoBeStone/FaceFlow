@@ -99,13 +99,11 @@ struct TrialableVipConversionPage: View {
                 templateSkuItemView(isLeading: false)
             } else {
                 ForEach(Array(viewModel.skus.enumerated()), id: \.offset) { index, sku in
-                    Button {
-                        viewModel.selectSku(sku.skuId)
-                    } label: {
-                        skuItemView(sku: sku, isSelected: viewModel.selectedSkuId == sku.skuId, isLeading: index == 0)
-                    }
-                    .buttonStyle(PlainButtonStyle())
-                    .contentShape(Rectangle())
+                    skuItemView(sku: sku, isSelected: viewModel.selectedSkuId == sku.skuId, isLeading: index == 0)
+                        .contentShape(Rectangle())
+                        .onTapGesture {
+                            viewModel.selectSku(sku.skuId)
+                        }
                 }
             }
         }

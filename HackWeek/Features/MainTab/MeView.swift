@@ -419,6 +419,6 @@ struct MeView: View {
 
 #Preview {
     MeView()
-        .modelContainer(for: [WordBook.self, WordModel.self, UserFaceAttributes.self])
+        .modelContainer(for: [UserFaceAttributes.self])
 }
 

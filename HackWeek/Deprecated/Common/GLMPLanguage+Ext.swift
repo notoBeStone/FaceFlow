@@ -632,6 +632,41 @@ extension GLMPLanguage {
     static var me_attribute_skin_tone: String { "Skin Tone" }
     static var me_attribute_skin_blemishes: String { "Skin Blemishes" }
     static var me_attribute_age_range: String { "Age Range" }
+    
+    // MARK: - Scan Page
+    static var scan_mode_select_title: String { "Choose Scan Mode" }
+    static var scan_mode_makeup: String { "Makeup Analysis" }
+    static var scan_mode_makeup_desc: String { "Analyze your makeup and get scores" }
+    static var scan_mode_product: String { "Product Scan" }
+    static var scan_mode_product_desc: String { "Scan product and check ingredients" }
+    
+    static var scan_makeup_section_title: String { "Makeup Scores" }
+    static var scan_product_section_title: String { "Product Scans" }
+    static var scan_empty_makeup: String { "No makeup analysis yet" }
+    static var scan_empty_product: String { "No product scans yet" }
+    static var scan_start_analyzing: String { "Tap camera button to start" }
+    
+    static var scan_analyzing: String { "AI is analyzing..." }
+    static var scan_please_wait: String { "Please wait a moment" }
+    
+    static var scan_result_score: String { "Score" }
+    static var scan_result_review: String { "Review" }
+    static var scan_result_suggestion: String { "Suggestions" }
+    static var scan_result_summary: String { "Summary" }
+    static var scan_result_ingredients: String { "Ingredients" }
+    static var scan_result_view_details: String { "View Details" }
+    
+    static var scan_delete_confirm_title: String { "Delete Record" }
+    static var scan_delete_confirm_message: String { "Are you sure you want to delete this record?" }
+    static var scan_delete_confirm_yes: String { "Delete" }
+    
+    static var scan_error_title: String { "Analysis Failed" }
+    static var scan_error_message: String { "Unable to analyze the image. Please try again." }
+    static var scan_error_ok: String { "OK" }
+    
+    static var scan_camera_permission_title: String { "Camera Access Required" }
+    static var scan_camera_permission_message: String { "Please allow camera access in Settings to use this feature." }
+    static var scan_camera_go_settings: String { "Go to Settings" }
 }
 
 extension GLMPLanguage {

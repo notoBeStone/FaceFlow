@@ -25,6 +25,8 @@ extension Font {
     public static let avenirButton1Medium = Font.custom("Avenir-Medium", size: 20.rpx)
     public static let avenirButton2Medium = Font.custom("Avenir-Medium", size: 16.rpx)
     public static let avenirButton3Medium = Font.custom("Avenir-Medium", size: 14.rpx)
+    public static let avenirCaptionRoman = Font.custom("Avenir-Roman", size: 12.rpx)
+    public static let avenirCaptionMedium = Font.custom("Avenir-Medium", size: 12.rpx)
     public static let avenirHeadlineBlack = Font.custom("Avenir-Black", size: 20.rpx)
     public static let avenirTabBarMedium = Font.custom("Avenir-Medium", size: 12.rpx)
     public static let avenirTabBarRoman = Font.custom("Avenir-Roman", size: 12.rpx)

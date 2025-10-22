@@ -93,6 +93,7 @@ struct HistoryVipConversionView: View {
             } else {
                 ForEach(viewModel.skus) { sku in
                     skuItemView(sku: sku, isSelected: viewModel.selectedSkuId == sku.skuId)
+                        .contentShape(Rectangle())
                         .onTapGesture {
                             viewModel.selectSku(sku.skuId)
                         }
