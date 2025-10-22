@@ -40,7 +40,11 @@ struct TrialableVipConversionPage: View {
     }
     
     var headImage: some View {
-        VipHeaderVideoPlayer(videoName: "vip_header", aspectRatio: 2502/1656)
+        Image("vip_header")
+            .resizable()
+            .aspectRatio(2502/1656, contentMode: .fit)
+            .frame(maxWidth: .infinity)
+            .clipped()
     }
     
     var gradient: some View {

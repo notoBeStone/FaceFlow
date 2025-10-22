@@ -115,7 +115,6 @@ struct MeView: View {
                     .multilineTextAlignment(.center)
                     .padding(.horizontal, 32)
             }
-            .padding(.vertical, 32)
             
             Button {
                 showingOnboarding = true
@@ -136,6 +135,7 @@ struct MeView: View {
             }
             .padding(.horizontal, 32)
         }
+        .padding(.vertical, 32)
         .background(Color.gwL)
         .cornerRadius(16)
         .padding(.horizontal, 20)

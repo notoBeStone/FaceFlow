@@ -1,11 +1,11 @@
 {
   "images" : [
     {
+      "filename" : "vip_header.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "vip_header@2x.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
