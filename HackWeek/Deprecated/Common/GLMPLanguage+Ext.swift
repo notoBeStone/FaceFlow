@@ -593,11 +593,17 @@ extension GLMPLanguage {
     
     // Questions - Skin Tone
     static var faceAttributes_question_skinTone: String { "Your skin tone?" }
-    static var faceAttributes_skinTone_coolFair: String { "Cool Fair" }
-    static var faceAttributes_skinTone_warmFair: String { "Warm Fair" }
-    static var faceAttributes_skinTone_natural: String { "Natural" }
-    static var faceAttributes_skinTone_healthy: String { "Healthy" }
-    static var faceAttributes_skinTone_wheat: String { "Wheat" }
+    static var faceAttributes_skinTone_light: String { "Light" }
+    static var faceAttributes_skinTone_medium: String { "Medium" }
+    static var faceAttributes_skinTone_golden: String { "Golden" }
+    static var faceAttributes_skinTone_dark: String { "Dark" }
+    
+    // Questions - Skin Blemishes
+    static var faceAttributes_question_skinBlemishes: String { "Any blemishes on your face?" }
+    static var faceAttributes_question_skinBlemishes_subtitle: String { "Be honest, it helps us recommend better" }
+    static var faceAttributes_skinBlemishes_noneOrFew: String { "None or Few" }
+    static var faceAttributes_skinBlemishes_moderate: String { "Moderate" }
+    static var faceAttributes_skinBlemishes_many: String { "Many" }
     
     // MARK: - Me Page - Face Attributes Section
     static var me_face_attributes_title: String { "Your Face Profile" }
@@ -624,6 +630,7 @@ extension GLMPLanguage {
     static var me_attribute_lips_shape: String { "Lip Shape" }
     static var me_attribute_skin_type: String { "Skin Type" }
     static var me_attribute_skin_tone: String { "Skin Tone" }
+    static var me_attribute_skin_blemishes: String { "Skin Blemishes" }
     static var me_attribute_age_range: String { "Age Range" }
 }
 

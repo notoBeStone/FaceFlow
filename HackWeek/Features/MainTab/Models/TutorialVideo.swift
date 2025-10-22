@@ -22,9 +22,9 @@ enum TutorialTag: String, Codable, CaseIterable {
     case invertedTriangle = "InvertedTriangle"  // 倒三角形脸
     
     // MARK: - Cheekbone Prominence
-    case high = "High"                          // 高颧骨
-    case normal = "Normal"                      // 正常颧骨
-    case low = "Low"                            // 低颧骨
+    case cheekboneHigh = "CheekboneHigh"        // 高颧骨
+    case cheekboneNormal = "CheekboneNormal"    // 正常颧骨
+    case cheekboneLow = "CheekboneLow"          // 低颧骨
     
     // MARK: - Jawline Type
     case roundJawline = "RoundJawline"          // 圆润下颌线
@@ -33,14 +33,14 @@ enum TutorialTag: String, Codable, CaseIterable {
     case definedJawline = "DefinedJawline"      // 下颌角明显
     
     // MARK: - Chin Shape
-    case pointed = "Pointed"                    // 尖下巴
+    case chinPointed = "ChinPointed"            // 尖下巴
     case roundChin = "RoundChin"                // 圆下巴
-    case wide = "Wide"                          // 宽下巴
+    case chinWide = "ChinWide"                  // 宽下巴
     
     // MARK: - Eye Size
-    case small = "Small"                        // 小眼睛
+    case eyeSmall = "EyeSmall"                  // 小眼睛
     case normalEye = "NormalEye"                // 正常眼睛
-    case large = "Large"                        // 大眼睛
+    case eyeLarge = "EyeLarge"                  // 大眼睛
     
     // MARK: - Eye Shape
     case monolid = "Monolid"                    // 单眼皮
@@ -51,18 +51,18 @@ enum TutorialTag: String, Codable, CaseIterable {
     // MARK: - Eye Distance
     case wideEye = "WideEye"                    // 眼距宽
     case normalDistance = "NormalDistance"      // 眼距正常
-    case narrow = "Narrow"                      // 眼距窄
+    case eyeNarrow = "EyeNarrow"                // 眼距窄
     
     // MARK: - Eyebrow Shape
-    case straight = "Straight"                  // 平眉
-    case curved = "Curved"                      // 弯眉
-    case arched = "Arched"                      // 拱形眉
-    case angular = "Angular"                    // 剑眉
+    case eyebrowStraight = "EyebrowStraight"    // 平眉
+    case eyebrowCurved = "EyebrowCurved"        // 弯眉
+    case eyebrowArched = "EyebrowArched"        // 拱形眉
+    case eyebrowAngular = "EyebrowAngular"      // 剑眉
     
     // MARK: - Nose Length
-    case short = "Short"                        // 短鼻
+    case noseShort = "NoseShort"                // 短鼻
     case normalNose = "NormalNose"              // 正常鼻长
-    case long = "Long"                          // 长鼻
+    case noseLong = "NoseLong"                  // 长鼻
     
     // MARK: - Nose Width
     case narrowNose = "NarrowNose"              // 窄鼻
@@ -70,28 +70,32 @@ enum TutorialTag: String, Codable, CaseIterable {
     case wideNose = "WideNose"                  // 宽鼻
     
     // MARK: - Lips Thickness
-    case thin = "Thin"                          // 薄唇
-    case medium = "Medium"                      // 适中唇
-    case thick = "Thick"                        // 厚唇
+    case lipsThin = "LipsThin"                  // 薄唇
+    case lipsMedium = "LipsMedium"              // 适中唇
+    case lipsThick = "LipsThick"                // 厚唇
     
     // MARK: - Lips Shape
-    case topHeavy = "TopHeavy"                  // 上厚下薄
-    case bottomHeavy = "BottomHeavy"            // 下厚上薄
-    case balanced = "Balanced"                  // 厚薄均匀
+    case lipsTopHeavy = "LipsTopHeavy"          // 上厚下薄
+    case lipsBottomHeavy = "LipsBottomHeavy"    // 下厚上薄
+    case lipsBalanced = "LipsBalanced"          // 厚薄均匀
     
     // MARK: - Skin Type
-    case dry = "Dry"                            // 干性肤质
-    case oily = "Oily"                          // 油性肤质
+    case skinDry = "SkinDry"                    // 干性肤质
+    case skinOily = "SkinOily"                  // 油性肤质
     case normalSkin = "NormalSkin"              // 中性肤质
-    case combination = "Combination"            // 混合肤质
-    case sensitive = "Sensitive"                // 敏感肤质
+    case skinCombination = "SkinCombination"    // 混合肤质
+    case skinSensitive = "SkinSensitive"        // 敏感肤质
     
     // MARK: - Skin Tone
-    case coolFair = "CoolFair"                  // 冷白皮
-    case warmFair = "WarmFair"                  // 暖白皮
-    case natural = "Natural"                    // 自然肤色
-    case healthy = "Healthy"                    // 健康肤色
-    case wheat = "Wheat"                        // 小麦肤色
+    case skinToneLight = "SkinToneLight"        // 浅色肤色
+    case skinToneMedium = "SkinToneMedium"      // 中等肤色
+    case skinToneGolden = "SkinToneGolden"      // 金色肤色
+    case skinToneDark = "SkinToneDark"          // 深色肤色
+    
+    // MARK: - Skin Blemishes
+    case blemishesNone = "BlemishesNone"        // 没有或较少瑕疵
+    case blemishesModerate = "BlemishesModerate" // 中等瑕疵
+    case blemishesMany = "BlemishesMany"        // 较多瑕疵
     
     // MARK: - Age Range
     case under18 = "Under18"                    // 18以下

@@ -240,6 +240,7 @@ struct MeView: View {
         case "lipsShape": return FaceAttributesQuestionFactory.createLipsShapeQuestion()
         case "skinType": return FaceAttributesQuestionFactory.createSkinTypeQuestion()
         case "skinTone": return FaceAttributesQuestionFactory.createSkinToneQuestion()
+        case "skinBlemishes": return FaceAttributesQuestionFactory.createSkinBlemishesQuestion()
         default: return nil
         }
     }
@@ -264,6 +265,7 @@ struct MeView: View {
         case "lipsShape": return attributes.lipsShape
         case "skinType": return attributes.skinType
         case "skinTone": return attributes.skinTone
+        case "skinBlemishes": return attributes.skinBlemishes
         default: return nil
         }
     }
@@ -288,6 +290,7 @@ struct MeView: View {
         case "lipsShape": attributes.lipsShape = value
         case "skinType": attributes.skinType = value
         case "skinTone": attributes.skinTone = value
+        case "skinBlemishes": attributes.skinBlemishes = value
         default: break
         }
         
@@ -397,6 +400,11 @@ struct MeView: View {
                         label: GLMPLanguage.me_attribute_skin_tone,
                         value: attributes.skinTone.flatMap { FaceAttributesLocalizedStrings.getOptionTitle(for: $0) },
                         attributeId: "skinTone"
+                    ),
+                    FaceAttributeItem(
+                        label: GLMPLanguage.me_attribute_skin_blemishes,
+                        value: attributes.skinBlemishes.flatMap { FaceAttributesLocalizedStrings.getOptionTitle(for: $0) },
+                        attributeId: "skinBlemishes"
                     ),
                     FaceAttributeItem(
                         label: GLMPLanguage.me_attribute_age_range,

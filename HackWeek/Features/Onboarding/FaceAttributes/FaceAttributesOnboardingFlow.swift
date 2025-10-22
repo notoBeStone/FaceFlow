@@ -31,6 +31,7 @@ struct AttributeQuestion: Identifiable {
         case lipsShape
         case skinType
         case skinTone
+        case skinBlemishes
         case ageRange
     }
 }

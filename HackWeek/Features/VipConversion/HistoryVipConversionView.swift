@@ -44,7 +44,7 @@ struct HistoryVipConversionView: View {
                         LinearGradient(colors: [
                             Color.white.opacity(0.0),
                             Color.white.opacity(1.0)
-                        ], startPoint: .top, endPoint: .bottom)
+                        ], startPoint: .center, endPoint: .bottom)
                     )
                     .frame(height: proxy.size.height / 1.5)
             }
@@ -71,8 +71,10 @@ struct HistoryVipConversionView: View {
             ForEach(historyPaywallFeatures, id: \.self) { item in
                 HStack(alignment: .top, spacing: 10) {
                     Image(.vipCheckIcon)
+                        .renderingMode(.template)
                         .resizable()
                         .frame(width: isIPad ? 24 : 16, height: isIPad ? 24 : 16)
+                        .foregroundColor(.mainColor)
                     Text(item)
                         .font(.custom("Montserrat-Medium", size: isIPad ? 20 : 16))
                         .foregroundColor(Color(hex: 0x3B3B3B))

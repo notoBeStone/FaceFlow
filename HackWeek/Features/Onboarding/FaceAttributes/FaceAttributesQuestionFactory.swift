@@ -247,13 +247,27 @@ struct FaceAttributesQuestionFactory {
             question: question,
             subtitle: subtitle,
             options: [
-                AttributeOption(id: "coolFair", title: GLMPLanguage.faceAttributes_skinTone_coolFair, imageName: "skin_tone_cool", value: SkinTone.coolFair.rawValue),
-                AttributeOption(id: "warmFair", title: GLMPLanguage.faceAttributes_skinTone_warmFair, imageName: "skin_tone_warm", value: SkinTone.warmFair.rawValue),
-                AttributeOption(id: "natural", title: GLMPLanguage.faceAttributes_skinTone_natural, imageName: "skin_tone_natural", value: SkinTone.natural.rawValue),
-                AttributeOption(id: "healthy", title: GLMPLanguage.faceAttributes_skinTone_healthy, imageName: "skin_tone_healthy", value: SkinTone.healthy.rawValue),
-                AttributeOption(id: "wheat", title: GLMPLanguage.faceAttributes_skinTone_wheat, imageName: "skin_tone_wheat", value: SkinTone.wheat.rawValue)
+                AttributeOption(id: "light", title: GLMPLanguage.faceAttributes_skinTone_light, imageName: "skin_tone_light", value: SkinTone.light.rawValue),
+                AttributeOption(id: "medium", title: GLMPLanguage.faceAttributes_skinTone_medium, imageName: "skin_tone_medium", value: SkinTone.medium.rawValue),
+                AttributeOption(id: "golden", title: GLMPLanguage.faceAttributes_skinTone_golden, imageName: "skin_tone_golden", value: SkinTone.golden.rawValue),
+                AttributeOption(id: "dark", title: GLMPLanguage.faceAttributes_skinTone_dark, imageName: "skin_tone_dark", value: SkinTone.dark.rawValue)
             ],
             attributeType: .skinTone
+        )
+    }
+    
+    static func createSkinBlemishesQuestion() -> AttributeQuestion {
+        let (question, subtitle) = FaceAttributesLocalizedStrings.getQuestionTitle(for: .skinBlemishes)
+        return AttributeQuestion(
+            id: "skinBlemishes",
+            question: question,
+            subtitle: subtitle,
+            options: [
+                AttributeOption(id: "noneOrFew", title: GLMPLanguage.faceAttributes_skinBlemishes_noneOrFew, imageName: "skin_blemishes_none", value: SkinBlemishes.noneOrFew.rawValue),
+                AttributeOption(id: "moderate", title: GLMPLanguage.faceAttributes_skinBlemishes_moderate, imageName: "skin_blemishes_moderate", value: SkinBlemishes.moderate.rawValue),
+                AttributeOption(id: "many", title: GLMPLanguage.faceAttributes_skinBlemishes_many, imageName: "skin_blemishes_many", value: SkinBlemishes.many.rawValue)
+            ],
+            attributeType: .skinBlemishes
         )
     }
     
@@ -285,7 +299,8 @@ struct FaceAttributesQuestionFactory {
     static func createStage3Questions() -> [AttributeQuestion] {
         return [
             createSkinTypeQuestion(),
-            createSkinToneQuestion()
+            createSkinToneQuestion(),
+            createSkinBlemishesQuestion()
         ]
     }
 }

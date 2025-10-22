@@ -56,7 +56,7 @@ struct TrialableVipConversionPage: View {
                         LinearGradient(colors: [
                             Color.white.opacity(0.0),
                             Color.white.opacity(1.0)
-                        ], startPoint: .top, endPoint: .bottom)
+                        ], startPoint: .center, endPoint: .bottom)
                     )
                     .frame(height: proxy.size.height / 1.5)
             }
@@ -93,7 +93,7 @@ struct TrialableVipConversionPage: View {
     }
     
     var skuSelectionView: some View {
-        HStack(spacing: 0) {
+        HStack(spacing: 12) {
             if viewModel.skus.isEmpty {
                 templateSkuItemView()
                 templateSkuItemView(isLeading: false)
@@ -140,7 +140,7 @@ struct TrialableVipConversionPage: View {
         .block()
         .frame(height: isIPad ? 110 : 77)
         .overlay {
-            RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
+            RoundedCorner(radius: 6)
                 .stroke(Color(hex: 0xD8D8D8), lineWidth: 1)
         }
     }
@@ -171,11 +171,11 @@ struct TrialableVipConversionPage: View {
         .frame(height: isIPad ? 110 : 77)
         .frame(maxWidth: .infinity)
         .background {
-            RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
+            RoundedCorner(radius: 6)
                 .fill(isSelected ? Color.mainColor.opacity(0.35) : Color.clear)
         }
         .overlay {
-            RoundedCorner(radius: 6, corners: isLeading ? [.topLeft, .bottomLeft] : [.topRight, .bottomRight])
+            RoundedCorner(radius: 6)
                 .stroke(isSelected ? Color.mainColor : Color(hex: 0xD8D8D8), lineWidth: 1)
                 .padding(0.5)
         }

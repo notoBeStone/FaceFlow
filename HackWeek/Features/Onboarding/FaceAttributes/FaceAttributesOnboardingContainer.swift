@@ -116,6 +116,7 @@ struct FaceAttributesOnboardingContainer: View {
         attributes.lipsShape = flow.selectedAnswers["lipsShape"]
         attributes.skinType = flow.selectedAnswers["skinType"]
         attributes.skinTone = flow.selectedAnswers["skinTone"]
+        attributes.skinBlemishes = flow.selectedAnswers["skinBlemishes"]
         attributes.ageRange = flow.selectedAnswers["ageRange"]
         
         attributes.updatedAt = Date()

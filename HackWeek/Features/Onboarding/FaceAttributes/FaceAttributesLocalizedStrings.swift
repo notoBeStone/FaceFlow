@@ -71,6 +71,8 @@ struct FaceAttributesLocalizedStrings {
             return (GLMPLanguage.faceAttributes_question_skinType, GLMPLanguage.faceAttributes_question_skinType_subtitle)
         case .skinTone:
             return (GLMPLanguage.faceAttributes_question_skinTone, nil)
+        case .skinBlemishes:
+            return (GLMPLanguage.faceAttributes_question_skinBlemishes, GLMPLanguage.faceAttributes_question_skinBlemishes_subtitle)
         }
     }
     
@@ -159,11 +161,15 @@ struct FaceAttributesLocalizedStrings {
         case SkinType.sensitive.rawValue: return GLMPLanguage.faceAttributes_skinType_sensitive
         
         // Skin Tone
-        case SkinTone.coolFair.rawValue: return GLMPLanguage.faceAttributes_skinTone_coolFair
-        case SkinTone.warmFair.rawValue: return GLMPLanguage.faceAttributes_skinTone_warmFair
-        case SkinTone.natural.rawValue: return GLMPLanguage.faceAttributes_skinTone_natural
-        case SkinTone.healthy.rawValue: return GLMPLanguage.faceAttributes_skinTone_healthy
-        case SkinTone.wheat.rawValue: return GLMPLanguage.faceAttributes_skinTone_wheat
+        case SkinTone.light.rawValue: return GLMPLanguage.faceAttributes_skinTone_light
+        case SkinTone.medium.rawValue: return GLMPLanguage.faceAttributes_skinTone_medium
+        case SkinTone.golden.rawValue: return GLMPLanguage.faceAttributes_skinTone_golden
+        case SkinTone.dark.rawValue: return GLMPLanguage.faceAttributes_skinTone_dark
+        
+        // Skin Blemishes
+        case SkinBlemishes.noneOrFew.rawValue: return GLMPLanguage.faceAttributes_skinBlemishes_noneOrFew
+        case SkinBlemishes.moderate.rawValue: return GLMPLanguage.faceAttributes_skinBlemishes_moderate
+        case SkinBlemishes.many.rawValue: return GLMPLanguage.faceAttributes_skinBlemishes_many
         
         default: return value
         }

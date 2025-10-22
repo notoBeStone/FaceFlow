@@ -22,9 +22,9 @@ enum FaceShape: String, Codable, CaseIterable {
 
 /// 颧骨高低
 enum CheekboneProminence: String, Codable, CaseIterable {
-    case high = "High"                      // 高
-    case normal = "Normal"                  // 正常
-    case low = "Low"                        // 低
+    case high = "CheekboneHigh"             // 高
+    case normal = "CheekboneNormal"         // 正常
+    case low = "CheekboneLow"               // 低
 }
 
 /// 下颌线类型
@@ -37,18 +37,18 @@ enum JawlineType: String, Codable, CaseIterable {
 
 /// 下巴形状
 enum ChinShape: String, Codable, CaseIterable {
-    case pointed = "Pointed"                // 尖
+    case pointed = "ChinPointed"            // 尖
     case round = "RoundChin"                // 圆
-    case wide = "Wide"                      // 宽
+    case wide = "ChinWide"                  // 宽
 }
 
 // MARK: - Eye Feature Enums
 
 /// 眼睛大小
 enum EyeSize: String, Codable, CaseIterable {
-    case small = "Small"                    // 小
+    case small = "EyeSmall"                 // 小
     case normal = "NormalEye"               // 正常
-    case large = "Large"                    // 大
+    case large = "EyeLarge"                 // 大
 }
 
 /// 眼睛形状
@@ -63,24 +63,24 @@ enum EyeShape: String, Codable, CaseIterable {
 enum EyeDistance: String, Codable, CaseIterable {
     case wide = "WideEye"                   // 宽
     case normal = "NormalDistance"          // 正常
-    case narrow = "Narrow"                  // 窄
+    case narrow = "EyeNarrow"               // 窄
 }
 
 /// 眉形
 enum EyebrowShape: String, Codable, CaseIterable {
-    case straight = "Straight"              // 平
-    case curved = "Curved"                  // 弯
-    case arched = "Arched"                  // 拱形
-    case angular = "Angular"                // 剑眉
+    case straight = "EyebrowStraight"       // 平
+    case curved = "EyebrowCurved"           // 弯
+    case arched = "EyebrowArched"           // 拱形
+    case angular = "EyebrowAngular"         // 剑眉
 }
 
 // MARK: - Nose Feature Enums
 
 /// 鼻子长度
 enum NoseLength: String, Codable, CaseIterable {
-    case short = "Short"                    // 短
+    case short = "NoseShort"                // 短
     case normal = "NormalNose"              // 正常
-    case long = "Long"                      // 长
+    case long = "NoseLong"                  // 长
 }
 
 /// 鼻子宽度
@@ -94,36 +94,42 @@ enum NoseWidth: String, Codable, CaseIterable {
 
 /// 嘴唇厚度
 enum LipsThickness: String, Codable, CaseIterable {
-    case thin = "Thin"                      // 薄
-    case medium = "Medium"                  // 适中
-    case thick = "Thick"                    // 厚
+    case thin = "LipsThin"                  // 薄
+    case medium = "LipsMedium"              // 适中
+    case thick = "LipsThick"                // 厚
 }
 
 /// 嘴唇形状
 enum LipsShape: String, Codable, CaseIterable {
-    case topHeavy = "TopHeavy"              // 上厚下薄
-    case bottomHeavy = "BottomHeavy"        // 下厚上薄
-    case balanced = "Balanced"              // 厚薄均匀
+    case topHeavy = "LipsTopHeavy"          // 上厚下薄
+    case bottomHeavy = "LipsBottomHeavy"    // 下厚上薄
+    case balanced = "LipsBalanced"          // 厚薄均匀
 }
 
 // MARK: - Skin Feature Enums
 
 /// 肤质
 enum SkinType: String, Codable, CaseIterable {
-    case dry = "Dry"                        // 干性
-    case oily = "Oily"                      // 油性
+    case dry = "SkinDry"                    // 干性
+    case oily = "SkinOily"                  // 油性
     case normal = "NormalSkin"              // 中性
-    case combination = "Combination"        // 混合
-    case sensitive = "Sensitive"            // 敏感
+    case combination = "SkinCombination"    // 混合
+    case sensitive = "SkinSensitive"        // 敏感
 }
 
 /// 肤色
 enum SkinTone: String, Codable, CaseIterable {
-    case coolFair = "CoolFair"              // 冷白
-    case warmFair = "WarmFair"              // 暖白
-    case natural = "Natural"                // 自然
-    case healthy = "Healthy"                // 健康
-    case wheat = "Wheat"                    // 小麦色
+    case light = "SkinToneLight"            // 浅色
+    case medium = "SkinToneMedium"          // 中等
+    case golden = "SkinToneGolden"          // 金色
+    case dark = "SkinToneDark"              // 深色
+}
+
+/// 皮肤瑕疵程度
+enum SkinBlemishes: String, Codable, CaseIterable {
+    case noneOrFew = "BlemishesNone"        // 没有或较少
+    case moderate = "BlemishesModerate"     // 中等
+    case many = "BlemishesMany"             // 较多
 }
 
 // MARK: - Age Range Enum
@@ -200,6 +206,9 @@ final class UserFaceAttributes {
     /// 肤色
     var skinTone: String?
     
+    /// 皮肤瑕疵程度
+    var skinBlemishes: String?
+    
     // MARK: - Demographics
     
     /// 年龄范围
@@ -231,6 +240,7 @@ final class UserFaceAttributes {
         lipsShape: LipsShape? = nil,
         skinType: SkinType? = nil,
         skinTone: SkinTone? = nil,
+        skinBlemishes: SkinBlemishes? = nil,
         ageRange: AgeRange? = nil
     ) {
         if let faceShape = faceShape { self.faceShape = faceShape.rawValue }
@@ -247,6 +257,7 @@ final class UserFaceAttributes {
         if let lipsShape = lipsShape { self.lipsShape = lipsShape.rawValue }
         if let skinType = skinType { self.skinType = skinType.rawValue }
         if let skinTone = skinTone { self.skinTone = skinTone.rawValue }
+        if let skinBlemishes = skinBlemishes { self.skinBlemishes = skinBlemishes.rawValue }
         if let ageRange = ageRange { self.ageRange = ageRange.rawValue }
         
         self.updatedAt = Date()
@@ -359,6 +370,11 @@ extension UserFaceAttributes {
     var skinToneEnum: SkinTone? {
         get { skinTone.flatMap { SkinTone(rawValue: $0) } }
         set { skinTone = newValue?.rawValue }
+    }
+    
+    var skinBlemishesEnum: SkinBlemishes? {
+        get { skinBlemishes.flatMap { SkinBlemishes(rawValue: $0) } }
+        set { skinBlemishes = newValue?.rawValue }
     }
     
     var ageRangeEnum: AgeRange? {
