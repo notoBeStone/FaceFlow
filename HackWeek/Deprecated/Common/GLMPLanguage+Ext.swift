@@ -666,6 +666,16 @@ extension GLMPLanguage {
     static var scan_camera_permission_message: String { "Please allow camera access in Settings to use this feature." }
     static var scan_camera_go_settings: String { "Go to Settings" }
     
+    static var scan_recognition_failed_title: String { "Recognition Failed" }
+    static var scan_recognition_failed_subtitle: String { "Unable to identify the product" }
+    static var scan_recognition_failed_tips_title: String { "Tips for Better Results" }
+    static var scan_recognition_failed_tip_1: String { "Ensure product label is clearly visible" }
+    static var scan_recognition_failed_tip_2: String { "Use sufficient lighting" }
+    static var scan_recognition_failed_tip_3: String { "Make sure camera is focused" }
+    static var scan_recognition_failed_tip_4: String { "Show complete ingredient list" }
+    static var scan_recognition_failed_retake: String { "Retake Photo" }
+    static var scan_recognition_failed_close: String { "Close" }
+    
     // MARK: - Feedback
     static var feedback_analysis_helpful: String { "Was this analysis helpful?" }
     static var feedback_video_helpful: String { "Was this tutorial helpful?" }

@@ -25,6 +25,7 @@ struct ScanView: View {
     @State private var showAnalyzing = false
     @State private var selectedMakeupRecord: ScanRecord?
     @State private var selectedProductRecord: ScanRecord?
+    @State private var showRecognitionFailed = false
     
     var body: some View {
         NavigationStack {
@@ -73,6 +74,9 @@ struct ScanView: View {
                     capturedImage = image
                     Task {
                         showAnalyzing = true
+                        // 重置识别失败状态
+                        viewModel.recognitionFailed = false
+                        
                         if let record = await viewModel.analyzeImage(image, scanType: selectedScanType, modelContext: modelContext) {
                             showAnalyzing = false
                             // 分析成功后自动打开详情页
@@ -83,6 +87,11 @@ struct ScanView: View {
                             }
                         } else {
                             showAnalyzing = false
+                            // 检查是否是识别失败
+                            if viewModel.recognitionFailed {
+                                showRecognitionFailed = true
+                            }
+                            // 其他错误情况会通过 viewModel.showError 处理
                         }
                     }
                 }
@@ -98,6 +107,18 @@ struct ScanView: View {
             }
             .sheet(item: $selectedProductRecord) { record in
                 ProductResultView(record: record)
+            }
+            .sheet(isPresented: $showRecognitionFailed) {
+                if let image = viewModel.failedImage {
+                    ProductRecognitionFailedView(
+                        image: image,
+                        reason: viewModel.failedReason,
+                        suggestions: viewModel.failedSuggestions
+                    ) {
+                        // 重新拍摄
+                        showModeSheet = true
+                    }
+                }
             }
             .alert(GLMPLanguage.scan_error_title, isPresented: $viewModel.showError) {
                 Button(GLMPLanguage.scan_error_ok, role: .cancel) {}

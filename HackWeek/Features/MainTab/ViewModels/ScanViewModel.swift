@@ -19,6 +19,10 @@ class ScanViewModel: ObservableObject {
     @Published var isLoading = false
     @Published var showError = false
     @Published var errorMessage = ""
+    @Published var recognitionFailed = false
+    @Published var failedImage: UIImage?
+    @Published var failedReason = ""
+    @Published var failedSuggestions = ""
     
     // MARK: - Private Properties
     
@@ -68,25 +72,30 @@ class ScanViewModel: ObservableObject {
                 )
             ]
             
-            // 4. 调用 AI API
+            // 4. 调用 AI API（使用 gpt-4o 模型以获得更好的联网搜索能力）
+            let config = GPTConfig(
+                model: .gpt4o,           // 使用 gpt-4o，它有更强的联网搜索能力
+                maxTokens: 2000,         // 增加 token 数以获得更完整的成分列表
+                temperature: 0.7         // 降低温度以获得更准确的结果
+            )
             let resultJSON = try await TemplateAPI.ChatGPT.llmCompletion(
                 messages,
-                configuration: nil,
+                configuration: config,
                 responseFormat: nil
             )
             
             print("📝 AI 返回结果：\(resultJSON)")
             
-            // 5. 提取纯 JSON（移除可能的 markdown 代码块）
+            // 6. 提取纯 JSON（移除可能的 markdown 代码块）
             let cleanJSON = extractJSON(from: resultJSON)
             print("🧹 清洗后的 JSON：\(cleanJSON)")
             
-            // 6. 验证 JSON 格式
+            // 7. 验证 JSON 格式
             guard let jsonData = cleanJSON.data(using: .utf8) else {
                 throw NSError(domain: "JSONError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Invalid JSON response"])
             }
             
-            // 7. 验证 JSON 可以解析
+            // 8. 验证 JSON 可以解析
             do {
                 let jsonObject = try JSONSerialization.jsonObject(with: jsonData, options: [])
                 print("✅ JSON 解析成功：\(jsonObject)")
@@ -96,7 +105,35 @@ class ScanViewModel: ObservableObject {
                 throw NSError(domain: "JSONError", code: -1, userInfo: [NSLocalizedDescriptionKey: "Failed to parse JSON: \(error.localizedDescription)"])
             }
             
-            // 8. 保存记录
+            // 9. 检查是否识别失败（评分为 N/A）
+            if scanType == .product {
+                // 尝试解析产品结果
+                if let result = try? JSONDecoder().decode(ProductAnalysisResult.self, from: jsonData) {
+                    if result.score == "N/A" {
+                        // 识别失败，设置失败状态并返回 nil
+                        print("⚠️ 产品识别失败：Score = N/A")
+                        recognitionFailed = true
+                        failedImage = image
+                        failedReason = result.summary
+                        failedSuggestions = result.suggestions
+                        return nil
+                    }
+                }
+            } else if scanType == .makeup {
+                // 妆容评分也可能返回 N/A（虽然不太常见）
+                if let result = try? JSONDecoder().decode(MakeupAnalysisResult.self, from: jsonData) {
+                    if result.score == "N/A" {
+                        print("⚠️ 妆容识别失败：Score = N/A")
+                        recognitionFailed = true
+                        failedImage = image
+                        failedReason = result.review
+                        failedSuggestions = result.suggestion
+                        return nil
+                    }
+                }
+            }
+            
+            // 10. 保存记录（只有评分不是 N/A 时才保存）
             let record = ScanRecord(
                 scanType: scanType,
                 imageData: imageData,
@@ -107,10 +144,10 @@ class ScanViewModel: ObservableObject {
             try modelContext.save()
             print("✅ 记录保存成功")
             
-            // 9. 刷新列表
+            // 11. 刷新列表
             fetchRecords(modelContext: modelContext)
             
-            // 10. 返回保存的记录
+            // 12. 返回保存的记录
             return record
             
         } catch {
