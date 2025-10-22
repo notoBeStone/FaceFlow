@@ -58,6 +58,16 @@ struct ProductResultView: View {
                         .font(.avenirBodyRoman)
                         .foregroundColor(.g5L)
                         .padding(.top, 8)
+                    
+                    // 反馈组件
+                    if let result = record.productResult {
+                        ResultFeedbackView(
+                            recordId: record.id.uuidString,
+                            score: result.score,
+                            analysisType: .product
+                        )
+                        .padding(.top, 16)
+                    }
                 }
                 .padding(20)
             }

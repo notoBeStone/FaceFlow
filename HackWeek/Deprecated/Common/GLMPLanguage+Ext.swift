@@ -446,9 +446,7 @@ extension GLMPLanguage {
     static var home_aquascape_idea_desc: String { "Get inspired with AI-generated aquascaping designs" }
     
     // MARK: - Main Tab Bar
-    static var tab_home: String { "Home" }
-    static var tab_scan: String { "Scan" }
-    static var tab_me: String { "Me" }
+    static var tab_scan: String { "Discover" }
     
     // MARK: - Main App
     static var main_app_title: String { "Tutorial" }
@@ -456,8 +454,8 @@ extension GLMPLanguage {
     static var home_discover: String { "Discover your beauty journey" }
     static var home_section_beginner: String { "Beginner" }
     static var home_section_advanced: String { "Advanced" }
-    static var scan_title: String { "Scan" }
-    static var scan_description: String { "Scan makeup products" }
+    static var scan_title: String { "Discover" }
+    static var scan_description: String { "Analyze your beauty" }
     static var me_title: String { "Profile" }
     static var me_description: String { "Manage your profile" }
     
@@ -667,6 +665,16 @@ extension GLMPLanguage {
     static var scan_camera_permission_title: String { "Camera Access Required" }
     static var scan_camera_permission_message: String { "Please allow camera access in Settings to use this feature." }
     static var scan_camera_go_settings: String { "Go to Settings" }
+    
+    // MARK: - Feedback
+    static var feedback_analysis_helpful: String { "Was this analysis helpful?" }
+    static var feedback_video_helpful: String { "Was this tutorial helpful?" }
+    static var feedback_yes: String { "Yes" }
+    static var feedback_no: String { "No" }
+    static var feedback_detail_placeholder: String { "Tell us more (optional)" }
+    static var feedback_submit: String { "Submit" }
+    static var feedback_thanks: String { "Thank you for your feedback!" }
+    static var feedback_detail_title: String { "Help us improve" }
 }
 
 extension GLMPLanguage {

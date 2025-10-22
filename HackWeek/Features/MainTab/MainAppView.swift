@@ -48,7 +48,7 @@ struct MainAppView: ComposablePageComponent {
                 HomeView()
                     .tabItem {
                         Image(systemName: selectedTab == 0 ? "house.fill" : "house")
-                        Text(GLMPLanguage.tab_home)
+                        Text(GLMPLanguage.main_app_title)
                             .font(.avenirTabBarMedium)
                     }
                     .tag(0)
@@ -64,7 +64,7 @@ struct MainAppView: ComposablePageComponent {
                 MeView()
                     .tabItem {
                         Image(systemName: selectedTab == 2 ? "person.fill" : "person")
-                        Text(GLMPLanguage.tab_me)
+                        Text(GLMPLanguage.me_title)
                             .font(.avenirTabBarMedium)
                     }
                     .tag(2)

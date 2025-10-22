@@ -52,6 +52,16 @@ struct MakeupResultView: View {
                         .font(.avenirBodyRoman)
                         .foregroundColor(.g5L)
                         .padding(.top, 8)
+                    
+                    // 反馈组件
+                    if let result = record.makeupResult {
+                        ResultFeedbackView(
+                            recordId: record.id.uuidString,
+                            score: result.score,
+                            analysisType: .makeup
+                        )
+                        .padding(.top, 16)
+                    }
                 }
                 .padding(20)
             }

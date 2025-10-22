@@ -95,6 +95,16 @@ struct SimpleVideoPlayerView: View {
                                 .lineSpacing(4)
                         }
                         
+                        // 反馈组件
+                        ResultFeedbackView(
+                            recordId: video.id,
+                            score: String(Int(video.duration ?? 0)),
+                            analysisType: .video,
+                            customTitle: GLMPLanguage.feedback_video_helpful,
+                            isDarkMode: true
+                        )
+                        .padding(.top, 24)
+                        
                         Spacer()
                     }
                     .padding(20)
@@ -248,7 +258,7 @@ class SimpleVideoPlayerViewModel: ObservableObject {
 // MARK: - Preview
 
 #Preview {
-    @Namespace var namespace
+    @Previewable @Namespace var namespace
     return SimpleVideoPlayerView(
         video: TutorialVideo(
             title: "Everyday Makeup Tutorial",

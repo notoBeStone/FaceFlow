@@ -18,4 +18,22 @@ events:
   detail:
     share: "分享按钮"
     like: "点赞按钮"
-    comment: "评论按钮" 
+    comment: "评论按钮"
+  
+  # 妆容分析结果页
+  makeup_result:
+    feedback_helpful: "有帮助反馈"
+    feedback_not_helpful: "无帮助反馈"
+    feedback_detail: "详细反馈提交"
+  
+  # 产品扫描结果页
+  product_result:
+    feedback_helpful: "有帮助反馈"
+    feedback_not_helpful: "无帮助反馈"
+    feedback_detail: "详细反馈提交"
+  
+  # 视频播放页
+  video_player:
+    feedback_helpful: "有帮助反馈"
+    feedback_not_helpful: "无帮助反馈"
+    feedback_detail: "详细反馈提交" 
