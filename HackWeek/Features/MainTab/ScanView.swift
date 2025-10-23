@@ -21,6 +21,7 @@ struct ScanView: View {
     @State private var showModeSheet = false
     @State private var showImagePicker = false
     @State private var selectedScanType: ScanType = .makeup
+    @State private var shouldOpenCamera = false  // 标记是否需要打开相机
     @State private var capturedImage: UIImage?
     @State private var showAnalyzing = false
     @State private var selectedMakeupRecord: ScanRecord?
@@ -54,10 +55,20 @@ struct ScanView: View {
                 }
             }
             .navigationTitle(GLMPLanguage.scan_title)
-            .sheet(isPresented: $showModeSheet) {
+            .sheet(isPresented: $showModeSheet, onDismiss: {
+                // 弹窗完全关闭后，如果用户选择了模式，则打开相机
+                if shouldOpenCamera {
+                    shouldOpenCamera = false
+                    // 稍微延迟一下，确保动画流畅
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                        showImagePicker = true
+                    }
+                }
+            }) {
                 CameraModeSheet { scanType in
                     selectedScanType = scanType
-                    showImagePicker = true
+                    shouldOpenCamera = true
+                    // 不在这里直接打开相机，而是在 onDismiss 中打开
                 }
             }
             .sheet(isPresented: $showImagePicker) {
