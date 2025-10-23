@@ -72,15 +72,9 @@ class ScanViewModel: ObservableObject {
                 )
             ]
             
-            // 4. 调用 AI API（使用 gpt-4o 模型以获得更好的联网搜索能力）
-            let config = GPTConfig(
-                model: .gpt4o,           // 使用 gpt-4o，它有更强的联网搜索能力
-                maxTokens: 2000,         // 增加 token 数以获得更完整的成分列表
-                temperature: 0.7         // 降低温度以获得更准确的结果
-            )
             let resultJSON = try await TemplateAPI.ChatGPT.llmCompletion(
                 messages,
-                configuration: config,
+                configuration: nil,
                 responseFormat: nil
             )
             
