@@ -17,19 +17,7 @@ struct FaceAttributesOnboardingContainer: View {
     
     var body: some View {
         ZStack {
-            if flow.isShowingEncouragement {
-                // 显示鼓励页面
-                EncouragementPage(
-                    stage: flow.stages[flow.currentStageIndex + 1],
-                    onContinue: {
-                        flow.moveToNextStage()
-                    }
-                )
-                .transition(.asymmetric(
-                    insertion: .scale.combined(with: .opacity),
-                    removal: .scale.combined(with: .opacity)
-                ))
-            } else if let question = flow.currentQuestion {
+            if let question = flow.currentQuestion {
                 // 显示问题页面 - 统一使用 AttributeSelectionPage（会自动根据问题类型选择样式）
                 AttributeSelectionPage(
                     question: question,
@@ -64,7 +52,6 @@ struct FaceAttributesOnboardingContainer: View {
             }
         }
         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.currentQuestionIndex)
-        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.isShowingEncouragement)
         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.isCompleted)
     }
     

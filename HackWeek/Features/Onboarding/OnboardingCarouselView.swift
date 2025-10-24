@@ -6,6 +6,7 @@
 //
 
 import SwiftUI
+import GLUtils
 
 /// Onboarding 轮播图页面
 struct OnboardingCarouselView: View {
@@ -27,38 +28,50 @@ struct OnboardingCarouselView: View {
     var body: some View {
         ZStack {
             // 背景图片
-            Image("app_bg")
-                .resizable()
-                .scaledToFill()
+            Color(hex: 0x181920)
                 .ignoresSafeArea()
             
-            VStack(spacing: 0) {
-                // 轮播图片 (只有图片) - 左右上贴紧屏幕
-                TabView(selection: $currentPage) {
-                    ForEach(0..<totalPages, id: \.self) { index in
-                        Image(carouselData[index].imageName)
-                            .resizable()
-                            .scaledToFit()
-                            .frame(maxWidth: .infinity)
-                            .aspectRatio(750.0 / 1623.0, contentMode: .fit)
-                            .tag(index)
+            // 轮播图片 (只有图片) - 左右上贴紧屏幕
+            TabView(selection: $currentPage) {
+                ForEach(0..<totalPages, id: \.self) { index in
+                    ScrollView {
+                        VStack {
+                            Image(carouselData[index].imageName)
+                                .resizable()
+                                .scaledToFill()
+                                .frame(width: GLScreenWidth, height: GLScreenWidth * 1623.0 / 750.0)
+                                .tag(index)
+                                .clipped()
+                            Spacer()
+                        }
+                        .frame(maxWidth: .infinity, maxHeight: .infinity, alignment: .top)
                     }
+                    .frame(maxWidth: .infinity, maxHeight: .infinity)
+                    .ignoresSafeArea()
                 }
-                .tabViewStyle(.page(indexDisplayMode: .never))
-                .disabled(true) // 禁用手势滑动
-                .frame(maxWidth: .infinity)
+                
+            }
+            .tabViewStyle(.page(indexDisplayMode: .never))
+            .disabled(true) // 禁用手势滑动
+            
+            
+            VStack(spacing: 0) {
                 
                 Spacer()
                 
-                // 文案
-                Text(carouselData[currentPage].title)
-                    .font(Font.custom("Avenir", size: 24))
-                    .foregroundColor(Color(red: 1, green: 0.96, blue: 0.99))
-                    .frame(width: 273, alignment: .topLeading)
-                    .animation(.easeInOut(duration: 0.3), value: currentPage)
+                HStack {
+                    // 文案
+                    Text(carouselData[currentPage].title)
+                        .font(Font.custom("Avenir", size: 24))
+                        .foregroundColor(Color(red: 1, green: 0.96, blue: 0.99))
+                        .frame(width: 273, alignment: .topLeading)
+                        .animation(.easeInOut(duration: 0.3), value: currentPage)
+                        .padding(.leading, 16)
+                    Spacer()
+                }
                 
                 Spacer()
-                    .frame(height: 48)
+                    .frame(height: 60)
                 
                 // 自定义页面指示器
                 HStack(spacing: 8) {
