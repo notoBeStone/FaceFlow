@@ -19,14 +19,21 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="app_bg" translatesAutoresizingMaskIntoConstraints="NO" id="wur-KK-ALa">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </imageView>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="pic_start_up" translatesAutoresizingMaskIntoConstraints="NO" id="Zej-Rm-vda">
-                                <rect key="frame" x="127.5" y="213.5" width="120" height="120"/>
+                                <rect key="frame" x="139.5" y="225.5" width="96" height="96"/>
                             </imageView>
                         </subviews>
                         <color key="backgroundColor" name="mainBackgroundColor"/>
                         <constraints>
-                            <constraint firstItem="Zej-Rm-vda" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="EOn-bV-UGN"/>
-                            <constraint firstItem="Zej-Rm-vda" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="t1t-TZ-5Id"/>
+                            <constraint firstItem="wur-KK-ALa" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="3K9-eO-91X"/>
+                            <constraint firstItem="Zej-Rm-vda" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="4HC-Rp-TX8"/>
+                            <constraint firstAttribute="trailing" secondItem="wur-KK-ALa" secondAttribute="trailing" id="9Zw-oL-ELO"/>
+                            <constraint firstItem="wur-KK-ALa" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ZuA-NR-tlc"/>
+                            <constraint firstAttribute="bottom" secondItem="wur-KK-ALa" secondAttribute="bottom" id="eDb-Wz-FPF"/>
+                            <constraint firstItem="Zej-Rm-vda" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" constant="-60" id="f29-iM-fLW"/>
                         </constraints>
                     </view>
                 </viewController>
@@ -36,7 +43,8 @@
         </scene>
     </scenes>
     <resources>
-        <image name="pic_start_up" width="120" height="120"/>
+        <image name="app_bg" width="375" height="812"/>
+        <image name="pic_start_up" width="96" height="96"/>
         <namedColor name="mainBackgroundColor">
             <color red="0.96078431372549022" green="0.96078431372549022" blue="0.96078431372549022" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>

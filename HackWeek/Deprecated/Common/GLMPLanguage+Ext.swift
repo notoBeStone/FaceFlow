@@ -345,6 +345,19 @@ extension GLMPLanguage {
         "Get Started"
     }
     
+    // MARK: - Agreement
+    static var agreement_terms_of_use: String {
+        "Terms of Use"
+    }
+    
+    static var agreement_privacy_policy: String {
+        "Privacy Policy"
+    }
+    
+    static var agreement_by_tapping: String {
+        "By tapping Start Now, you agree to our %@ \n and confirm you have read our %@"
+    }
+    
     static var feedback_header_text: String {
         "💖 We Want to serve better!"
     }

@@ -22,7 +22,14 @@ class PlaceholderViewController: UIViewController {
     // MARK: - Config
     
     func configUI() {
-        self.view.backgroundColor = UIColor(named: "mainBackgroundColor")
+        let backgroundImageView = UIImageView(image: UIImage(named: "app_bg"))
+        backgroundImageView.contentMode = .scaleAspectFill
+        self.view.insertSubview(backgroundImageView, at: 0)
+        
+        backgroundImageView.snp.makeConstraints { make in
+            make.edges.equalToSuperview()
+        }
+        
         self.view.gl_addSubviews([self.imageView])
         self.imageView.snp.makeConstraints { make in
             make.centerX.equalToSuperview()

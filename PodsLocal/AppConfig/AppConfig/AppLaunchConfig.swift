@@ -12,7 +12,7 @@ public struct AppLaunchConfig {
     
     //Agreement Memo
 //    public static let agreementMemo: String = "PT"
-    public static let agreementMemo: String? = nil
+    public static let agreementMemo: String? = "10001"
     
     //MARK: - GLWebImage
     
