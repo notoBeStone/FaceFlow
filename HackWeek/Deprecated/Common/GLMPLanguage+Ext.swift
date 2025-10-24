@@ -713,6 +713,12 @@ extension GLMPLanguage {
     static var feedback_submit: String { "Submit" }
     static var feedback_thanks: String { "Thank you for your feedback!" }
     static var feedback_detail_title: String { "Help us improve" }
+    
+    // MARK: - Onboarding Carousel
+    static var onboarding_carousel_title1: String { "Makeup tutorials made just for you." }
+    static var onboarding_carousel_title2: String { "Get instant AI beauty advice." }
+    static var onboarding_carousel_title3: String { "Scan products, know what's inside." }
+    static var onboarding_carousel_skip: String { "Skip" }
 }
 
 extension GLMPLanguage {

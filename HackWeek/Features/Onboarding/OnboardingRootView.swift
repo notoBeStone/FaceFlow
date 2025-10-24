@@ -13,6 +13,7 @@ import GLCore
 /// Onboarding根视图，负责检查Onboarding状态并显示适当的页面
 struct OnboardingRootView: View {
     @StateObject private var onboardingManager = OnboardingManager.shared
+    @State private var isCarouselCompleted = false
 
     // SwiftData 数据容器
     @Environment(\.modelContext) private var modelContext
@@ -22,8 +23,13 @@ struct OnboardingRootView: View {
             if onboardingManager.isOnboardingCompleted {
                 // Onboarding已完成，显示主应用界面
                 MainAppView()
+            } else if !isCarouselCompleted {
+                // 显示轮播图
+                OnboardingCarouselView {
+                    isCarouselCompleted = true
+                }
             } else {
-                // Onboarding未完成，直接显示面部属性问卷
+                // 轮播完成后，显示面部属性问卷
                 FaceAttributesOnboardingContainer {
                     // 问卷完成后的处理
                     onboardingManager.handleOnboardingCompletion()
