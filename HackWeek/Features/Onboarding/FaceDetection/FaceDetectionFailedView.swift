@@ -27,7 +27,7 @@ struct FaceDetectionFailedView: View {
                 Image("onboarding_retry")
                     .resizable()
                     .scaledToFit()
-                    .frame(width: 120, height: 120)
+                    .frame(width: 74, height: 74)
                     .padding(.bottom, 32)
                 
                 // 标题

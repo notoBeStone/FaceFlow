@@ -497,6 +497,9 @@ extension GLMPLanguage {
     // Encouragement
     static var faceAttributes_encouragement_awesome: String { "Awesome!" }
     
+    // Loading
+    static var faceAttributes_loading_title: String { "Your personalized beauty\nresults are almost ready!" }
+    
     // Completion
     static var faceAttributes_completion_perfect: String { "Perfect!" }
     static var faceAttributes_completion_message: String { "We've learned about your unique features\nYour personalized beauty plan is ready" }

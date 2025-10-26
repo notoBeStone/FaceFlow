@@ -42,9 +42,8 @@ struct OnboardingRootView: View {
                     onboardingManager.handleOnboardingCompletion()
                 }
             } else {
-                // TODO: 显示下一个流程
-                // 暂时显示面部属性问卷
-                FaceAttributesOnboardingContainer {
+                // 显示面部属性问卷
+                FaceAttributesOnboardingContainer(faceImage: detectedFaceImage) {
                     // 问卷完成后的处理
                     onboardingManager.handleOnboardingCompletion()
                 }

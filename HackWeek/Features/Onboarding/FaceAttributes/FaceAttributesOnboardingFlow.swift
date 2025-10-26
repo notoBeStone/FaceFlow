@@ -56,71 +56,30 @@ struct OnboardingStage: Identifiable {
 // MARK: - Onboarding Flow Manager
 
 class FaceAttributesOnboardingFlow: ObservableObject {
-    @Published var currentStageIndex: Int = 0
     @Published var currentQuestionIndex: Int = 0
-    @Published var isShowingEncouragement: Bool = false
     @Published var isCompleted: Bool = false
     @Published var selectedAnswers: [String: String] = [:] // questionId: value
     
-    // 三个阶段的问题 - 使用本地化文案
-    lazy var stages: [OnboardingStage] = {
-        let stage1Info = FaceAttributesLocalizedStrings.getStageInfo(for: 0)
-        let stage2Info = FaceAttributesLocalizedStrings.getStageInfo(for: 1)
-        let stage3Info = FaceAttributesLocalizedStrings.getStageInfo(for: 2)
-        
-        return [
-            // 第一阶段：了解脸型
-            OnboardingStage(
-                id: 0,
-                title: stage1Info.title,
-                subtitle: stage1Info.subtitle,
-                emoji: stage1Info.emoji,
-                questions: FaceAttributesQuestionFactory.createStage1Questions()
-            ),
-            // 第二阶段：了解五官
-            OnboardingStage(
-                id: 1,
-                title: stage2Info.title,
-                subtitle: stage2Info.subtitle,
-                emoji: stage2Info.emoji,
-                questions: FaceAttributesQuestionFactory.createStage2Questions()
-            ),
-            // 第三阶段：了解肤质
-            OnboardingStage(
-                id: 2,
-                title: stage3Info.title,
-                subtitle: stage3Info.subtitle,
-                emoji: stage3Info.emoji,
-                questions: FaceAttributesQuestionFactory.createStage3Questions()
-            )
-        ]
+    // 简化版：只有两个问题（年龄和肤质）
+    lazy var questions: [AttributeQuestion] = {
+        return FaceAttributesQuestionFactory.createSimplifiedQuestions()
     }()
     
     // MARK: - Computed Properties
     
-    var currentStage: OnboardingStage {
-        stages[currentStageIndex]
-    }
-    
     var currentQuestion: AttributeQuestion? {
         // 如果已完成，返回 nil 以显示完成页面
         guard !isCompleted else { return nil }
-        guard currentQuestionIndex < currentStage.questions.count else { return nil }
-        return currentStage.questions[currentQuestionIndex]
+        guard currentQuestionIndex < questions.count else { return nil }
+        return questions[currentQuestionIndex]
     }
     
     var progress: Double {
-        let totalQuestions = stages.reduce(0) { $0 + $1.questions.count }
-        let completedQuestions = stages.prefix(currentStageIndex).reduce(0) { $0 + $1.questions.count } + currentQuestionIndex
-        return Double(completedQuestions) / Double(totalQuestions)
+        return Double(currentQuestionIndex) / Double(questions.count)
     }
     
-    var isLastStage: Bool {
-        currentStageIndex == stages.count - 1
-    }
-    
-    var isLastQuestionInStage: Bool {
-        currentQuestionIndex == currentStage.questions.count - 1
+    var isLastQuestion: Bool {
+        currentQuestionIndex == questions.count - 1
     }
     
     // MARK: - Actions
@@ -131,25 +90,13 @@ class FaceAttributesOnboardingFlow: ObservableObject {
     }
     
     func moveToNext() {
-        if isLastQuestionInStage {
-            // 当前阶段的最后一个问题
-            if isLastStage {
-                // 是最后一个阶段，完成流程
-                completeFlow()
-            } else {
-                // 显示鼓励页面
-                isShowingEncouragement = true
-            }
+        if isLastQuestion {
+            // 最后一个问题，完成流程
+            completeFlow()
         } else {
             // 移动到下一个问题
             currentQuestionIndex += 1
         }
-    }
-    
-    func moveToNextStage() {
-        currentStageIndex += 1
-        currentQuestionIndex = 0
-        isShowingEncouragement = false
     }
     
     func completeFlow() {
@@ -166,3 +113,4 @@ class FaceAttributesOnboardingFlow: ObservableObject {
         moveToNext()
     }
 }
+

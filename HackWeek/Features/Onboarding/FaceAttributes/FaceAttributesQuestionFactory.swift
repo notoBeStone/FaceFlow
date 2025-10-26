@@ -273,6 +273,15 @@ struct FaceAttributesQuestionFactory {
     
     // MARK: - Create All Stage Questions
     
+    /// 简化版：仅包含年龄和肤质两个问题
+    static func createSimplifiedQuestions() -> [AttributeQuestion] {
+        return [
+            createAgeRangeQuestion(),
+            createSkinTypeQuestion()
+        ]
+    }
+    
+    // 旧版本保留（备用）
     static func createStage1Questions() -> [AttributeQuestion] {
         return [
             createAgeRangeQuestion(),

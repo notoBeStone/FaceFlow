@@ -172,7 +172,7 @@ struct SingleAttributeEditor: View {
                     .stroke(selectedValue == option.value ? Color.mainColor : Color.clear, lineWidth: 2)
             )
         }
-        .buttonStyle(ScaleButtonStyle())
+        .buttonStyle(PlainButtonStyle())
     }
     
     private func gridOptionCard(option: AttributeOption) -> some View {
@@ -208,7 +208,7 @@ struct SingleAttributeEditor: View {
                     .stroke(selectedValue == option.value ? Color.mainColor : Color.g4L, lineWidth: selectedValue == option.value ? 2.5 : 1)
             )
         }
-        .buttonStyle(ScaleButtonStyle())
+        .buttonStyle(PlainButtonStyle())
     }
     
     // MARK: - Save Button

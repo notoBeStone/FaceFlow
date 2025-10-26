@@ -13,28 +13,65 @@ struct FaceAttributesOnboardingContainer: View {
     @StateObject private var flow = FaceAttributesOnboardingFlow()
     @Environment(\.modelContext) private var modelContext
     
+    @State private var showLoadingView = false
+    @State private var showReportView = false
+    
+    let faceImage: UIImage?
     let onComplete: () -> Void
     
     var body: some View {
         ZStack {
-            if let question = flow.currentQuestion {
-                // 显示问题页面 - 统一使用 AttributeSelectionPage（会自动根据问题类型选择样式）
+            if showReportView {
+                // 显示报告页面
+                BeautyReportView(faceImage: faceImage) {
+                    onComplete()
+                }
+                .transition(.opacity)
+            } else if showLoadingView {
+                // 显示加载页面
+                FaceAnalysisLoadingView(
+                    faceImage: faceImage,
+                    onComplete: {
+                        // Loading 完成后进入报告页
+                        withAnimation {
+                            showLoadingView = false
+                            showReportView = true
+                        }
+                    },
+                    onError: { _ in
+                        // 即使出错也进入报告页（已在 LoadingView 中处理）
+                    }
+                )
+                .transition(.opacity)
+            } else if let question = flow.currentQuestion {
+                // 显示问题页面
                 AttributeSelectionPage(
                     question: question,
                     onSelect: { value in
-                        flow.selectAnswer(questionId: question.id, value: value)
+                        // 先保存答案
+                        flow.selectedAnswers[question.id] = value
                         
-                        // 检查是否完成
-                        if flow.isLastStage && flow.isLastQuestionInStage {
-                            saveAttributesAndComplete()
+                        // 判断是否是最后一题
+                        if flow.isLastQuestion {
+                            // 最后一题：延迟一下让用户看到选中效果，然后进入加载页面
+                            DispatchQueue.main.asyncAfter(deadline: .now() + 0.3) {
+                                flow.completeFlow()
+                                saveAttributesAndShowLoading()
+                            }
+                        } else {
+                            // 不是最后一题：移动到下一题
+                            flow.currentQuestionIndex += 1
                         }
                     },
                     onSkip: {
-                        flow.skipQuestion()
-                        
-                        // 检查是否完成
-                        if flow.isLastStage && flow.isLastQuestionInStage {
-                            saveAttributesAndComplete()
+                        // 判断是否是最后一题
+                        if flow.isLastQuestion {
+                            // 最后一题：直接进入加载页面
+                            flow.completeFlow()
+                            saveAttributesAndShowLoading()
+                        } else {
+                            // 不是最后一题：移动到下一题
+                            flow.currentQuestionIndex += 1
                         }
                     },
                     progress: flow.progress
@@ -43,32 +80,30 @@ struct FaceAttributesOnboardingContainer: View {
                     insertion: .move(edge: .trailing).combined(with: .opacity),
                     removal: .move(edge: .leading).combined(with: .opacity)
                 ))
-            } else {
-                // 完成页面（可选）
-                CompletionView {
-                    onComplete()
-                }
-                .transition(.scale.combined(with: .opacity))
             }
         }
         .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.currentQuestionIndex)
-        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: flow.isCompleted)
+        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: showLoadingView)
+        .animation(.spring(response: 0.4, dampingFraction: 0.8), value: showReportView)
     }
     
-    // MARK: - Save & Complete
+    // MARK: - Save & Show Loading
     
-    private func saveAttributesAndComplete() {
+    private func saveAttributesAndShowLoading() {
         Task { @MainActor in
             do {
-                // 保存用户属性到 SwiftData
+                // 保存用户属性到 SwiftData（只保存 ageRange 和 skinType）
                 try await saveUserAttributes()
                 
-                // 延迟显示完成页面
-                DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
-                    flow.completeFlow()
-                }
+                debugPrint("✅ 用户基础属性已保存（年龄和肤质）")
                 
-                debugPrint("✅ 用户面部属性已保存")
+                // 标记流程完成
+                flow.completeFlow()
+                
+                // 显示加载页面（会在加载页面调用 API 分析其他属性）
+                withAnimation {
+                    showLoadingView = true
+                }
             } catch {
                 debugPrint("❌ 保存用户属性失败: \(error)")
             }
@@ -88,29 +123,32 @@ struct FaceAttributesOnboardingContainer: View {
             modelContext.insert(attributes)
         }
         
-        // 从回答中提取各个属性
-        attributes.faceShape = flow.selectedAnswers["faceShape"]
-        attributes.cheekboneProminence = flow.selectedAnswers["cheekboneProminence"]
-        attributes.jawlineType = flow.selectedAnswers["jawlineType"]
-        attributes.chinShape = flow.selectedAnswers["chinShape"]
-        attributes.eyeSize = flow.selectedAnswers["eyeSize"]
-        attributes.eyeShape = flow.selectedAnswers["eyeShape"]
-        attributes.eyeDistance = flow.selectedAnswers["eyeDistance"]
-        attributes.eyebrowShape = flow.selectedAnswers["eyebrowShape"]
-        attributes.noseLength = flow.selectedAnswers["noseLength"]
-        attributes.noseWidth = flow.selectedAnswers["noseWidth"]
-        attributes.lipsThickness = flow.selectedAnswers["lipsThickness"]
-        attributes.lipsShape = flow.selectedAnswers["lipsShape"]
-        attributes.skinType = flow.selectedAnswers["skinType"]
-        attributes.skinTone = flow.selectedAnswers["skinTone"]
-        attributes.skinBlemishes = flow.selectedAnswers["skinBlemishes"]
+        // 只保存用户手动选择的属性（年龄和肤质）
         attributes.ageRange = flow.selectedAnswers["ageRange"]
+        attributes.skinType = flow.selectedAnswers["skinType"]
+        
+        // 其他属性将在 API 分析后填充
+        // TODO: 在 FaceAnalysisLoadingView 中调用 API 后，更新以下属性：
+        // attributes.faceShape
+        // attributes.cheekboneProminence
+        // attributes.jawlineType
+        // attributes.chinShape
+        // attributes.eyeSize
+        // attributes.eyeShape
+        // attributes.eyeDistance
+        // attributes.eyebrowShape
+        // attributes.noseLength
+        // attributes.noseWidth
+        // attributes.lipsThickness
+        // attributes.lipsShape
+        // attributes.skinTone
+        // attributes.skinBlemishes
         
         attributes.updatedAt = Date()
         
         try modelContext.save()
         
-        debugPrint("✅ 保存的属性: \(attributes.getAllTags())")
+        debugPrint("✅ 保存的基础属性: 年龄=\(attributes.ageRange ?? "nil"), 肤质=\(attributes.skinType ?? "nil")")
     }
 }
 
@@ -191,7 +229,7 @@ struct CompletionView: View {
 
 #if DEBUG
 #Preview {
-    FaceAttributesOnboardingContainer {
+    FaceAttributesOnboardingContainer(faceImage: nil) {
         debugPrint("Onboarding completed")
     }
 }

@@ -76,7 +76,7 @@ struct MeView: View {
                 }
             }
             .sheet(isPresented: $showingOnboarding) {
-                FaceAttributesOnboardingContainer {
+                FaceAttributesOnboardingContainer(faceImage: nil) {
                     showingOnboarding = false
                 }
             }
