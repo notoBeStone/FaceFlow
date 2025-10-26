@@ -42,8 +42,8 @@ struct HistoryVipConversionView: View {
                 Rectangle()
                     .fill(
                         LinearGradient(colors: [
-                            Color.white.opacity(0.0),
-                            Color.white.opacity(1.0)
+                            Color(hex: 0x181920).opacity(0.0),
+                            Color(hex: 0x181920).opacity(1.0)
                         ], startPoint: .center, endPoint: .bottom)
                     )
                     .frame(height: proxy.size.height / 1.5)
@@ -55,7 +55,7 @@ struct HistoryVipConversionView: View {
         VStack(spacing: 0) {
             (
                 Text("Makeup Easier\nWith ")
-                    .foregroundColor(Color(hex: 0x1A1A1A))
+                    .foregroundColor(.white)
                 +
                 Text("FaceFlow")
                     .foregroundColor(.mainColor)
@@ -77,7 +77,7 @@ struct HistoryVipConversionView: View {
                         .foregroundColor(.mainColor)
                     Text(item)
                         .font(.custom("Montserrat-Medium", size: isIPad ? 20 : 16))
-                        .foregroundColor(Color(hex: 0x3B3B3B))
+                        .foregroundColor(Color(hex: 0xE6E6E6))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
             }
@@ -121,7 +121,7 @@ struct HistoryVipConversionView: View {
         .ph(16)
         .block()
         .roundedBG(12, color:.clear)
-        .roundedBorder(12, color: Color(hex: 0xD8D8D8))
+        .roundedBorder(12, color: Color(hex: 0x464646))
     }
     
     @ViewBuilder
@@ -130,11 +130,11 @@ struct HistoryVipConversionView: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : priceString(for: sku.product))
                     .fontSemiBold(18.rpx)
-                    .color(isSelected ? .mainColor : Color(hex: 0x3B3B3B))
+                    .color(isSelected ? .white : Color.white.opacity(0.6))
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : periodString(for: sku.period))
                     .fontMedium(16.rpx)
-                    .color(isSelected ? .mainColor : Color(hex: 0x6C6C6C))
+                    .color(isSelected ? .white : Color.white.opacity(0.6))
                     .blockLeading
             }
             Image(isSelected ? .vipSelectIcon : .vipUnselectIcon)
@@ -143,8 +143,8 @@ struct HistoryVipConversionView: View {
         .pv(18)
         .ph(16)
         .block()
-        .roundedBG(12, color: isSelected ? .mainColor.opacity(0.08) : .clear)
-        .roundedBorder(12, color: isSelected ? .mainColor : Color(hex: 0xD8D8D8))
+        .roundedBG(12, color: isSelected ? Color(hex: 0xFF4D8E).opacity(0.35) : .clear)
+        .roundedBorder(12, color: isSelected ? Color(hex: 0xFF4D8E) : Color(hex: 0x464646))
     }
     
     private func periodString(for period: ConversionSku.SkuPeriod) -> String {
@@ -168,7 +168,7 @@ struct HistoryVipConversionView: View {
         if let skuId = viewModel.selectedSkuId, let item = viewModel.skus.first(where: { $0.id == skuId}) {
             Text(hintForSku(sku: item))
                 .fontSemiBold(isIPad ? 20 : 14)
-                .foregroundColor(Color(hex: 0x6C6C6C))
+                .foregroundColor(Color(hex: 0xE1E1E1))
                 .blockCenter
                 .anyView
         } else {
@@ -182,7 +182,7 @@ struct HistoryVipConversionView: View {
                 Image(.vipReminderIcon).resizableSquare(24.rpx)
                 Text("Remind me before my trial ends")
                     .fontMedium(isIPad ? 16 : 14)
-                    .foregroundColor(Color(hex: 0x3B3B3B))
+                    .foregroundColor(Color(hex: 0xE1E1E1))
                     .blockLeading
                     .lineLimit(1)
             }
@@ -227,7 +227,17 @@ struct HistoryVipConversionView: View {
                 .foregroundColor(.white)
                 .blockCenter
                 .height(isIPad ? 76 : 56)
-                .capsuleBG(.mainColor)
+                .background(
+                    LinearGradient(
+                        stops: [
+                            Gradient.Stop(color: Color(red: 1, green: 0.3, blue: 0.56), location: 0.00),
+                            Gradient.Stop(color: Color(red: 0.65, green: 0.1, blue: 0.82), location: 1.00),
+                        ],
+                        startPoint: UnitPoint(x: 0, y: 0.5),
+                        endPoint: UnitPoint(x: 1, y: 0.5)
+                    )
+                )
+                .clipShape(Capsule())
         }
     }
     
@@ -285,7 +295,7 @@ struct HistoryVipConversionView: View {
             .padding(.horizontal, isIPad ? 150 : 24)
         }
         .pb(20)
-        .background(Color.white)
+        .background(Color(hex: 0x181920))
         .ignoresSafeArea()
         .onReceive(conversionObserver.updateUIEvent) { _ in
             TemplateAPI.Conversion.enableCurrentSkus(viewModel.availableSkus)

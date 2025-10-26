@@ -54,8 +54,8 @@ struct TrialableVipConversionPage: View {
                 Rectangle()
                     .fill(
                         LinearGradient(colors: [
-                            Color.white.opacity(0.0),
-                            Color.white.opacity(1.0)
+                            Color(hex: 0x181920).opacity(0.0),
+                            Color(hex: 0x181920).opacity(1.0)
                         ], startPoint: .center, endPoint: .bottom)
                     )
                     .frame(height: proxy.size.height / 1.5)
@@ -66,7 +66,7 @@ struct TrialableVipConversionPage: View {
     var titleArea: some View {
         Text("Design Your Trial")
             .fontBold(isIPad ? 44 : 24)
-            .foregroundColor(Color(hex: 0x1A1A1A))
+            .foregroundColor(.white)
             .blockCenter
     }
     
@@ -82,7 +82,7 @@ struct TrialableVipConversionPage: View {
                     
                     Text(item)
                         .font(.custom("Montserrat-Medium", size: isIPad ? 22 : 16))
-                        .foregroundColor(Color(hex: 0x3B3B3B))
+                        .foregroundColor(Color(hex: 0xE6E6E6))
                         .frame(maxWidth: .infinity, alignment: .leading)
                 }
                 .pv(6)
@@ -109,7 +109,7 @@ struct TrialableVipConversionPage: View {
         }
         .overlay(alignment: .center) {
             if viewModel.skus.isEmpty == false {
-                Rectangle().fill(Color.mainColor)
+                Rectangle().fill(Color(hex: 0xFF4D8E))
                     .width(1)
             }
         }
@@ -131,7 +131,7 @@ struct TrialableVipConversionPage: View {
             Image(systemName: "circle")
                 .resizable()
                 .frame(width: isIPad ? 28 : 24, height: isIPad ? 28 : 24)
-                .foregroundColor(Color(hex: 0xD8D8D8))
+                .foregroundColor(Color(hex: 0x464646))
         }
         .pv(isIPad ? 16 : 10)
         .ph(isIPad ? 16 : 12)
@@ -139,7 +139,7 @@ struct TrialableVipConversionPage: View {
         .frame(height: isIPad ? 110 : 77)
         .overlay {
             RoundedCorner(radius: 6)
-                .stroke(Color(hex: 0xD8D8D8), lineWidth: 1)
+                .stroke(Color(hex: 0x464646), lineWidth: 1)
         }
     }
     
@@ -149,11 +149,11 @@ struct TrialableVipConversionPage: View {
             VStack(spacing: 3) {
                 Text(sku.trialDays > 0 ? "Free" : "1 week")
                     .fontBold(isIPad ? 20 : 16)
-                    .color(isSelected ? .mainColor : Color(hex: 0x3B3B3B))
+                    .color(isSelected ? .white : Color.white.opacity(0.6))
                     .blockLeading
                 Text(sku.trialDays > 0 ? "\(sku.trialDays) days" : discountPrice(for: sku.product))
                     .fontMedium(isIPad ? 14 : 12)
-                    .color(isSelected ? .mainColor : Color(hex: 0x6C6C6C))
+                    .color(isSelected ? .white : Color.white.opacity(0.6))
                     .blockLeading
                 Spacer()
             }
@@ -161,7 +161,7 @@ struct TrialableVipConversionPage: View {
             Image(systemName: isSelected ? "checkmark.circle.fill" : "circle")
                 .resizable()
                 .frame(width: isIPad ? 28 : 24, height: isIPad ? 28 : 24)
-                .foregroundColor(isSelected ? Color.mainColor : Color(hex: 0xD8D8D8))
+                .foregroundColor(isSelected ? Color(hex: 0xFF4D8E) : Color(hex: 0x464646))
         }
         .pv(isIPad ? 16 : 10)
         .ph(isIPad ? 16 : 12)
@@ -170,11 +170,11 @@ struct TrialableVipConversionPage: View {
         .frame(maxWidth: .infinity)
         .background {
             RoundedCorner(radius: 6)
-                .fill(isSelected ? Color.mainColor.opacity(0.35) : Color.clear)
+                .fill(isSelected ? Color(hex: 0xFF4D8E).opacity(0.35) : Color.clear)
         }
         .overlay {
             RoundedCorner(radius: 6)
-                .stroke(isSelected ? Color.mainColor : Color(hex: 0xD8D8D8), lineWidth: 1)
+                .stroke(isSelected ? Color(hex: 0xFF4D8E) : Color(hex: 0x464646), lineWidth: 1)
                 .padding(0.5)
         }
     }
@@ -219,7 +219,7 @@ struct TrialableVipConversionPage: View {
                     Text("/week")
                         .fontRegular(isIPad ? 20 : 14)
                 )
-                .foregroundColor(Color(hex: 0x6C6C6C))
+                .foregroundColor(Color(hex: 0xE1E1E1))
                 .anyView
             } else {
                 (
@@ -232,7 +232,7 @@ struct TrialableVipConversionPage: View {
                     Text("/week")
                         .fontRegular(isIPad ? 20 : 14)
                 )
-                .foregroundColor(Color(hex: 0x6C6C6C))
+                .foregroundColor(Color(hex: 0xE1E1E1))
                 .anyView
             }
         } else {
@@ -244,7 +244,7 @@ struct TrialableVipConversionPage: View {
         HStack(spacing: 8) {
             Text("Remind me before my trial ends")
                 .fontMedium(isIPad ? 16 : 14)
-                .foregroundColor(Color(hex: 0x3B3B3B))
+                .foregroundColor(Color(hex: 0xE1E1E1))
                 .blockLeading
                 .lineLimit(1)
             Toggle(isOn: Binding(get: { viewModel.reminderEnable }, set: { newValue in
@@ -262,7 +262,7 @@ struct TrialableVipConversionPage: View {
         }
         .pv(8)
         .ph(16)
-        .capsuleBorder(Color(hex: 0xD8D8D8))
+        .capsuleBorder(Color.white.opacity(0.29))
     }
     
     func hintForSku(sku: ConversionSku) -> String {
@@ -285,7 +285,17 @@ struct TrialableVipConversionPage: View {
                 .foregroundColor(.white)
                 .blockCenter
                 .height(isIPad ? 76 : 56)
-                .capsuleBG(.mainColor)
+                .background(
+                    LinearGradient(
+                        stops: [
+                            Gradient.Stop(color: Color(red: 1, green: 0.3, blue: 0.56), location: 0.00),
+                            Gradient.Stop(color: Color(red: 0.65, green: 0.1, blue: 0.82), location: 1.00),
+                        ],
+                        startPoint: UnitPoint(x: 0, y: 0.5),
+                        endPoint: UnitPoint(x: 1, y: 0.5)
+                    )
+                )
+                .clipShape(Capsule())
         }
         .opacity(viewModel.selectedSkuId == nil ? 0.3 : 1.0)
         .disabled(viewModel.selectedSkuId == nil)
@@ -359,7 +369,7 @@ struct TrialableVipConversionPage: View {
             .padding(.horizontal, isIPad ? 150 : 20)
         }
         .ignoresSafeArea()
-        .background(Color.white)
+        .background(Color(hex: 0x181920))
         .onReceive(conversionObserver.updateUIEvent) { _ in
             TemplateAPI.Conversion.enableCurrentSkus(viewModel.availableSkus)
             Task {

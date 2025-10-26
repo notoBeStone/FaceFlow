@@ -37,7 +37,7 @@ struct SignupView: View {
             VStack(spacing: 0) {
                 // header image
                 HStack {
-                    Image("login_logo")
+                    Image("logo_80")
                         .resizable()
                         .aspectRatio(contentMode: .fill)
                         .foregroundColor(.p5)

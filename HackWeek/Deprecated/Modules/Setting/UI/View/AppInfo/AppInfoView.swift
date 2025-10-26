@@ -66,7 +66,9 @@ fileprivate struct HeaderView: View {
     var body: some View {
         VStack(spacing: 16.rpx) {
             
-            Image("settings_logo")
+            Image("logo_80")
+                .resizable()
+                .scaledToFill()
                 .frame(width: 110.rpx, height: 110.rpx)
             
             
