@@ -127,7 +127,7 @@ struct OnboardingCarouselView: View {
                 } else {
                     // 已到最后一页，等待后自动跳转
                     stopTimer()
-                    DispatchQueue.main.asyncAfter(deadline: .now() + autoScrollInterval) {
+                    DispatchQueue.main.asyncAfter(deadline: .now()) {
                         onComplete()
                     }
                 }

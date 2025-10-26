@@ -719,6 +719,19 @@ extension GLMPLanguage {
     static var onboarding_carousel_title2: String { "Get instant AI beauty advice." }
     static var onboarding_carousel_title3: String { "Scan products, know what's inside." }
     static var onboarding_carousel_skip: String { "Skip" }
+    
+    // MARK: - Face Scan Introduction
+    static var onboarding_face_scan_title: String { "Let's start with a face scan" }
+    static var onboarding_face_scan_subtitle: String { "A quick beauty consultation to personalize the best looks for you." }
+    static var onboarding_face_detecting: String { "正在检测人脸..." }
+    static var onboarding_face_select_photo: String { "选择照片" }
+    static var onboarding_face_no_face_detected: String { "未检测到人脸" }
+    static var onboarding_face_scan_how: String { "How would you like to scan?" }
+    static var onboarding_face_take_photo: String { "Take a Photo" }
+    static var onboarding_face_upload_gallery: String { "Upload from Gallery" }
+    static var onboarding_face_detection_failed_title: String { "We couldn't detect a face." }
+    static var onboarding_face_detection_failed_subtitle: String { "Make sure your face is fully visible and well-lit.\nTry again for a perfect personalized scan!" }
+    static var onboarding_face_try_again: String { "Try Again" }
 }
 
 extension GLMPLanguage {

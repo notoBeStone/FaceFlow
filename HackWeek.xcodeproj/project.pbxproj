@@ -52,7 +52,6 @@
 		5314EFAC2DFAB4B2006B439C /* Exceptions for "HackWeek" folder in "HackWeek" target */ = {
 			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
 			membershipExceptions = (
-				Deprecated/Generated/Lokalise/.gitignore,
 				"Deprecated/Generated/Lokalise/.gitlab-ci.yml",
 				Deprecated/Generated/Lokalise/README.md,
 				Features/VipConversion/CLAUDE.md,

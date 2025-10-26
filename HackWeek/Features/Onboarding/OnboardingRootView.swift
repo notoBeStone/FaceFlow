@@ -14,6 +14,8 @@ import GLCore
 struct OnboardingRootView: View {
     @StateObject private var onboardingManager = OnboardingManager.shared
     @State private var isCarouselCompleted = false
+    @State private var isFaceScanIntroCompleted = false
+    @State private var detectedFaceImage: UIImage?  // 保存检测到的人脸图片
 
     // SwiftData 数据容器
     @Environment(\.modelContext) private var modelContext
@@ -28,8 +30,20 @@ struct OnboardingRootView: View {
                 OnboardingCarouselView {
                     isCarouselCompleted = true
                 }
+            } else if !isFaceScanIntroCompleted {
+                // 显示面部扫描介绍页
+                FaceScanIntroView { faceImage in
+                    // Continue - 保存图片并进入下一步
+                    detectedFaceImage = faceImage
+                    isFaceScanIntroCompleted = true
+                    // TODO: 进入下一个流程
+                } onSkip: {
+                    // Skip - 直接完成 Onboarding
+                    onboardingManager.handleOnboardingCompletion()
+                }
             } else {
-                // 轮播完成后，显示面部属性问卷
+                // TODO: 显示下一个流程
+                // 暂时显示面部属性问卷
                 FaceAttributesOnboardingContainer {
                     // 问卷完成后的处理
                     onboardingManager.handleOnboardingCompletion()
