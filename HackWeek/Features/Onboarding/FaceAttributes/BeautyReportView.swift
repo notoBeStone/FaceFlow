@@ -21,6 +21,8 @@ struct BeautyReportView: View {
             Image("app_bg")
                 .resizable()
                 .scaledToFill()
+                .frame(height: GLScreenHeight)
+
             
             ScrollView {
                 VStack(spacing: 0) {

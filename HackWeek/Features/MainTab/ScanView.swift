@@ -113,13 +113,13 @@ struct ScanView: View {
             .fullScreenCover(isPresented: $showAnalyzing) {
                 AIAnalysisLoadingView(scanType: selectedScanType)
             }
-            .sheet(item: $selectedMakeupRecord) { record in
+            .fullScreenCover(item: $selectedMakeupRecord) { record in
                 MakeupResultView(record: record)
             }
-            .sheet(item: $selectedProductRecord) { record in
+            .fullScreenCover(item: $selectedProductRecord) { record in
                 ProductResultView(record: record)
             }
-            .sheet(isPresented: $showRecognitionFailed) {
+            .fullScreenCover(isPresented: $showRecognitionFailed) {
                 if let image = viewModel.failedImage {
                     ProductRecognitionFailedView(
                         image: image,

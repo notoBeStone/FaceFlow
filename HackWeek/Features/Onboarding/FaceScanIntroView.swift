@@ -31,6 +31,8 @@ struct FaceScanIntroView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .frame(height: GLScreenHeight)
+
             
             VStack(spacing: 0) {
                 Spacer()

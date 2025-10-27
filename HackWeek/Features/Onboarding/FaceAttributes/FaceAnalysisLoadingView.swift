@@ -9,6 +9,7 @@ import SwiftUI
 import SwiftData
 import GLMP
 import GLTrackingExtension
+import GLUtils
 
 /// 面部分析加载页面
 struct FaceAnalysisLoadingView: View {
@@ -26,6 +27,7 @@ struct FaceAnalysisLoadingView: View {
                 .resizable()
                 .scaledToFill()
                 .ignoresSafeArea()
+                .frame(height: GLScreenHeight)
             
             VStack(spacing: 40) {
                 Spacer()

@@ -25,7 +25,7 @@ struct AttributeSelectionPage: View {
             Image("app_bg")
                 .resizable()
                 .scaledToFill()
-                .ignoresSafeArea()
+                .frame(height: GLScreenHeight)
             
             VStack(spacing: 0) {
                 // 顶部进度指示器
@@ -50,6 +50,7 @@ struct AttributeSelectionPage: View {
                 Spacer()
             }
         }
+        .ignoresSafeArea()
         .onAppear {
             // 页面曝光埋点
             GLMPTracking.tracking("onboarding_attribute_exposure", parameters: [
