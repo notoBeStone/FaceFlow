@@ -7,6 +7,8 @@
 
 import SwiftUI
 import GLUtils
+import GLMP
+import GLTrackingExtension
 
 /// Onboarding 轮播图页面
 struct OnboardingCarouselView: View {
@@ -92,6 +94,8 @@ struct OnboardingCarouselView: View {
                 HStack {
                     Spacer()
                     Button(action: {
+                        // Skip 点击埋点
+                        GLMPTracking.tracking("onboarding_carousel_skip_click")
                         stopTimer()
                         onComplete()
                     }) {
@@ -109,6 +113,8 @@ struct OnboardingCarouselView: View {
         }
         .ignoresSafeArea()
         .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_carousel_exposure")
             startAutoScroll()
         }
         .onDisappear {
@@ -127,6 +133,8 @@ struct OnboardingCarouselView: View {
                 } else {
                     // 已到最后一页，等待后自动跳转
                     stopTimer()
+                    // 轮播完成埋点（调试用）
+                    GLMPTracking.tracking("onboarding_carousel_complete_debug")
                     DispatchQueue.main.asyncAfter(deadline: .now()) {
                         onComplete()
                     }

@@ -7,6 +7,8 @@
 
 import SwiftUI
 import GLUtils
+import GLMP
+import GLTrackingExtension
 
 /// 面部扫描介绍页面
 struct FaceScanIntroView: View {
@@ -63,6 +65,8 @@ struct FaceScanIntroView: View {
                 VStack(spacing: 4) {
                     // Continue 按钮
                     Button(action: {
+                        // Continue 点击埋点
+                        GLMPTracking.tracking("onboarding_facescan_continue_click")
                         showPhotoSourceSheet = true
                     }) {
                         Text(GLMPLanguage.text_continue)
@@ -85,7 +89,11 @@ struct FaceScanIntroView: View {
                     .padding(.horizontal, 20)
                     
                     // Skip 按钮
-                    Button(action: onSkip) {
+                    Button(action: {
+                        // Skip 点击埋点
+                        GLMPTracking.tracking("onboarding_facescan_skip_click")
+                        onSkip()
+                    }) {
                         Text(GLMPLanguage.onboarding_carousel_skip)
                             .font(.avenirMedium(16))
                             .multilineTextAlignment(.center)
@@ -123,6 +131,10 @@ struct FaceScanIntroView: View {
         .safeAreaInset(edge: .bottom) {
             Color.clear.frame(height: 0)
         }
+        .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_facescan_exposure")
+        }
         .fullScreenCover(isPresented: $showPhotoSourceSheet, onDismiss: {
             // 弹窗关闭后，根据选择打开对应的相机或相册
             if shouldOpenPicker {
@@ -139,6 +151,10 @@ struct FaceScanIntroView: View {
             }
         }) {
             PhotoSourceSheet { sourceType in
+                // 照片来源选择埋点
+                GLMPTracking.tracking("onboarding_facescan_source_click", parameters: [
+                    GLT_PARAM_TYPE: sourceType == .camera ? "camera" : "photo_library"
+                ])
                 selectedSourceType = sourceType
                 shouldOpenPicker = true
             }
@@ -176,10 +192,14 @@ struct FaceScanIntroView: View {
                 isDetecting = false
                 
                 if result.isQualified {
+                    // 人脸检测成功埋点（调试用）
+                    GLMPTracking.tracking("onboarding_facescan_detect_success_debug")
                     // 人脸检测通过，保存图片并继续流程
                     saveFaceImage(image)
                     onContinue(image)
                 } else {
+                    // 人脸检测失败埋点（调试用）
+                    GLMPTracking.tracking("onboarding_facescan_detect_failed_debug")
                     // 检测失败，显示 Retry 页面
                     showRetryView = true
                 }

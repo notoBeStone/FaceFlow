@@ -9,6 +9,8 @@ import SwiftUI
 import SwiftData
 import GLAccountExtension
 import GLCore
+import GLMP
+import GLTrackingExtension
 
 /// Onboarding根视图，负责检查Onboarding状态并显示适当的页面
 struct OnboardingRootView: View {
@@ -38,14 +40,14 @@ struct OnboardingRootView: View {
                     isFaceScanIntroCompleted = true
                     // TODO: 进入下一个流程
                 } onSkip: {
-                    // Skip - 直接完成 Onboarding
-                    onboardingManager.handleOnboardingCompletion()
+                    // Skip - 直接完成 Onboarding（没有人脸图片）
+                    onboardingManager.handleOnboardingCompletion(hasFaceImage: false)
                 }
             } else {
                 // 显示面部属性问卷
                 FaceAttributesOnboardingContainer(faceImage: detectedFaceImage) {
-                    // 问卷完成后的处理
-                    onboardingManager.handleOnboardingCompletion()
+                    // 问卷完成后的处理（有人脸图片）
+                    onboardingManager.handleOnboardingCompletion(hasFaceImage: detectedFaceImage != nil)
                 }
             }
         }
@@ -55,8 +57,13 @@ struct OnboardingRootView: View {
 // MARK: - OnboardingManager Extension
 extension OnboardingManager {
     /// 处理Onboarding完成
-    func handleOnboardingCompletion() {
+    func handleOnboardingCompletion(hasFaceImage: Bool = false) {
         Task { @MainActor in
+            // Onboarding 完成埋点（调试用）
+            GLMPTracking.tracking("onboarding_complete_debug", parameters: [
+                GLT_PARAM_TYPE: hasFaceImage ? "with_face" : "without_face"
+            ])
+            
             markOnboardingCompleted()
 
             // 检查用户是否为VIP

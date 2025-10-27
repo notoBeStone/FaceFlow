@@ -7,6 +7,8 @@
 
 import SwiftUI
 import GLUtils
+import GLMP
+import GLTrackingExtension
 
 /// 人脸检测失败重试页面
 struct FaceDetectionFailedView: View {
@@ -48,7 +50,11 @@ struct FaceDetectionFailedView: View {
                 Spacer()
                 
                 // Try Again 按钮
-                Button(action: onTryAgain) {
+                Button(action: {
+                    // Retry 点击埋点
+                    GLMPTracking.tracking("onboarding_facescan_retry_click")
+                    onTryAgain()
+                }) {
                     Text(GLMPLanguage.onboarding_face_try_again)
                         .font(.system(size: 18, weight: .semibold))
                         .foregroundColor(.white)
@@ -72,6 +78,10 @@ struct FaceDetectionFailedView: View {
             }
         }
         .ignoresSafeArea()
+        .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_facescan_failed_exposure")
+        }
     }
 }
 

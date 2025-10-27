@@ -7,6 +7,8 @@
 
 import SwiftUI
 import GLUtils
+import GLMP
+import GLTrackingExtension
 
 /// 属性选择页面 - 深色背景 + 卡片样式
 struct AttributeSelectionPage: View {
@@ -47,6 +49,12 @@ struct AttributeSelectionPage: View {
                 
                 Spacer()
             }
+        }
+        .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_attribute_exposure", parameters: [
+                GLT_PARAM_TYPE: question.id
+            ])
         }
     }
     
@@ -116,6 +124,12 @@ struct AttributeSelectionPage: View {
     
     private func handleSelection(_ option: AttributeOption) {
         selectedOptionId = option.id
+        
+        // 选项点击埋点
+        GLMPTracking.tracking("onboarding_attribute_option_click", parameters: [
+            GLT_PARAM_TYPE: question.id,
+            GLT_PARAM_VALUE: option.value
+        ])
         
         // 添加触觉反馈
         let impact = UIImpactFeedbackGenerator(style: .medium)

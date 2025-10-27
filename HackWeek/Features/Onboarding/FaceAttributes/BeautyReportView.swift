@@ -7,6 +7,8 @@
 
 import SwiftUI
 import GLUtils
+import GLMP
+import GLTrackingExtension
 
 /// 美妆报告页面 - 显示遮盖的占位符
 struct BeautyReportView: View {
@@ -87,7 +89,11 @@ struct BeautyReportView: View {
             VStack {
                 Spacer()
                 
-                Button(action: onContinue) {
+                Button(action: {
+                    // Continue 点击埋点
+                    GLMPTracking.tracking("onboarding_report_continue_click")
+                    onContinue()
+                }) {
                     Text("View Full Report")
                         .font(Font.custom("Avenir", size: 18)
                             .weight(.medium))
@@ -111,6 +117,10 @@ struct BeautyReportView: View {
             }
         }
         .ignoresSafeArea()
+        .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_report_exposure")
+        }
     }
     
     // MARK: - Helper Views

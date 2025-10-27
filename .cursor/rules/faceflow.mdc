@@ -7,18 +7,171 @@ alwaysApply: true
 ## 项目简介
 FaceFlow 是一个美妆视频 iOS 应用。
 
+---
+
 ## 开发规范
 
 ### 1. 样式规范
-- **字体定义**: 参考 `Font+App.swift` 文件中的字体定义
-- **颜色定义**: 参考 `Color+App.swift` 文件中的颜色定义
+
+#### 字体
+- 使用 `Font+App.swift` 中定义的统一字体
+- 禁止硬编码字体名称和大小
+
+#### 颜色
+- 使用 `Color+App.swift` 中定义的统一颜色
+- 禁止硬编码颜色值（如 `Color(red:green:blue:)` 或十六进制色值）
+
+---
 
 ### 2. 国际化规范
-- **文字定义**: 所有用户可见的文字必须写在 `GLMPLanguage+Ext` 中，不要硬编码字符串
+
+#### 文字定义
+- **必须**将所有用户可见的文字定义在 `GLMPLanguage+Ext` 中
+- **禁止**在代码中硬编码显示文本
+- 确保所有文案支持多语言
+
+#### 示例
+```swift
+// ✅ 正确：使用国际化文本
+Text(GLMPLanguage.onboarding.title)
+
+// ❌ 错误：硬编码文本
+Text("欢迎使用")
+```
+
+---
 
 ### 3. 编码原则
+
+#### 基本原则
 - 遵循 SwiftUI 最佳实践
 - 保持代码可读性和可维护性
-- 使用统一的命名规范
+- 使用统一的命名规范（驼峰命名法）
+- 适当添加注释说明复杂逻辑
 
-方案得到确认以后再进行代码更改
+#### 代码审查
+- **重要**：所有功能方案需得到确认后再进行代码实现
+- 提交代码前确保无 linter 错误
+- 确保代码通过基本测试
+
+---
+
+### 4. 埋点（Analytics）规范
+
+#### 命名规范
+
+**重要：只能使用以下三种埋点类型**
+
+##### 1. 页面曝光事件（二段式命名）
+- 格式：`{页面名称}_exposure`
+- 示例：`home_exposure`, `profile_exposure`, `onboarding_carousel_exposure`
+
+##### 2. 点击事件（三段式命名）
+- 格式：`{页面名称}_{元素名称}_click`
+- 示例：`home_filter_click`, `profile_edit_click`, `onboarding_carousel_skip_click`
+
+##### 3. 调试埋点（以 _debug 结尾）
+- 格式：`{事件描述}_debug`
+- 用途：用于开发调试、性能监控、错误追踪等非业务核心的埋点
+- 示例：
+  - `onboarding_complete_debug` - Onboarding 完成（调试用）
+  - `onboarding_facescan_detect_success_debug` - 人脸检测成功（调试用）
+  - `onboarding_analysis_loading_failed_debug` - 分析失败（调试用）
+
+**注意：除了上述三种类型，不允许使用其他命名格式的埋点**
+
+#### 参数规范
+
+使用预定义的参数键，确保类型匹配：
+
+##### Int 类型参数
+```swift
+length      // 长度
+count       // 数量
+size        // 大小
+int1~int5   // 通用整型参数（integer1-integer5）
+```
+
+##### Double 类型参数
+```swift
+time        // 时间
+number      // 数值
+percent     // 百分比
+price       // 价格
+double1~double5  // 通用浮点参数
+```
+
+##### String 类型参数
+```swift
+code        // 代码
+index       // 索引
+step        // 步骤
+type        // 类型
+content     // 内容
+error       // 错误信息
+from        // 来源
+group       // 分组
+id          // 标识符
+key         // 键
+keywords    // 关键词
+message     // 消息
+mode        // 模式
+name        // 名称
+sku         // 商品编号
+source      // 来源
+status      // 状态
+target      // 目标
+to          // 目的地
+value       // 值
+version     // 版本
+vip         // 会员状态
+string1~string5  // 通用字符串参数
+```
+
+#### 注意事项
+- **必须**确保参数值的数据类型与参数键定义的类型一致
+- 不要使用未定义的参数键，当找不到完全匹配的意思的参数时，找近似意思的
+- 埋点事件命名要清晰明确，便于后续数据分析
+- **严格遵守**命名规范：exposure（二段式）、click（三段式）、debug（_debug 结尾）
+
+#### 示例
+```swift
+// ✅ 正确：曝光事件（二段式）
+GLMPTracking.tracking("onboarding_carousel_exposure")
+
+// ✅ 正确：点击事件（三段式）
+GLMPTracking.tracking("onboarding_carousel_skip_click")
+
+// ✅ 正确：调试埋点（_debug 结尾）
+GLMPTracking.tracking("onboarding_complete_debug", parameters: [
+    GLT_PARAM_TYPE: "with_face"
+])
+
+// ✅ 正确：参数类型匹配
+GLMPTracking.tracking("home_filter_click", parameters: [
+    GLT_PARAM_TYPE: "beauty",     // String
+    GLT_PARAM_COUNT: 5,           // Int
+    GLT_PARAM_TIME: 2.5           // Double
+])
+
+// ❌ 错误：不符合命名规范
+GLMPTracking.tracking("onboarding_complete")  // 应该是 onboarding_complete_debug
+
+// ❌ 错误：click 事件不是三段式
+GLMPTracking.tracking("onboarding_click")  // 应该是 onboarding_xxx_click
+
+// ❌ 错误：参数类型不匹配
+GLMPTracking.tracking("home_filter_click", parameters: [
+    GLT_PARAM_COUNT: "5"  // 应该是 Int，不是 String
+])
+```
+
+---
+
+## 工作流程
+
+1. **需求确认**：与产品/设计确认功能需求和实现方案
+2. **方案设计**：设计技术实现方案，必要时进行技术评审
+3. **代码实现**：按照本规范进行开发
+4. **自测验证**：确保功能正常，无明显 bug
+5. **代码提交**：提交前检查 linter 错误并修复

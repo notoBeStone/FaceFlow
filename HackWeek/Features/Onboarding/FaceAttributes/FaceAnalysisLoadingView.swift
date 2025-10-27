@@ -7,6 +7,8 @@
 
 import SwiftUI
 import SwiftData
+import GLMP
+import GLTrackingExtension
 
 /// 面部分析加载页面
 struct FaceAnalysisLoadingView: View {
@@ -73,6 +75,8 @@ struct FaceAnalysisLoadingView: View {
             }
         }
         .onAppear {
+            // 页面曝光埋点
+            GLMPTracking.tracking("onboarding_analysis_loading_exposure")
             startLoading()
         }
     }
@@ -86,10 +90,12 @@ struct FaceAnalysisLoadingView: View {
     }
     
     private func performFaceAnalysis() async {
+        let startTime = Date()
+        
         // 1. 检查是否有人脸图片
         guard let faceImage = faceImage else {
             debugPrint("⚠️ 没有人脸图片，直接进入结果页")
-            await completeAnalysis()
+            await completeAnalysis(startTime: startTime, hasError: false)
             return
         }
         
@@ -106,19 +112,36 @@ struct FaceAnalysisLoadingView: View {
             try await viewModel.saveAnalysisResult(result, modelContext: modelContext)
             
             debugPrint("✅ 数据已保存到 SwiftData")
+            
+            // 成功完成
+            await completeAnalysis(startTime: startTime, hasError: false)
         } catch {
             debugPrint("❌ 面部分析失败: \(error)")
             debugPrint("ℹ️ 但仍然继续进入结果页")
-            // 不抛出错误，继续流程
+            
+            // 分析失败埋点（调试用）
+            GLMPTracking.tracking("onboarding_analysis_loading_failed_debug", parameters: [
+                GLT_PARAM_ERROR: error.localizedDescription
+            ])
+            
+            // 失败也继续
+            await completeAnalysis(startTime: startTime, hasError: true)
         }
-        
-        // 4. 无论成功失败，都进入结果页
-        await completeAnalysis()
     }
     
-    private func completeAnalysis() async {
+    private func completeAnalysis(startTime: Date, hasError: Bool) async {
         // 延迟一下让用户看到 100% 的进度
         try? await Task.sleep(nanoseconds: 500_000_000) // 0.5 秒
+        
+        // 计算分析用时
+        let duration = Date().timeIntervalSince(startTime)
+        
+        // 完成埋点（调试用，仅在成功时）
+        if !hasError {
+            GLMPTracking.tracking("onboarding_analysis_loading_complete_debug", parameters: [
+                GLT_PARAM_TIME: duration
+            ])
+        }
         
         // 完成回调
         await MainActor.run {
