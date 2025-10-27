@@ -1,15 +1,15 @@
 variables:
-  GDP_APPLICATION: aquaai-ios-app #GDP上配的应用名称（GDP->应用管理->应用列表）
-  PRODUCT: aquaai #产品名
+  GDP_APPLICATION: faceflow #GDP上配的应用名称（GDP->应用管理->应用列表）
+  PRODUCT: faceflow #产品名
   NEED_TEST: 0
   NEED_STYLE: 0 #是否开启代码规范检测
   OC_SONAR: 0 #是否开启OC代码检测 （需添加sonar配置）
   SWIFT_SONAR: 0 #是否开启swift代码检测（需添加sonar配置）
   USE_OLD_WHITELIST: 0 #是否使用老白名单（已废弃，CI根据GDP上对应产品区域和安全等级自行选择白名单）
-  BUILD_WORKSPACE: AquaAI.xcworkspace
-  BUILD_SCHEME: AquaAI
+  BUILD_WORKSPACE: HackWeek.xcworkspace
+  BUILD_SCHEME: HackWeek
   SRC_PATH: ./ #ci项目脚本相对路径（保持默认勿动）
-  BUNDLE_ID: com.aquariumai.fishkeeping #bundleId
+  BUNDLE_ID: com.faceflow.ai #bundleId
   NEED_BUILD_DATAV: 0 #是否需要build DATAV包
   DATAV_VERSION: 0.0.0 #DATAV版本
   INSTALLER_SIZE_LIMIT: 250 #上传大小限制

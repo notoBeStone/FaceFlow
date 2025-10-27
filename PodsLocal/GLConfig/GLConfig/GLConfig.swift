@@ -41,11 +41,11 @@ import GLPurchaseExtension
             return reviewAddress
         }
         switch self {
-            case .prod: return "https://app-service.okayfishai.com"
+            case .prod: return "https://app-service.faceflowbeauty.com"
             case .stage:
-                return "https://app-service-stage.okayfishai.com"
+                return "https://app-service-stage.faceflowbeauty.com"
 //                return "http://10.32.30.113:8070"
-            case .test: return "https://app-service-stage.okayfishai.com"
+            case .test: return "https://app-service-stage.faceflowbeauty.com"
         }
     }
     
@@ -126,7 +126,7 @@ import GLPurchaseExtension
     @objc public static let isSupportMultiLanguage: Bool = true // {$.is_support_multi_language}
         
     // AppInfo
-    public static let appId: String = "6747123584"
+    public static let appId: String = "6754315005"
     public static let teamId: String = "8DHYPVL45R"
     public static let appStoreLink = String(format: "https://apps.apple.com/app/id%@", appId)    // App Store Link
     public static let appStoreReviewLink = String(format: "itms-apps://itunes.apple.com/app/id%@?mt=8&action=write-review", appId)    // App Store Link
