@@ -20,15 +20,15 @@ import_from_git(
   path: "fastlane/Fastfile"
 )
 
-$PROJECT_NAME = "AquaAI"
+$PROJECT_NAME = "HackWeek"
 
 default_platform(:ios)
 $HOST_PREFIX = "    @objc dynamic public class var env: AppEnv {"
 $CUSTOM_HOST_PREFIX = "    @objc var host: String { "
 $HOST_FILE = "PodsLocal/GLConfig/GLConfig/GLConfig.swift"
 $scheme_map = {
-  :scheme => "AquaAI",
-  :google_service_file_path => 'AquaAI/SupportingFiles/GoogleService-Info.plist',
+  :scheme => "HackWeek",
+  :google_service_file_path => 'HackWeek/SupportingFiles/GoogleService-Info.plist',
   :ding_talk_hook => {
     "test" => ["3be2303e92f2df5077182d6aa2c95195b817f2a551e48e3718ef35a424be292f"],
     "stage" => ["3be2303e92f2df5077182d6aa2c95195b817f2a551e48e3718ef35a424be292f"],
@@ -96,7 +96,7 @@ platform :ios do
     build_ios_app(
       skip_package_ipa: true,
       workspace: "#{$PROJECT_NAME}.xcworkspace",
-      scheme: "AquaAI",
+      scheme: "HackWeek",
       xcargs: "-allowProvisioningUpdates",
       configuration: options[:build_configuration],
       build_path: test_build_path,
@@ -182,7 +182,7 @@ platform :ios do
     build_ios_app(
       skip_package_ipa: true,
       workspace: "#{$PROJECT_NAME}.xcworkspace",
-      scheme: "AquaAI",
+      scheme: "HackWeek",
       configuration: "Release",
       xcargs: "-allowProvisioningUpdates",
       scheme: scheme_config[:scheme],

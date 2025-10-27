@@ -47,20 +47,11 @@ public class SKUConfig {
 }
 
 public enum SkuType: String, CaseIterable {
-    // 19.99年包
-    case year = "AquaAI_sub_year"
+
     // 3.99周包 3天试用
-    case week3 = "AquaAI_sub_week_3dt"
-    // 3.99周包 无试用
-    case week = "AquaAI_sub_week"
+    case week3 = "faceflow_sub_week_3dt"
     // 3.99周包，首周 0.99
-    case week099 = "AquaAI_sub_week_099"
-    // 39.99 年包，3天试用，名字起错了
-    case year3dt = "okayfish_sub_year_7dt"
-    // 39.99 年包，首月优惠 1.99
-    case year1mt = "okayfish_sub_year_30dt_1.99"
-    // 39.99 年包，无试用
-    case newYear = "okayfish_sub_year"
+    case week099 = "faceflow_sub_week_7dt_099"
     
     var sku: String {
         self.rawValue
@@ -72,7 +63,7 @@ public enum SkuType: String, CaseIterable {
     
     var trailDays: Int {
         switch self {
-            case .week3, .year3dt:
+            case .week3:
                 return 3
             default:
                 return 0
@@ -88,9 +79,7 @@ public enum SkuType: String, CaseIterable {
     
     var period: SkuPeriod {
         switch self {
-            case .year, .newYear, .year1mt, .year3dt:
-                return .yearly
-            case .week3, .week, .week099:
+            case .week3, .week099:
                 return .weekly
         }
     }

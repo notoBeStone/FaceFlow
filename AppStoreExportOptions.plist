@@ -8,8 +8,8 @@
 	<string>app-store</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.aquariumai.fishkeeping</key>
-		<string>AquaAI AppStore</string>
+		<key>com.faceflow.ai</key>
+		<string>faceflow AppStore</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>iOS Distribution</string>

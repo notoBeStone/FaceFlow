@@ -130,24 +130,24 @@ import GLPurchaseExtension
     public static let teamId: String = "8DHYPVL45R"
     public static let appStoreLink = String(format: "https://apps.apple.com/app/id%@", appId)    // App Store Link
     public static let appStoreReviewLink = String(format: "itms-apps://itunes.apple.com/app/id%@?mt=8&action=write-review", appId)    // App Store Link
-    public static let innerCode = "aquaai"
+    public static let innerCode = "faceflow"
     public static let supportEmail = "support@thevisionext.com"
     public static let supportEmailScheme = "mailto:" + supportEmail
     public static let launchScreenCacheVersion = "0.1.0"    // 需要清理启动页缓存的版本
     
     // App Scheme
-    public static let appScheme = "aquaai"
+    public static let appScheme = "faceflow"
 }
 
 // MARK: - Tracking
 extension GLConfig {
-    static let appProductId: String = "aquaai"  // tcc name
+    static let appProductId: String = "faceflow"  // tcc name
 }
 
 // MARK: - Adjust
 extension GLConfig {
-    static let adjustAppToken: String = "4y0afyjh7am8"
-    static let adjustTodayPayToken: String = "brys49"
+    static let adjustAppToken: String = "yryvqdil0074"
+    static let adjustTodayPayToken: String = "5x2xqt"
     static let adjustNPSToken: String = ""
     /// 返回是否需要客户端向 Adjust 上报订阅信息
     /// 如果需要客户端发送，则配置为 true；如果不需要，则配置为 false。

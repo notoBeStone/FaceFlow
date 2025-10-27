@@ -1,5 +1,5 @@
 {
-    "product": "aquaai",
+    "product": "faceflow",
     "project_id": "2485",
     "job_id": "0",
     "ossconf": {
@@ -13,13 +13,13 @@
     },
     "ding_notify": [],
     "deploy_method": "adhoc",
-    "output_name": "AquaAI.ipa",
+    "output_name": "HackWeek.ipa",
     "export_method": "ad-hoc",
     "export_options": "ExportOptions.plist",
-    "export_project": "AquaAI.xcodeproj",
+    "export_project": "HackWeek.xcodeproj",
     "privacy_info_path": "PrivacyInfo.lock",
     "podfile_lock_path": "Podfile.lock",
-    "archive_path": "AquaAI.xcarchive",
+    "archive_path": "HackWeek.xcarchive",
     "export_team_id": "8DHYPVL45R",
     "issue_project_id": "182",
     "resign": [{

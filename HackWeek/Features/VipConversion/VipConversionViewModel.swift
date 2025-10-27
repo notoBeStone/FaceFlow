@@ -25,25 +25,15 @@ extension ConversionSku: Identifiable, Hashable {
 class VipConversionViewModel: ObservableObject {
     lazy var availableSkus: [String] = {
         switch memoType {
-            case "27637":
-                return [
-                    "okayfish_sub_year_7dt",
-                    "okayfish_sub_year_30dt_1.99"
-                ]
             case "27622":
                 return [
-                    "AquaAI_sub_week",
-                    "AquaAI_sub_year"
-                ]
-            case "27638":
-                return [
-                    "AquaAI_sub_week_3dt",
-                    "okayfish_sub_year_30dt_1.99"
+                    "faceflow_sub_week_3dt",
+                    "faceflow_sub_week_7dt_099"
                 ]
             default:
                 return [
-                    "AquaAI_sub_week_3dt",
-                    "AquaAI_sub_week_099"
+                    "faceflow_sub_week_3dt",
+                    "faceflow_sub_week_7dt_099"
                 ]
         }
     }()

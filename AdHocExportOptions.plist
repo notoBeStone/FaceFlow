@@ -10,8 +10,8 @@
 	<string>ad-hoc</string>
 	<key>provisioningProfiles</key>
 	<dict>
-		<key>com.aquariumai.fishkeeping</key>
-		<string>AquaAI Adhoc</string>
+		<key>com.faceflow.ai</key>
+		<string>faceflow Adhoc</string>
 	</dict>
 	<key>signingCertificate</key>
 	<string>iOS Distribution</string>
