@@ -7,6 +7,7 @@
 
 import Foundation
 import SwiftUI
+import SwiftData
 
 /// 首页 ViewModel
 class HomeViewModel: ObservableObject {
@@ -15,13 +16,21 @@ class HomeViewModel: ObservableObject {
     
     @Published var beginnerVideos: [TutorialVideo] = []
     @Published var advancedVideos: [TutorialVideo] = []
+    @Published var recommendedVideos: [TutorialVideo] = []
     @Published var isLoading: Bool = false
     @Published var errorMessage: String?
     
+    // MARK: - Private Properties
+    
+    private var allVideos: [TutorialVideo] = []
+    private let modelContext: ModelContext?
+    
     // MARK: - Initialization
     
-    init() {
-        loadMockData()
+    init(modelContext: ModelContext? = nil) {
+        self.modelContext = modelContext
+        loadVideosFromJSON()
+        updateRecommendedVideos()
     }
     
     // MARK: - Public Methods
@@ -38,102 +47,99 @@ class HomeViewModel: ObservableObject {
         }
     }
     
+    /// 更新推荐视频列表
+    func updateRecommendedVideos() {
+        guard let modelContext = modelContext else {
+            // 如果没有 modelContext，返回空列表
+            recommendedVideos = []
+            return
+        }
+        
+        // 获取用户面部属性
+        let descriptor = FetchDescriptor<UserFaceAttributes>(
+            sortBy: [SortDescriptor(\.updatedAt, order: .reverse)]
+        )
+        
+        guard let userAttributes = try? modelContext.fetch(descriptor).first else {
+            // 如果没有用户属性，返回空列表
+            recommendedVideos = []
+            return
+        }
+        
+        // 获取用户的属性标签（排除难度标签）
+        let userTags = Set(userAttributes.getAllTags())
+        
+        // 筛选匹配的视频
+        let matchedVideos = allVideos.filter { video in
+            // 获取视频的属性标签（排除难度标签）
+            let videoAttributeTags = Set(video.tags.filter { tag in
+                !isDifficultyTag(tag)
+            })
+            
+            // 如果视频没有属性标签，则不推荐
+            guard !videoAttributeTags.isEmpty else { return false }
+            
+            // 检查是否有交集（只要有一个匹配就展示）
+            return !userTags.intersection(videoAttributeTags).isEmpty
+        }
+        
+        // 按匹配度排序
+        recommendedVideos = matchedVideos.sorted { video1, video2 in
+            let score1 = calculateMatchScore(video: video1, userTags: userTags)
+            let score2 = calculateMatchScore(video: video2, userTags: userTags)
+            return score1 > score2
+        }
+    }
+    
     // MARK: - Private Methods
     
-    /// 加载 Mock 数据
-    private func loadMockData() {
-        // Beginner 视频数据
-        beginnerVideos = [
-            TutorialVideo(
-                title: "Everyday Makeup Tutorial",
-                summary: "Learn the basics of everyday makeup in just 10 minutes",
-                thumbnailURL: "https://picsum.photos/seed/makeup1/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4",
-                duration: 600, // 10分钟
-                tags: [
-                    TutorialTag.beginner.rawValue,
-            
-                ]
-            ),
-            TutorialVideo(
-                title: "Natural Look Guide",
-                summary: "Create a fresh, natural look perfect for any occasion",
-                thumbnailURL: "https://picsum.photos/seed/makeup2/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ElephantsDream.mp4",
-                duration: 480, // 8分钟
-                tags: [
-                    TutorialTag.beginner.rawValue,
-             
-                ]
-            ),
-            TutorialVideo(
-                title: "Simple Eye Makeup",
-                summary: "Master basic eye makeup techniques for beginners",
-                thumbnailURL: "https://picsum.photos/seed/makeup3/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerBlazes.mp4",
-                duration: 420, // 7分钟
-                tags: [
-                    TutorialTag.beginner.rawValue,
-                ]
-            ),
-            TutorialVideo(
-                title: "Quick Makeup Tips",
-                summary: "Time-saving tips for a polished look in minutes",
-                thumbnailURL: "https://picsum.photos/seed/makeup4/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerEscapes.mp4",
-                duration: 300, // 5分钟
-                tags: [
-                    TutorialTag.beginner.rawValue,
-                ]
-            )
-        ]
+    /// 从 JSON 文件加载视频数据
+    private func loadVideosFromJSON() {
+        guard let url = Bundle.main.url(forResource: "tutorial_videos", withExtension: "json") else {
+            errorMessage = "无法找到视频数据文件"
+            return
+        }
         
-        // Advanced 视频数据
-        advancedVideos = [
-            TutorialVideo(
-                title: "Glamorous Evening Makeup",
-                summary: "Create a stunning evening look with professional techniques",
-                thumbnailURL: "https://picsum.photos/seed/makeup5/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerFun.mp4",
-                duration: 900, // 15分钟
-                tags: [
-                    TutorialTag.advanced.rawValue,
-                   
-                ]
-            ),
-            TutorialVideo(
-                title: "Smoky Eye Tutorial",
-                summary: "Master the art of creating perfect smoky eyes",
-                thumbnailURL: "https://picsum.photos/seed/makeup6/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerJoyrides.mp4",
-                duration: 720, // 12分钟
-                tags: [
-                    TutorialTag.advanced.rawValue,
-                
-                ]
-            ),
-            TutorialVideo(
-                title: "Contouring Techniques",
-                summary: "Advanced face sculpting and contouring methods",
-                thumbnailURL: "https://picsum.photos/seed/makeup7/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/ForBiggerMeltdowns.mp4",
-                duration: 840, // 14分钟
-                tags: [
-                    TutorialTag.advanced.rawValue,
-                  
-                ]
-            ),
-            TutorialVideo(
-                title: "Highlighting Guide",
-                summary: "Achieve the perfect glow with advanced highlighting",
-                thumbnailURL: "https://picsum.photos/seed/makeup8/400/300",
-                videoUrl: "https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/Sintel.mp4",
-                duration: 660, // 11分钟
-                tags: [
-                    TutorialTag.advanced.rawValue,
-                ]
-            )
-        ]
+        do {
+            let data = try Data(contentsOf: url)
+            let videos = try JSONDecoder().decode([TutorialVideo].self, from: data)
+            
+            // 保存所有视频
+            allVideos = videos
+            
+            // 根据标签分类视频（避免重复）
+            // 规则：
+            // 1. 有 Beginner 标签 → 放入 beginnerVideos
+            // 2. 没有 Beginner 标签 → 放入 advancedVideos（无论有没有 Advanced 标签）
+            beginnerVideos = videos.filter { $0.isBeginner }
+            advancedVideos = videos.filter { !$0.isBeginner }
+            
+        } catch {
+            errorMessage = "加载视频数据失败: \(error.localizedDescription)"
+            print("❌ Failed to load tutorial videos: \(error)")
+        }
+    }
+    
+    /// 判断是否为难度标签（不参与匹配）
+    private func isDifficultyTag(_ tag: String) -> Bool {
+        return tag == TutorialTag.beginner.rawValue || tag == TutorialTag.advanced.rawValue
+    }
+    
+    /// 计算视频与用户标签的匹配分数
+    private func calculateMatchScore(video: TutorialVideo, userTags: Set<String>) -> Double {
+        // 获取视频的属性标签（排除难度标签）
+        let videoAttributeTags = Set(video.tags.filter { !isDifficultyTag($0) })
+        
+        guard !videoAttributeTags.isEmpty else { return 0.0 }
+        
+        // 计算匹配的标签数量
+        let matchingTags = userTags.intersection(videoAttributeTags)
+        
+        // 匹配分数 = 匹配的标签数 / 用户标签总数
+        // 这样可以优先推荐匹配更多用户属性的视频
+        guard !userTags.isEmpty else { return 0.0 }
+        
+        return Double(matchingTags.count) / Double(userTags.count)
     }
 }
 

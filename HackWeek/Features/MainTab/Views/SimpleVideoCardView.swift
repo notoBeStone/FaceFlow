@@ -23,7 +23,8 @@ struct SimpleVideoCardView: View {
         VStack(alignment: .leading, spacing: 8) {
             // 图片区域
             thumbnailView
-                .aspectRatio(1.2, contentMode: .fit)
+                .frame(maxWidth: .infinity)
+                .aspectRatio(16.0 / 9.0, contentMode: .fit)
             
             // 标题
             Text(video.title)
@@ -34,6 +35,7 @@ struct SimpleVideoCardView: View {
             
             Spacer()
         }
+        .frame(maxWidth: .infinity)
     }
     
     // MARK: - Helper Views

@@ -7,6 +7,7 @@
 
 import SwiftUI
 import GLMP
+import GLUtils
 
 /// Home 页面
 struct HomeView: View {
@@ -78,6 +79,7 @@ struct HomeView: View {
                     }
                 }
             }
+            .frame(maxWidth: .infinity)
             
             // More 链接（右对齐）
             if hasMore {

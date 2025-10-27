@@ -1,0 +1,255 @@
+[
+  {
+    "id": "001",
+    "title": "Why Makeup Doesn't Look Good",
+    "summary": "Discover common reasons why makeup might not look flattering and learn essential techniques to avoid these pitfalls for a more natural, beautiful result.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/001.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/001.mp4",
+    "duration": 718,
+    "tags": ["Beginner", "Under18", "Age19To25", "Age26To35", "SkinToneMedium"]
+  },
+  {
+    "id": "002",
+    "title": "Common Makeup Mistakes Fixed",
+    "summary": "Learn to identify and correct the most frequent makeup errors. This comprehensive guide helps you achieve professional-looking results by avoiding typical beginner mistakes.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/002.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/002.mp4",
+    "duration": 787,
+    "tags": ["Beginner", "SkinToneGolden", "SkinToneDark", "Age26To35", "Age36To45"]
+  },
+  {
+    "id": "003",
+    "title": "Stop Aging Yourself with Makeup",
+    "summary": "Discover 8 common makeup mistakes that can make you look older than you are, and learn the corrective techniques to achieve a more youthful, radiant appearance.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/003.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/003.mp4",
+    "duration": 491,
+    "tags": ["Beginner", "SkinToneMedium", "SkinToneGolden", "Age36To45", "Over45"]
+  },
+  {
+    "id": "004",
+    "title": "Simple Glam Tutorial",
+    "summary": "Create a stunning yet easy glamorous look perfect for special occasions. This tutorial breaks down professional techniques into simple, achievable steps.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/004.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/004.mp4",
+    "duration": 667,
+    "tags": ["Beginner", "Advanced", "Age19To25", "Age26To35", "Age36To45", "SkinDry"]
+  },
+  {
+    "id": "005",
+    "title": "Age-Proof Makeup Techniques",
+    "summary": "Master the art of makeup that enhances your natural beauty without adding years. Learn professional correction techniques for common aging mistakes.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/005.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/005.mp4",
+    "duration": 1119,
+    "tags": ["Beginner", "SkinToneMedium", "SkinToneGolden", "Age36To45", "Over45"]
+  },
+  {
+    "id": "006",
+    "title": "Essential Makeup Mistakes to Avoid",
+    "summary": "A comprehensive guide to the most common makeup pitfalls and how to sidestep them for flawless, natural-looking results every time.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/006.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/006.mp4",
+    "duration": 917,
+    "tags": ["Beginner", "SkinToneLight", "SkinToneMedium", "SkinToneGolden", "SkinToneDark", "Age26To35", "Age36To45"]
+  },
+  {
+    "id": "007",
+    "title": "Extra Glam Makeup",
+    "summary": "Elevate your makeup game with this advanced glamorous tutorial. Perfect for those special nights when you want to make a statement.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/007.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/007.mp4",
+    "duration": 687,
+    "tags": ["Advanced", "BlemishesMany", "Under18", "Age19To25", "Age26To35"]
+  },
+  {
+    "id": "008",
+    "title": "Make Your Eyes Look Bigger",
+    "summary": "Discover the eye makeup secrets that create the illusion of larger, more open eyes. Learn strategic placement and techniques for maximum impact.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/008.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/008.mp4",
+    "duration": 487,
+    "tags": ["Beginner", "Advanced", "EyeSmall", "NormalEye", "DoubleLid", "WideEye", "NormalDistance", "Under18", "Age19To25", "Age26To35", "Age36To45"]
+  },
+  {
+    "id": "009",
+    "title": "Game-Changing Concealer Hack",
+    "summary": "Transform your complexion with this revolutionary concealer technique. Perfect for covering blemishes and achieving a flawless, natural-looking finish.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/009.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/009.mp4",
+    "duration": 625,
+    "tags": ["BlemishesMany", "BlemishesModerate"]
+  },
+  {
+    "id": "010",
+    "title": "Beginner's Makeup Guide",
+    "summary": "Complete step-by-step makeup tutorial designed specifically for beginners. Learn all the fundamentals from foundation to finishing touches in one comprehensive guide.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/010.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/010.mp4",
+    "duration": 1140,
+    "tags": ["Beginner"]
+  },
+  {
+    "id": "011",
+    "title": "Face Contouring in 5 Steps",
+    "summary": "Master the art of facial contouring with this simple 5-step method. Learn to sculpt and define your features for a professionally enhanced look.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/011.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/011.mp4",
+    "duration": 1312,
+    "tags": ["Beginner", "ChinPointed", "NormalWidth", "WideNose", "RoundJawline"]
+  },
+  {
+    "id": "012",
+    "title": "Perfect Under Eye Concealer",
+    "summary": "Say goodbye to dark circles and creasing! Learn professional techniques for flawless under-eye coverage that lasts all day without settling into fine lines.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/012.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/012.mp4",
+    "duration": 1010,
+    "tags": ["BlemishesModerate", "BlemishesMany", "Age19To25", "Age26To35", "Age36To45", "Over45"]
+  },
+  {
+    "id": "013",
+    "title": "Fix Patchy Eyeshadow",
+    "summary": "Discover why your eyeshadow looks uneven and learn the quick fixes to achieve smooth, blended, professional-looking eye makeup every time.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/013.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/013.mp4",
+    "duration": 331,
+    "tags": ["Beginner", "EyeSmall", "NormalEye", "EyeLarge", "DoubleLid"]
+  },
+  {
+    "id": "014",
+    "title": "Eyeshadow Do's and Don'ts",
+    "summary": "Master eyeshadow application with this guide to essential techniques and common mistakes to avoid for perfectly blended, flattering eye looks.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/014.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/014.mp4",
+    "duration": 464,
+    "tags": ["NormalDistance", "EyeNarrow"]
+  },
+  {
+    "id": "015",
+    "title": "Eyeliner Styles for Hooded Eyes",
+    "summary": "Explore 9 different eyeliner techniques specifically designed for hooded eyes. Easy, beginner-friendly tutorial with professional results.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/015.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/015.mp4",
+    "duration": 350,
+    "tags": ["DoubleLid", "Beginner", "Advanced"]
+  },
+  {
+    "id": "016",
+    "title": "Lip Liner Hacks",
+    "summary": "Quick and effective lip liner tricks to enhance your lip shape, prevent feathering, and create the perfect pout.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/016.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/016.mp4",
+    "duration": 15,
+    "tags": ["LipsThin", "LipsMedium", "LipsThick", "LipsTopHeavy", "LipsBottomHeavy", "LipsBalanced"]
+  },
+  {
+    "id": "017",
+    "title": "Lip Liner Do's and Don'ts",
+    "summary": "Essential tips for perfect lip liner application. Learn what works and what to avoid for naturally enhanced, beautiful lips.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/017.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/017.mp4",
+    "duration": 24,
+    "tags": ["LipsThin", "LipsMedium", "LipsThick", "LipsTopHeavy", "LipsBottomHeavy", "LipsBalanced"]
+  },
+  {
+    "id": "018",
+    "title": "Must-Try Lip Combo",
+    "summary": "Discover an amazing lip color combination that creates dimension and lasting beauty. Perfect for any skill level.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/018.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/018.mp4",
+    "duration": 45,
+    "tags": ["LipsThin", "LipsMedium", "LipsThick", "LipsTopHeavy", "LipsBottomHeavy", "LipsBalanced", "Advanced"]
+  },
+  {
+    "id": "019",
+    "title": "Cheekbone Contouring",
+    "summary": "Learn to define and enhance your cheekbones with strategic contouring techniques for a sculpted, dimensional look.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/019.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/019.mp4",
+    "duration": 12,
+    "tags": ["CheekboneNormal", "CheekboneLow", "Round", "Oval"]
+  },
+  {
+    "id": "020",
+    "title": "Contour for Round Faces",
+    "summary": "Quick and easy contouring tutorial designed specifically for round face shapes. Learn to create definition and balance with simple techniques.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/020.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/020.mp4",
+    "duration": 648,
+    "tags": ["Round", "RoundJawline", "RoundChin"]
+  },
+  {
+    "id": "021",
+    "title": "Beginner's Nose Contour",
+    "summary": "Master nose contouring with this beginner-friendly tutorial featuring a special technique for natural-looking nose refinement.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/021.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/021.mp4",
+    "duration": 243,
+    "tags": ["NoseShort", "NormalNose", "WideNose", "NormalWidth"]
+  },
+  {
+    "id": "022",
+    "title": "Wide-Set Eyes Makeup",
+    "summary": "Specialized makeup techniques to balance and enhance wide-set eyes for a more harmonious, captivating look.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/022.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/022.mp4",
+    "duration": 30,
+    "tags": ["NormalDistance", "WideEye", "EyeSmall", "NormalEye", "EyeLarge"]
+  },
+  {
+    "id": "023",
+    "title": "Makeup for Round Faces",
+    "summary": "Comprehensive beginner's guide to makeup application tailored for round face shapes, emphasizing techniques that create balance and definition.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/023.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/023.mp4",
+    "duration": 94,
+    "tags": ["Beginner", "Round"]
+  },
+  {
+    "id": "024",
+    "title": "Makeup for Oval Faces",
+    "summary": "Learn the best makeup techniques for oval face shapes to enhance your naturally balanced features.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/024.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/024.mp4",
+    "duration": 55,
+    "tags": ["Beginner", "Oval"]
+  },
+  {
+    "id": "025",
+    "title": "Makeup for Square Faces",
+    "summary": "Beginner's guide to makeup application for square face shapes, with tips to soften angles and create harmony.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/025.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/025.mp4",
+    "duration": 85,
+    "tags": ["Beginner", "Square"]
+  },
+  {
+    "id": "026",
+    "title": "Makeup for Heart Faces",
+    "summary": "Discover makeup techniques that beautifully balance heart-shaped faces, creating proportion and highlighting your best features.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/026.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/026.mp4",
+    "duration": 73,
+    "tags": ["Beginner", "Heart"]
+  },
+  {
+    "id": "027",
+    "title": "Foundation for Dry Skin",
+    "summary": "Solve foundation problems on dry skin with this comprehensive guide to base makeup. Learn prep, application, and setting techniques for a flawless finish.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/027.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/027.mp4",
+    "duration": 470,
+    "tags": ["Beginner", "SkinDry"]
+  },
+  {
+    "id": "028",
+    "title": "Stop Makeup Getting Oily",
+    "summary": "Effective solutions to control shine and keep your makeup fresh all day. Perfect techniques for oily skin types to achieve a matte, long-lasting finish.",
+    "thumbnailURL": "https://static.faceflowbeauty.com/app/static/video_v1/028.png",
+    "videoUrl": "https://static.faceflowbeauty.com/app/static/video_v1/028.mp4",
+    "duration": 305,
+    "tags": ["Beginner", "SkinOily"]
+  }
+]
+

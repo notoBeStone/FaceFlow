@@ -296,6 +296,15 @@ final class UserFaceAttributes {
         
         return Double(matchingTags.count) / Double(userTags.count)
     }
+    
+    /// 检查是否匹配某个视频（只要有一个标签匹配即可）
+    func matches(videoTags: [String]) -> Bool {
+        let userTags = Set(getAllTags())
+        let videoAttributeTags = Set(videoTags)
+        
+        // 检查是否有交集
+        return !userTags.intersection(videoAttributeTags).isEmpty
+    }
 }
 
 // MARK: - Extensions

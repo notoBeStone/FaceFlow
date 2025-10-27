@@ -106,7 +106,7 @@ enum TutorialTag: String, Codable, CaseIterable {
 }
 
 /// 视频教程数据模型
-struct TutorialVideo: Identifiable, Hashable {
+struct TutorialVideo: Identifiable, Hashable, Codable {
     let id: String
     let title: String
     let summary: String?
@@ -156,6 +156,13 @@ extension TutorialVideo {
     /// 获取所有标签枚举
     var tutorialTags: [TutorialTag] {
         return tags.compactMap { TutorialTag(rawValue: $0) }
+    }
+    
+    /// 获取属性标签（排除难度标签 Beginner/Advanced）
+    var attributeTags: [String] {
+        return tags.filter { tag in
+            tag != TutorialTag.beginner.rawValue && tag != TutorialTag.advanced.rawValue
+        }
     }
 }
 
