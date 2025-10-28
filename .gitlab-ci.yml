@@ -14,13 +14,12 @@ variables:
   DATAV_VERSION: 0.0.0 #DATAV版本
   INSTALLER_SIZE_LIMIT: 250 #上传大小限制
   DEPLOY_JSON_FILE: ./deploytpl-rc.json #deploytpl-rc.json文件路径
-  SIGNATURE_FILE: PodsLocal/GLConfig/GLConfig/NetworkSignture/NetworkSignture.m #server签名文件路径
   
-  # HOST_FILE: xxx/xxxx/xxxHost.m #host配置代码文件
-  # HOST_REPLACEMENT_TARGET: '        \[xxxx setHostEnvironment:'  #项目中host设置代码
-  # HOST_REPLACEMENT_test: '        \[xxxx setHostEnvironment:Test\]\;' #test环境设置
-  # HOST_REPLACEMENT_stage: '        \[xxxx setHostEnvironment:Stage\]\;' #stage环境设置
-  # HOST_REPLACEMENT_prod: '        \[xxxx setHostEnvironment:Prod\]\;' #prod环境设置 
+  HOST_FILE: PodsLocal/GLConfig/GLConfig.swif #host配置代码文件
+  HOST_REPLACEMENT_TARGET: '    @objc dynamic public class var env: AppEnv { .stage }'  #项目中host设置代码
+  HOST_REPLACEMENT_test: '    @objc dynamic public class var env: AppEnv { .stage }' #test环境设置
+  HOST_REPLACEMENT_stage: '    @objc dynamic public class var env: AppEnv { .stage };' #stage环境设置
+  HOST_REPLACEMENT_prod: '    @objc dynamic public class var env: AppEnv { .prod }' #prod环境设置 
 
 include: #ci项目的一些配置（保持默认勿动）
   - project: 'component/devops/ci-template'

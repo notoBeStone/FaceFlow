@@ -62,7 +62,7 @@ static inline const char *hwl_strJoin(const char *s1, const char *s2, const char
 
 // 加密请打开 .gitlab-ci.yml 中 SIGNATURE_FILE 字段
 + (NSString *)prod {
-    return @"";
+    return @"18216a1gfuYchzTmSQS6Tpkq2XxSAsPT";
 }
 
 + (NSString *)stage {
